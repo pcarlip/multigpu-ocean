@@ -1,29 +1,17 @@
-using Oceananigans
-using Oceananigans.Fields: interpolate!
 using MPI
-
-# Automatically distributes among available processors
-arch = Distributed(GPU())
-
-rank = arch.local_rank
-Nranks = MPI.Comm_size(arch.communicator)
-println("Hello from process $rank out of $Nranks")
-
-x = y = z = (0, 1)
-grid = RectilinearGrid(arch; size=(64, 64, 64), x, y, z, topology=(Periodic, Periodic, Bounded))
-
-@info "The grid on rank $rank:"
-@info "$grid"
-
-c = CenterField(grid)
-set!(c, (x, y, z) -> x * y^2 * z^3)
-
-@info "c on rank $rank:"
-@show c
-
-u = XFaceField(grid)
-set!(c, (x, y, z) -> x * y^2 * z^3)
-interpolate!(u, c)
-
-@info "u on rank $rank:"
-@show u
+using CUDA
+MPI.Init()
+comm = MPI.COMM_WORLD
+rank = MPI.Comm_rank(comm)
+size = MPI.Comm_size(comm)
+dst = mod(rank+1, size)
+src = mod(rank-1, size)
+println("rank=$rank, size=$size, dst=$dst, src=$src")
+N = 4
+send_mesg = CuArray{Float64}(undef, N)
+recv_mesg = CuArray{Float64}(undef, N)
+fill!(send_mesg, Float64(rank))
+CUDA.synchronize()
+MPI.Sendrecv!(send_mesg, dst, 0, recv_mesg, src, 0, comm)
+println("recv_mesg on proc $rank: $recv_mesg")
+rank==0 && println("done.")
