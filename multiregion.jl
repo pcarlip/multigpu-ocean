@@ -31,7 +31,7 @@ mrgrid = MultiRegionGrid(grid, partition = XPartition(2), devices = 2)
 
 
 # %%
-model = NonhydrostaticModel(; grid, advection = WENO())
+model = NonhydrostaticModel(; grid = mrgrid, advection = WENO())
 
 e(x, y, z) = 2rand() - 1
 set!(model, u = e, v = e, w = e)
@@ -52,8 +52,17 @@ run!(simulation)
 using CairoMakie
 
 u, v, w = model.velocities
-ζ = Field(∂x(v) - ∂y(u), indices = (:, :, grid.Nz))
+ζ = Field(∂x(v) - ∂y(u), indices = (:, mrgrid.Ny, :))
 compute!(ζ)
 heatmap(ζ)
+
+# %%
+simulation.stop_iteration += 400
+run!(simulation)
+
+compute!(ζ)
+heatmap(ζ)
+
+
 
 # %%
