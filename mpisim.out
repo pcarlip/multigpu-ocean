@@ -3,29 +3,29 @@
 [ Info: MPI has not been initialized, so we are calling MPI.Init().
 [ Info: MPI has not been initialized, so we are calling MPI.Init().
 grid = 16×64×64 RectilinearGrid{Float64, Oceananigans.Grids.FullyConnected, Periodic, Periodic} on Distributed{GPU{CUDA.CUDAKernels.CUDABackend}} with 3×3×3 halo
-├── FullyConnected x ∈ [3.14159, 4.71239) regularly spaced with Δx=0.0981748
-├── Periodic y ∈ [9.65411e-18, 6.28319)   regularly spaced with Δy=0.0981748
-└── Periodic z ∈ [9.65411e-18, 6.28319)   regularly spaced with Δz=0.0981748
-grid = 16×64×64 RectilinearGrid{Float64, Oceananigans.Grids.FullyConnected, Periodic, Periodic} on Distributed{GPU{CUDA.CUDAKernels.CUDABackend}} with 3×3×3 halo
-├── FullyConnected x ∈ [4.71239, 6.28319) regularly spaced with Δx=0.0981748
-├── Periodic y ∈ [9.65411e-18, 6.28319)   regularly spaced with Δy=0.0981748
-└── Periodic z ∈ [9.65411e-18, 6.28319)   regularly spaced with Δz=0.0981748
-grid = 16×64×64 RectilinearGrid{Float64, Oceananigans.Grids.FullyConnected, Periodic, Periodic} on Distributed{GPU{CUDA.CUDAKernels.CUDABackend}} with 3×3×3 halo
 ├── FullyConnected x ∈ [0.0, 1.5708)    regularly spaced with Δx=0.0981748
 ├── Periodic y ∈ [9.65411e-18, 6.28319) regularly spaced with Δy=0.0981748
 └── Periodic z ∈ [9.65411e-18, 6.28319) regularly spaced with Δz=0.0981748
 grid = 16×64×64 RectilinearGrid{Float64, Oceananigans.Grids.FullyConnected, Periodic, Periodic} on Distributed{GPU{CUDA.CUDAKernels.CUDABackend}} with 3×3×3 halo
+├── FullyConnected x ∈ [3.14159, 4.71239) regularly spaced with Δx=0.0981748
+├── Periodic y ∈ [9.65411e-18, 6.28319)   regularly spaced with Δy=0.0981748
+└── Periodic z ∈ [9.65411e-18, 6.28319)   regularly spaced with Δz=0.0981748
+grid = 16×64×64 RectilinearGrid{Float64, Oceananigans.Grids.FullyConnected, Periodic, Periodic} on Distributed{GPU{CUDA.CUDAKernels.CUDABackend}} with 3×3×3 halo
 ├── FullyConnected x ∈ [1.5708, 3.14159) regularly spaced with Δx=0.0981748
 ├── Periodic y ∈ [9.65411e-18, 6.28319)  regularly spaced with Δy=0.0981748
 └── Periodic z ∈ [9.65411e-18, 6.28319)  regularly spaced with Δz=0.0981748
+grid = 16×64×64 RectilinearGrid{Float64, Oceananigans.Grids.FullyConnected, Periodic, Periodic} on Distributed{GPU{CUDA.CUDAKernels.CUDABackend}} with 3×3×3 halo
+├── FullyConnected x ∈ [4.71239, 6.28319) regularly spaced with Δx=0.0981748
+├── Periodic y ∈ [9.65411e-18, 6.28319)   regularly spaced with Δy=0.0981748
+└── Periodic z ∈ [9.65411e-18, 6.28319)   regularly spaced with Δz=0.0981748
 --------------------------------------------------------------------------
-The call to cuMemHostRegister(0x146473e00008, 134217728, 0) failed.
+The call to cuMemHostRegister(0x1485afe00008, 134217728, 0) failed.
   Host:  aerosmith
   cuMemHostRegister return value:  1
   Registration cache:  smcuda
 --------------------------------------------------------------------------
-[aerosmith.hpc.oregonstate.edu:487395] 3 more processes have sent help message help-mpi-common-cuda.txt / cuMemHostRegister during init failed
-[aerosmith.hpc.oregonstate.edu:487395] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[aerosmith.hpc.oregonstate.edu:487953] 3 more processes have sent help message help-mpi-common-cuda.txt / cuMemHostRegister during init failed
+[aerosmith.hpc.oregonstate.edu:487953] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
 --------------------------------------------------------------------------
 The call to cuIpcGetMemHandle failed. This means the GPU RDMA protocol
 cannot be used.
@@ -34,87 +34,486 @@ cannot be used.
 Check the cuda.h file for what the return value means. Perhaps a reboot
 of the node will clear the problem.
 --------------------------------------------------------------------------
-[aerosmith.hpc.oregonstate.edu:487395] 103 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[aerosmith.hpc.oregonstate.edu:487953] 103 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
 [ Info: Initializing simulation...
 [ Info: Initializing simulation...
 [ Info: Initializing simulation...
 [ Info: Initializing simulation...
-[aerosmith.hpc.oregonstate.edu:487395] 48 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[ Info:     ... simulation initialization complete (9.920 seconds)
+[aerosmith.hpc.oregonstate.edu:487953] 48 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+Iteration: 0000, time: 0 seconds, Δt: 10 ms, max(|w|) = 1.8e+00 ms⁻¹, wall time: 0 seconds
+[ Info:     ... simulation initialization complete (13.312 seconds)
 [ Info: Executing initial time step...
-[ Info:     ... simulation initialization complete (10.055 seconds)
+Iteration: 0000, time: 0 seconds, Δt: 10 ms, max(|w|) = 1.8e+00 ms⁻¹, wall time: 0 seconds
+[ Info:     ... simulation initialization complete (13.309 seconds)
 [ Info: Executing initial time step...
-[ Info:     ... simulation initialization complete (10.067 seconds)
+Iteration: 0000, time: 0 seconds, Δt: 10 ms, max(|w|) = 1.8e+00 ms⁻¹, wall time: 0 seconds
+[ Info:     ... simulation initialization complete (13.340 seconds)
 [ Info: Executing initial time step...
-[ Info:     ... simulation initialization complete (10.077 seconds)
+Iteration: 0000, time: 0 seconds, Δt: 10 ms, max(|w|) = 1.8e+00 ms⁻¹, wall time: 0 seconds
+[ Info:     ... simulation initialization complete (13.580 seconds)
 [ Info: Executing initial time step...
-[aerosmith.hpc.oregonstate.edu:487395] 1 more process has sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Data unpack had inadequate space in file util/show_help.c at line 521
-[ Info:     ... initial time step complete (4.867 seconds).
-[ Info:     ... initial time step complete (4.599 seconds).
-[ Info:     ... initial time step complete (4.712 seconds).
-[ Info:     ... initial time step complete (4.710 seconds).
-[aerosmith.hpc.oregonstate.edu:487395] 6304 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:487395] 15584 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] 15564 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Data unpack had inadequate space in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] 15601 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] 15605 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:487395] 15564 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] 15434 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:487395] 15479 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] 15429 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:487395] 15516 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] 15443 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:487395] 15484 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] 15490 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:487395] 15437 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:487395] 15575 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:487395] [[41610,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:487395] 15558 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[ Info: Simulation is stopping after running for 1.540 minutes.
+[aerosmith.hpc.oregonstate.edu:487953] 1 more process has sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[ Info:     ... initial time step complete (5.063 seconds).
+[ Info:     ... initial time step complete (5.113 seconds).
+[ Info:     ... initial time step complete (4.870 seconds).
+[ Info:     ... initial time step complete (5.105 seconds).
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0020, time: 200.000 ms, Δt: 10 ms, max(|w|) = 9.8e-01 ms⁻¹, wall time: 20.231 seconds
+Iteration: 0020, time: 200.000 ms, Δt: 10 ms, max(|w|) = 9.8e-01 ms⁻¹, wall time: 20.238 seconds
+Iteration: 0020, time: 200.000 ms, Δt: 10 ms, max(|w|) = 9.8e-01 ms⁻¹, wall time: 20.229 seconds
+Iteration: 0020, time: 200.000 ms, Δt: 10 ms, max(|w|) = 9.8e-01 ms⁻¹, wall time: 20.268 seconds
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+[aerosmith.hpc.oregonstate.edu:487953] 5593 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0040, time: 400.000 ms, Δt: 10 ms, max(|w|) = 7.6e-01 ms⁻¹, wall time: 21.785 seconds
+Iteration: 0040, time: 400.000 ms, Δt: 10 ms, max(|w|) = 7.6e-01 ms⁻¹, wall time: 21.792 seconds
+Iteration: 0040, time: 400.000 ms, Δt: 10 ms, max(|w|) = 7.6e-01 ms⁻¹, wall time: 21.782 seconds
+Iteration: 0040, time: 400.000 ms, Δt: 10 ms, max(|w|) = 7.6e-01 ms⁻¹, wall time: 21.822 seconds
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0060, time: 600.000 ms, Δt: 10 ms, max(|w|) = 6.4e-01 ms⁻¹, wall time: 23.357 seconds
+Iteration: 0060, time: 600.000 ms, Δt: 10 ms, max(|w|) = 6.4e-01 ms⁻¹, wall time: 23.317 seconds
+Iteration: 0060, time: 600.000 ms, Δt: 10 ms, max(|w|) = 6.4e-01 ms⁻¹, wall time: 23.320 seconds
+Iteration: 0060, time: 600.000 ms, Δt: 10 ms, max(|w|) = 6.4e-01 ms⁻¹, wall time: 23.327 seconds
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack had inadequate space in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0080, time: 800.000 ms, Δt: 10 ms, max(|w|) = 5.5e-01 ms⁻¹, wall time: 24.863 seconds
+Iteration: 0080, time: 800.000 ms, Δt: 10 ms, max(|w|) = 5.5e-01 ms⁻¹, wall time: 24.870 seconds
+Iteration: 0080, time: 800.000 ms, Δt: 10 ms, max(|w|) = 5.5e-01 ms⁻¹, wall time: 24.900 seconds
+Iteration: 0080, time: 800.000 ms, Δt: 10 ms, max(|w|) = 5.5e-01 ms⁻¹, wall time: 24.861 seconds
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] 15499 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+Iteration: 0100, time: 1000.000 ms, Δt: 10 ms, max(|w|) = 4.9e-01 ms⁻¹, wall time: 26.415 seconds
+Iteration: 0100, time: 1000.000 ms, Δt: 10 ms, max(|w|) = 4.9e-01 ms⁻¹, wall time: 26.445 seconds
+Iteration: 0100, time: 1000.000 ms, Δt: 10 ms, max(|w|) = 4.9e-01 ms⁻¹, wall time: 26.408 seconds
+Iteration: 0100, time: 1000.000 ms, Δt: 10 ms, max(|w|) = 4.9e-01 ms⁻¹, wall time: 26.406 seconds
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0120, time: 1.200 seconds, Δt: 10 ms, max(|w|) = 4.3e-01 ms⁻¹, wall time: 27.973 seconds
+Iteration: 0120, time: 1.200 seconds, Δt: 10 ms, max(|w|) = 4.3e-01 ms⁻¹, wall time: 28.003 seconds
+Iteration: 0120, time: 1.200 seconds, Δt: 10 ms, max(|w|) = 4.3e-01 ms⁻¹, wall time: 27.963 seconds
+Iteration: 0120, time: 1.200 seconds, Δt: 10 ms, max(|w|) = 4.3e-01 ms⁻¹, wall time: 27.966 seconds
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+Iteration: 0140, time: 1.400 seconds, Δt: 10 ms, max(|w|) = 4.1e-01 ms⁻¹, wall time: 29.507 seconds
+Iteration: 0140, time: 1.400 seconds, Δt: 10 ms, max(|w|) = 4.1e-01 ms⁻¹, wall time: 29.546 seconds
+Iteration: 0140, time: 1.400 seconds, Δt: 10 ms, max(|w|) = 4.1e-01 ms⁻¹, wall time: 29.516 seconds
+Iteration: 0140, time: 1.400 seconds, Δt: 10 ms, max(|w|) = 4.1e-01 ms⁻¹, wall time: 29.509 seconds
+[aerosmith.hpc.oregonstate.edu:487953] 15521 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0160, time: 1.600 seconds, Δt: 10 ms, max(|w|) = 3.8e-01 ms⁻¹, wall time: 31.044 seconds
+Iteration: 0160, time: 1.600 seconds, Δt: 10 ms, max(|w|) = 3.8e-01 ms⁻¹, wall time: 31.084 seconds
+Iteration: 0160, time: 1.600 seconds, Δt: 10 ms, max(|w|) = 3.8e-01 ms⁻¹, wall time: 31.046 seconds
+Iteration: 0160, time: 1.600 seconds, Δt: 10 ms, max(|w|) = 3.8e-01 ms⁻¹, wall time: 31.053 seconds
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+Iteration: 0180, time: 1.800 seconds, Δt: 10 ms, max(|w|) = 3.5e-01 ms⁻¹, wall time: 32.588 seconds
+Iteration: 0180, time: 1.800 seconds, Δt: 10 ms, max(|w|) = 3.5e-01 ms⁻¹, wall time: 32.625 seconds
+Iteration: 0180, time: 1.800 seconds, Δt: 10 ms, max(|w|) = 3.5e-01 ms⁻¹, wall time: 32.586 seconds
+Iteration: 0180, time: 1.800 seconds, Δt: 10 ms, max(|w|) = 3.5e-01 ms⁻¹, wall time: 32.595 seconds
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack had inadequate space in file util/show_help.c at line 507
+Iteration: 0200, time: 2.000 seconds, Δt: 10 ms, max(|w|) = 3.4e-01 ms⁻¹, wall time: 34.127 seconds
+Iteration: 0200, time: 2.000 seconds, Δt: 10 ms, max(|w|) = 3.4e-01 ms⁻¹, wall time: 34.130 seconds
+Iteration: 0200, time: 2.000 seconds, Δt: 10 ms, max(|w|) = 3.4e-01 ms⁻¹, wall time: 34.167 seconds
+Iteration: 0200, time: 2.000 seconds, Δt: 10 ms, max(|w|) = 3.4e-01 ms⁻¹, wall time: 34.137 seconds
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] 15540 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+Iteration: 0220, time: 2.200 seconds, Δt: 10 ms, max(|w|) = 3.2e-01 ms⁻¹, wall time: 35.718 seconds
+Iteration: 0220, time: 2.200 seconds, Δt: 10 ms, max(|w|) = 3.2e-01 ms⁻¹, wall time: 35.678 seconds
+Iteration: 0220, time: 2.200 seconds, Δt: 10 ms, max(|w|) = 3.2e-01 ms⁻¹, wall time: 35.681 seconds
+Iteration: 0220, time: 2.200 seconds, Δt: 10 ms, max(|w|) = 3.2e-01 ms⁻¹, wall time: 35.688 seconds
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+Iteration: 0240, time: 2.400 seconds, Δt: 10 ms, max(|w|) = 3.1e-01 ms⁻¹, wall time: 37.244 seconds
+Iteration: 0240, time: 2.400 seconds, Δt: 10 ms, max(|w|) = 3.1e-01 ms⁻¹, wall time: 37.237 seconds
+Iteration: 0240, time: 2.400 seconds, Δt: 10 ms, max(|w|) = 3.1e-01 ms⁻¹, wall time: 37.274 seconds
+Iteration: 0240, time: 2.400 seconds, Δt: 10 ms, max(|w|) = 3.1e-01 ms⁻¹, wall time: 37.235 seconds
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0260, time: 2.600 seconds, Δt: 10 ms, max(|w|) = 2.9e-01 ms⁻¹, wall time: 38.793 seconds
+Iteration: 0260, time: 2.600 seconds, Δt: 10 ms, max(|w|) = 2.9e-01 ms⁻¹, wall time: 38.802 seconds
+Iteration: 0260, time: 2.600 seconds, Δt: 10 ms, max(|w|) = 2.9e-01 ms⁻¹, wall time: 38.796 seconds
+Iteration: 0260, time: 2.600 seconds, Δt: 10 ms, max(|w|) = 2.9e-01 ms⁻¹, wall time: 38.833 seconds
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+Iteration: 0280, time: 2.800 seconds, Δt: 10 ms, max(|w|) = 2.8e-01 ms⁻¹, wall time: 40.394 seconds
+Iteration: 0280, time: 2.800 seconds, Δt: 10 ms, max(|w|) = 2.8e-01 ms⁻¹, wall time: 40.355 seconds
+Iteration: 0280, time: 2.800 seconds, Δt: 10 ms, max(|w|) = 2.8e-01 ms⁻¹, wall time: 40.364 seconds
+Iteration: 0280, time: 2.800 seconds, Δt: 10 ms, max(|w|) = 2.8e-01 ms⁻¹, wall time: 40.357 seconds
+[aerosmith.hpc.oregonstate.edu:487953] 15401 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack had inadequate space in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0300, time: 3.000 seconds, Δt: 10 ms, max(|w|) = 2.7e-01 ms⁻¹, wall time: 41.936 seconds
+Iteration: 0300, time: 3.000 seconds, Δt: 10 ms, max(|w|) = 2.7e-01 ms⁻¹, wall time: 41.896 seconds
+Iteration: 0300, time: 3.000 seconds, Δt: 10 ms, max(|w|) = 2.7e-01 ms⁻¹, wall time: 41.905 seconds
+Iteration: 0300, time: 3.000 seconds, Δt: 10 ms, max(|w|) = 2.7e-01 ms⁻¹, wall time: 41.899 seconds
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack had inadequate space in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0320, time: 3.200 seconds, Δt: 10 ms, max(|w|) = 2.5e-01 ms⁻¹, wall time: 43.471 seconds
+Iteration: 0320, time: 3.200 seconds, Δt: 10 ms, max(|w|) = 2.5e-01 ms⁻¹, wall time: 43.431 seconds
+Iteration: 0320, time: 3.200 seconds, Δt: 10 ms, max(|w|) = 2.5e-01 ms⁻¹, wall time: 43.434 seconds
+Iteration: 0320, time: 3.200 seconds, Δt: 10 ms, max(|w|) = 2.5e-01 ms⁻¹, wall time: 43.441 seconds
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack had inadequate space in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0340, time: 3.400 seconds, Δt: 10 ms, max(|w|) = 2.5e-01 ms⁻¹, wall time: 44.976 seconds
+Iteration: 0340, time: 3.400 seconds, Δt: 10 ms, max(|w|) = 2.5e-01 ms⁻¹, wall time: 44.973 seconds
+Iteration: 0340, time: 3.400 seconds, Δt: 10 ms, max(|w|) = 2.5e-01 ms⁻¹, wall time: 45.013 seconds
+Iteration: 0340, time: 3.400 seconds, Δt: 10 ms, max(|w|) = 2.5e-01 ms⁻¹, wall time: 44.983 seconds
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] 15545 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+Iteration: 0360, time: 3.600 seconds, Δt: 10 ms, max(|w|) = 2.4e-01 ms⁻¹, wall time: 46.521 seconds
+Iteration: 0360, time: 3.600 seconds, Δt: 10 ms, max(|w|) = 2.4e-01 ms⁻¹, wall time: 46.553 seconds
+Iteration: 0360, time: 3.600 seconds, Δt: 10 ms, max(|w|) = 2.4e-01 ms⁻¹, wall time: 46.514 seconds
+Iteration: 0360, time: 3.600 seconds, Δt: 10 ms, max(|w|) = 2.4e-01 ms⁻¹, wall time: 46.512 seconds
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+Iteration: 0380, time: 3.800 seconds, Δt: 10 ms, max(|w|) = 2.3e-01 ms⁻¹, wall time: 48.061 seconds
+Iteration: 0380, time: 3.800 seconds, Δt: 10 ms, max(|w|) = 2.3e-01 ms⁻¹, wall time: 48.068 seconds
+Iteration: 0380, time: 3.800 seconds, Δt: 10 ms, max(|w|) = 2.3e-01 ms⁻¹, wall time: 48.098 seconds
+Iteration: 0380, time: 3.800 seconds, Δt: 10 ms, max(|w|) = 2.3e-01 ms⁻¹, wall time: 48.061 seconds
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+Iteration: 0400, time: 4.000 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 49.605 seconds
+Iteration: 0400, time: 4.000 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 49.615 seconds
+Iteration: 0400, time: 4.000 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 49.645 seconds
+Iteration: 0400, time: 4.000 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 49.608 seconds
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] 15563 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+Iteration: 0420, time: 4.200 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 51.145 seconds
+Iteration: 0420, time: 4.200 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 51.155 seconds
+Iteration: 0420, time: 4.200 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 51.148 seconds
+Iteration: 0420, time: 4.200 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 51.185 seconds
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack had inadequate space in file util/show_help.c at line 507
+Iteration: 0440, time: 4.400 seconds, Δt: 10 ms, max(|w|) = 2.3e-01 ms⁻¹, wall time: 52.690 seconds
+Iteration: 0440, time: 4.400 seconds, Δt: 10 ms, max(|w|) = 2.3e-01 ms⁻¹, wall time: 52.697 seconds
+Iteration: 0440, time: 4.400 seconds, Δt: 10 ms, max(|w|) = 2.3e-01 ms⁻¹, wall time: 52.688 seconds
+Iteration: 0440, time: 4.400 seconds, Δt: 10 ms, max(|w|) = 2.3e-01 ms⁻¹, wall time: 52.727 seconds
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0460, time: 4.600 seconds, Δt: 10 ms, max(|w|) = 2.3e-01 ms⁻¹, wall time: 54.253 seconds
+Iteration: 0460, time: 4.600 seconds, Δt: 10 ms, max(|w|) = 2.3e-01 ms⁻¹, wall time: 54.255 seconds
+Iteration: 0460, time: 4.600 seconds, Δt: 10 ms, max(|w|) = 2.3e-01 ms⁻¹, wall time: 54.262 seconds
+Iteration: 0460, time: 4.600 seconds, Δt: 10 ms, max(|w|) = 2.3e-01 ms⁻¹, wall time: 54.292 seconds
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] 15412 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0480, time: 4.800 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 55.822 seconds
+Iteration: 0480, time: 4.800 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 55.813 seconds
+Iteration: 0480, time: 4.800 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 55.815 seconds
+Iteration: 0480, time: 4.800 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 55.852 seconds
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0500, time: 5.000 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 57.383 seconds
+Iteration: 0500, time: 5.000 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 57.374 seconds
+Iteration: 0500, time: 5.000 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 57.413 seconds
+Iteration: 0500, time: 5.000 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 57.376 seconds
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0520, time: 5.200 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 58.974 seconds
+Iteration: 0520, time: 5.200 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 58.934 seconds
+Iteration: 0520, time: 5.200 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 58.944 seconds
+Iteration: 0520, time: 5.200 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 58.937 seconds
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] 15352 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0540, time: 5.400 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 1.008 minutes
+Iteration: 0540, time: 5.400 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 1.009 minutes
+Iteration: 0540, time: 5.400 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 1.008 minutes
+Iteration: 0540, time: 5.400 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 1.008 minutes
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0560, time: 5.600 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 1.034 minutes
+Iteration: 0560, time: 5.600 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 1.034 minutes
+Iteration: 0560, time: 5.600 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 1.035 minutes
+Iteration: 0560, time: 5.600 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 1.035 minutes
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0580, time: 5.800 seconds, Δt: 10 ms, max(|w|) = 2.1e-01 ms⁻¹, wall time: 1.060 minutes
+Iteration: 0580, time: 5.800 seconds, Δt: 10 ms, max(|w|) = 2.1e-01 ms⁻¹, wall time: 1.061 minutes
+Iteration: 0580, time: 5.800 seconds, Δt: 10 ms, max(|w|) = 2.1e-01 ms⁻¹, wall time: 1.061 minutes
+Iteration: 0580, time: 5.800 seconds, Δt: 10 ms, max(|w|) = 2.1e-01 ms⁻¹, wall time: 1.060 minutes
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0600, time: 6.000 seconds, Δt: 10 ms, max(|w|) = 2.0e-01 ms⁻¹, wall time: 1.087 minutes
+Iteration: 0600, time: 6.000 seconds, Δt: 10 ms, max(|w|) = 2.0e-01 ms⁻¹, wall time: 1.087 minutes
+Iteration: 0600, time: 6.000 seconds, Δt: 10 ms, max(|w|) = 2.0e-01 ms⁻¹, wall time: 1.086 minutes
+Iteration: 0600, time: 6.000 seconds, Δt: 10 ms, max(|w|) = 2.0e-01 ms⁻¹, wall time: 1.087 minutes
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] 15337 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0620, time: 6.200 seconds, Δt: 10 ms, max(|w|) = 2.0e-01 ms⁻¹, wall time: 1.112 minutes
+Iteration: 0620, time: 6.200 seconds, Δt: 10 ms, max(|w|) = 2.0e-01 ms⁻¹, wall time: 1.113 minutes
+Iteration: 0620, time: 6.200 seconds, Δt: 10 ms, max(|w|) = 2.0e-01 ms⁻¹, wall time: 1.113 minutes
+Iteration: 0620, time: 6.200 seconds, Δt: 10 ms, max(|w|) = 2.0e-01 ms⁻¹, wall time: 1.112 minutes
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0640, time: 6.400 seconds, Δt: 10 ms, max(|w|) = 2.0e-01 ms⁻¹, wall time: 1.139 minutes
+Iteration: 0640, time: 6.400 seconds, Δt: 10 ms, max(|w|) = 2.0e-01 ms⁻¹, wall time: 1.139 minutes
+Iteration: 0640, time: 6.400 seconds, Δt: 10 ms, max(|w|) = 2.0e-01 ms⁻¹, wall time: 1.139 minutes
+Iteration: 0640, time: 6.400 seconds, Δt: 10 ms, max(|w|) = 2.0e-01 ms⁻¹, wall time: 1.139 minutes
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0660, time: 6.600 seconds, Δt: 10 ms, max(|w|) = 2.0e-01 ms⁻¹, wall time: 1.165 minutes
+Iteration: 0660, time: 6.600 seconds, Δt: 10 ms, max(|w|) = 2.0e-01 ms⁻¹, wall time: 1.165 minutes
+Iteration: 0660, time: 6.600 seconds, Δt: 10 ms, max(|w|) = 2.0e-01 ms⁻¹, wall time: 1.165 minutes
+Iteration: 0660, time: 6.600 seconds, Δt: 10 ms, max(|w|) = 2.0e-01 ms⁻¹, wall time: 1.165 minutes
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] 15335 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0680, time: 6.800 seconds, Δt: 10 ms, max(|w|) = 1.9e-01 ms⁻¹, wall time: 1.191 minutes
+Iteration: 0680, time: 6.800 seconds, Δt: 10 ms, max(|w|) = 1.9e-01 ms⁻¹, wall time: 1.191 minutes
+Iteration: 0680, time: 6.800 seconds, Δt: 10 ms, max(|w|) = 1.9e-01 ms⁻¹, wall time: 1.191 minutes
+Iteration: 0680, time: 6.800 seconds, Δt: 10 ms, max(|w|) = 1.9e-01 ms⁻¹, wall time: 1.191 minutes
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0700, time: 7.000 seconds, Δt: 10 ms, max(|w|) = 1.9e-01 ms⁻¹, wall time: 1.217 minutes
+Iteration: 0700, time: 7.000 seconds, Δt: 10 ms, max(|w|) = 1.9e-01 ms⁻¹, wall time: 1.217 minutes
+Iteration: 0700, time: 7.000 seconds, Δt: 10 ms, max(|w|) = 1.9e-01 ms⁻¹, wall time: 1.217 minutes
+Iteration: 0700, time: 7.000 seconds, Δt: 10 ms, max(|w|) = 1.9e-01 ms⁻¹, wall time: 1.217 minutes
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 507
+Iteration: 0720, time: 7.200 seconds, Δt: 10 ms, max(|w|) = 1.8e-01 ms⁻¹, wall time: 1.243 minutes
+Iteration: 0720, time: 7.200 seconds, Δt: 10 ms, max(|w|) = 1.8e-01 ms⁻¹, wall time: 1.243 minutes
+Iteration: 0720, time: 7.200 seconds, Δt: 10 ms, max(|w|) = 1.8e-01 ms⁻¹, wall time: 1.243 minutes
+Iteration: 0720, time: 7.200 seconds, Δt: 10 ms, max(|w|) = 1.8e-01 ms⁻¹, wall time: 1.243 minutes
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
+[aerosmith.hpc.oregonstate.edu:487953] 15354 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0740, time: 7.400 seconds, Δt: 10 ms, max(|w|) = 1.8e-01 ms⁻¹, wall time: 1.269 minutes
+Iteration: 0740, time: 7.400 seconds, Δt: 10 ms, max(|w|) = 1.8e-01 ms⁻¹, wall time: 1.269 minutes
+Iteration: 0740, time: 7.400 seconds, Δt: 10 ms, max(|w|) = 1.8e-01 ms⁻¹, wall time: 1.269 minutes
+Iteration: 0740, time: 7.400 seconds, Δt: 10 ms, max(|w|) = 1.8e-01 ms⁻¹, wall time: 1.269 minutes
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0760, time: 7.600 seconds, Δt: 10 ms, max(|w|) = 1.8e-01 ms⁻¹, wall time: 1.295 minutes
+Iteration: 0760, time: 7.600 seconds, Δt: 10 ms, max(|w|) = 1.8e-01 ms⁻¹, wall time: 1.295 minutes
+Iteration: 0760, time: 7.600 seconds, Δt: 10 ms, max(|w|) = 1.8e-01 ms⁻¹, wall time: 1.295 minutes
+Iteration: 0760, time: 7.600 seconds, Δt: 10 ms, max(|w|) = 1.8e-01 ms⁻¹, wall time: 1.295 minutes
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0780, time: 7.800 seconds, Δt: 10 ms, max(|w|) = 1.7e-01 ms⁻¹, wall time: 1.321 minutes
+Iteration: 0780, time: 7.800 seconds, Δt: 10 ms, max(|w|) = 1.7e-01 ms⁻¹, wall time: 1.321 minutes
+Iteration: 0780, time: 7.800 seconds, Δt: 10 ms, max(|w|) = 1.7e-01 ms⁻¹, wall time: 1.321 minutes
+Iteration: 0780, time: 7.800 seconds, Δt: 10 ms, max(|w|) = 1.7e-01 ms⁻¹, wall time: 1.321 minutes
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] 15325 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+Iteration: 0800, time: 8.000 seconds, Δt: 10 ms, max(|w|) = 1.7e-01 ms⁻¹, wall time: 1.347 minutes
+Iteration: 0800, time: 8.000 seconds, Δt: 10 ms, max(|w|) = 1.7e-01 ms⁻¹, wall time: 1.347 minutes
+Iteration: 0800, time: 8.000 seconds, Δt: 10 ms, max(|w|) = 1.7e-01 ms⁻¹, wall time: 1.347 minutes
+Iteration: 0800, time: 8.000 seconds, Δt: 10 ms, max(|w|) = 1.7e-01 ms⁻¹, wall time: 1.347 minutes
+Iteration: 0820, time: 8.200 seconds, Δt: 10 ms, max(|w|) = 1.7e-01 ms⁻¹, wall time: 1.372 minutes
+Iteration: 0820, time: 8.200 seconds, Δt: 10 ms, max(|w|) = 1.7e-01 ms⁻¹, wall time: 1.372 minutes
+Iteration: 0820, time: 8.200 seconds, Δt: 10 ms, max(|w|) = 1.7e-01 ms⁻¹, wall time: 1.373 minutes
+Iteration: 0820, time: 8.200 seconds, Δt: 10 ms, max(|w|) = 1.7e-01 ms⁻¹, wall time: 1.373 minutes
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack had inadequate space in file util/show_help.c at line 507
+Iteration: 0840, time: 8.400 seconds, Δt: 10 ms, max(|w|) = 1.7e-01 ms⁻¹, wall time: 1.398 minutes
+Iteration: 0840, time: 8.400 seconds, Δt: 10 ms, max(|w|) = 1.7e-01 ms⁻¹, wall time: 1.399 minutes
+Iteration: 0840, time: 8.400 seconds, Δt: 10 ms, max(|w|) = 1.7e-01 ms⁻¹, wall time: 1.398 minutes
+Iteration: 0840, time: 8.400 seconds, Δt: 10 ms, max(|w|) = 1.7e-01 ms⁻¹, wall time: 1.398 minutes
+Iteration: 0860, time: 8.600 seconds, Δt: 10 ms, max(|w|) = 1.6e-01 ms⁻¹, wall time: 1.424 minutes
+Iteration: 0860, time: 8.600 seconds, Δt: 10 ms, max(|w|) = 1.6e-01 ms⁻¹, wall time: 1.424 minutes
+Iteration: 0860, time: 8.600 seconds, Δt: 10 ms, max(|w|) = 1.6e-01 ms⁻¹, wall time: 1.424 minutes
+Iteration: 0860, time: 8.600 seconds, Δt: 10 ms, max(|w|) = 1.6e-01 ms⁻¹, wall time: 1.424 minutes
+[aerosmith.hpc.oregonstate.edu:487953] 15580 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+Iteration: 0880, time: 8.800 seconds, Δt: 10 ms, max(|w|) = 1.6e-01 ms⁻¹, wall time: 1.450 minutes
+Iteration: 0880, time: 8.800 seconds, Δt: 10 ms, max(|w|) = 1.6e-01 ms⁻¹, wall time: 1.449 minutes
+Iteration: 0880, time: 8.800 seconds, Δt: 10 ms, max(|w|) = 1.6e-01 ms⁻¹, wall time: 1.450 minutes
+Iteration: 0880, time: 8.800 seconds, Δt: 10 ms, max(|w|) = 1.6e-01 ms⁻¹, wall time: 1.449 minutes
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0900, time: 9.000 seconds, Δt: 10 ms, max(|w|) = 1.6e-01 ms⁻¹, wall time: 1.475 minutes
+Iteration: 0900, time: 9.000 seconds, Δt: 10 ms, max(|w|) = 1.6e-01 ms⁻¹, wall time: 1.476 minutes
+Iteration: 0900, time: 9.000 seconds, Δt: 10 ms, max(|w|) = 1.6e-01 ms⁻¹, wall time: 1.475 minutes
+Iteration: 0900, time: 9.000 seconds, Δt: 10 ms, max(|w|) = 1.6e-01 ms⁻¹, wall time: 1.475 minutes
+Iteration: 0920, time: 9.200 seconds, Δt: 10 ms, max(|w|) = 1.6e-01 ms⁻¹, wall time: 1.501 minutes
+Iteration: 0920, time: 9.200 seconds, Δt: 10 ms, max(|w|) = 1.6e-01 ms⁻¹, wall time: 1.502 minutes
+Iteration: 0920, time: 9.200 seconds, Δt: 10 ms, max(|w|) = 1.6e-01 ms⁻¹, wall time: 1.501 minutes
+Iteration: 0920, time: 9.200 seconds, Δt: 10 ms, max(|w|) = 1.6e-01 ms⁻¹, wall time: 1.501 minutes
+[aerosmith.hpc.oregonstate.edu:487953] 15538 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+Iteration: 0940, time: 9.400 seconds, Δt: 10 ms, max(|w|) = 1.5e-01 ms⁻¹, wall time: 1.527 minutes
+Iteration: 0940, time: 9.400 seconds, Δt: 10 ms, max(|w|) = 1.5e-01 ms⁻¹, wall time: 1.527 minutes
+Iteration: 0940, time: 9.400 seconds, Δt: 10 ms, max(|w|) = 1.5e-01 ms⁻¹, wall time: 1.527 minutes
+Iteration: 0940, time: 9.400 seconds, Δt: 10 ms, max(|w|) = 1.5e-01 ms⁻¹, wall time: 1.527 minutes
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0960, time: 9.600 seconds, Δt: 10 ms, max(|w|) = 1.5e-01 ms⁻¹, wall time: 1.553 minutes
+Iteration: 0960, time: 9.600 seconds, Δt: 10 ms, max(|w|) = 1.5e-01 ms⁻¹, wall time: 1.552 minutes
+Iteration: 0960, time: 9.600 seconds, Δt: 10 ms, max(|w|) = 1.5e-01 ms⁻¹, wall time: 1.553 minutes
+Iteration: 0960, time: 9.600 seconds, Δt: 10 ms, max(|w|) = 1.5e-01 ms⁻¹, wall time: 1.552 minutes
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0980, time: 9.800 seconds, Δt: 10 ms, max(|w|) = 1.5e-01 ms⁻¹, wall time: 1.578 minutes
+Iteration: 0980, time: 9.800 seconds, Δt: 10 ms, max(|w|) = 1.5e-01 ms⁻¹, wall time: 1.578 minutes
+Iteration: 0980, time: 9.800 seconds, Δt: 10 ms, max(|w|) = 1.5e-01 ms⁻¹, wall time: 1.578 minutes
+Iteration: 0980, time: 9.800 seconds, Δt: 10 ms, max(|w|) = 1.5e-01 ms⁻¹, wall time: 1.579 minutes
+[aerosmith.hpc.oregonstate.edu:487953] [[49016,0],0] ORTE_ERROR_LOG: Data unpack had inadequate space in file util/show_help.c at line 507
+[aerosmith.hpc.oregonstate.edu:487953] 15561 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[ Info: Simulation is stopping after running for 1.604 minutes.
+[ Info: Simulation is stopping after running for 1.604 minutes.
 [ Info: Model iteration 1000 equals or exceeds stop iteration 1000.
-[ Info: Simulation is stopping after running for 1.538 minutes.
-[ Info: Simulation is stopping after running for 1.540 minutes.
+[ Info: Simulation is stopping after running for 1.605 minutes.
+[ Info: Model iteration 1000 equals or exceeds stop iteration 1000.
+[ Info: Simulation is stopping after running for 1.604 minutes.
 [ Info: Model iteration 1000 equals or exceeds stop iteration 1000.
 [ Info: Model iteration 1000 equals or exceeds stop iteration 1000.
-[ Info: Simulation is stopping after running for 1.540 minutes.
-[ Info: Model iteration 1000 equals or exceeds stop iteration 1000.
-[aerosmith.hpc.oregonstate.edu:487395] 916 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+Iteration: 1000, time: 10.000 seconds, Δt: 10 ms, max(|w|) = 1.5e-01 ms⁻¹, wall time: 1.604 minutes
+Iteration: 1000, time: 10.000 seconds, Δt: 10 ms, max(|w|) = 1.5e-01 ms⁻¹, wall time: 1.604 minutes
+Iteration: 1000, time: 10.000 seconds, Δt: 10 ms, max(|w|) = 1.5e-01 ms⁻¹, wall time: 1.604 minutes
+Iteration: 1000, time: 10.000 seconds, Δt: 10 ms, max(|w|) = 1.5e-01 ms⁻¹, wall time: 1.605 minutes
+[aerosmith.hpc.oregonstate.edu:487953] 2332 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed

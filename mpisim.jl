@@ -64,7 +64,7 @@ progress_message(sim) =
         iteration(sim), prettytime(sim), prettytime(sim.Δt),
         maximum(abs, sim.model.velocities.w), prettytime(sim.run_wall_time))
 
-#add_callback!(simulation, progress_message, IterationInterval(20))
+add_callback!(simulation, progress_message, IterationInterval(20))
 
 fields =
     Dict(
