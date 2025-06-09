@@ -23,7 +23,7 @@ using NCDatasets
 using Printf
 using Random
 
-Nx = Ny = Nz = 256
+Nx = Ny = Nz = 64
 Lx = Ly = Lz = 2π
 topology = (Periodic, Periodic, Periodic)
 arch = Distributed(GPU())
@@ -47,22 +47,15 @@ model = NonhydrostaticModel(;
 
 # Make sure we use different seeds for different cores.
 rank = arch.local_rank
-Random.seed!((rank + 1) * 1234)
-
-uᵢ = rand(size(grid)...)
-vᵢ = rand(size(grid)...)
-wᵢ = rand(size(grid)...)
-uᵢ .-= mean(uᵢ)
-vᵢ .-= mean(vᵢ)
-wᵢ .-= mean(wᵢ)
-set!(model, u = uᵢ, v = vᵢ, w = wᵢ)
+e(x, y, z) = 2rand() - 1
+set!(model, u = e, v = e, w = e)
 
 u, v, w = model.velocities
 #e_op = @at (Center, Center, Center) 1/2 * (u^2 + v^2 + w^2)
 #e = Field(e_op)
-ζ = Field(∂x(v) - ∂y(u))
+#ζ = Field(∂x(v) - ∂y(u))
 #compute!(e)
-compute!(ζ)
+#compute!(ζ)
 
 simulation = Simulation(model, Δt = 0.01, stop_iteration = 1000)
 
@@ -71,14 +64,22 @@ progress_message(sim) =
         iteration(sim), prettytime(sim), prettytime(sim.Δt),
         maximum(abs, sim.model.velocities.w), prettytime(sim.run_wall_time))
 
-add_callback!(simulation, progress_message, IterationInterval(20))
+#add_callback!(simulation, progress_message, IterationInterval(20))
 
-outputs = merge(model.velocities, (; ζ))
+fields =
+    Dict(
+        "u" => u,
+        "v" => v,
+        "w" => w,
+        #"uadv" => u * ∂x(u) + v * ∂y(u) + w * ∂z(u),
+        #"vadv" => u * ∂x(v) + v * ∂y(v) + w * ∂z(v),
+        #"wadv" => u * ∂x(w) + v * ∂y(w) + w * ∂z(w),
+    )
 
-simulation.output_writers[:fields] = NetCDFWriter(model, outputs,
-    schedule = TimeInterval(0.1),
+#= simulation.output_writers[:field_writer] = NetCDFWriter(model, fields,
+    schedule = IterationInterval(50),
     with_halos = true,
     filename = "three_dimensional_turbulence_rank$rank",
     overwrite_existing = true)
-
+ =#
 run!(simulation)
