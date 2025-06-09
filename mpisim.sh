@@ -16,4 +16,6 @@ export MPITRAMPOLINE_MPIEXEC="/local/ceoas/x86_64/opt/MPItrampoline/openmpi@4.1.
 
 export UCX_WARN_UNUSED_ENV_VARS=n
 
+export JULIA_NUM_THREADS=1
+
 /local/ceoas/x86_64/opt/MPIwrapper/openmpi@4.1.6%gcc@13.2-cuda-sandybridge/bin/mpiwrapperexec -n 4 julia --project mpisim.jl

@@ -17,13 +17,13 @@
 
 using MPI
 using Oceananigans
-#using Oceananigans.DistributedComputations
+using Oceananigans.DistributedComputations
 using Statistics
 using NCDatasets
 using Printf
 using Random
 
-Nx = Ny = Nz = 64
+Nx = Ny = Nz = 256
 Lx = Ly = Lz = 2π
 topology = (Periodic, Periodic, Periodic)
 arch = Distributed(GPU())
