@@ -1,6 +1,7 @@
 [deps]
 CUDA = "052768ef-5323-5732-b1bb-66c8b64840ba"
 CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
+ColorSchemes = "35d6a980-a343-548e-a6ea-1d62b119f2f4"
 HDF5_jll = "0234f1f7-429e-5d53-9886-15a909be8d59"
 JuliaFormatter = "98e50ef6-434e-11e9-1051-2b60c6c9e899"
 LanguageServer = "2b0e0bc5-e4fd-59b4-8912-456d1b03d8d7"
