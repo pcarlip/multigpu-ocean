@@ -76,10 +76,10 @@ fields =
         #"wadv" => u * ∂x(w) + v * ∂y(w) + w * ∂z(w),
     )
 
-#= simulation.output_writers[:field_writer] = NetCDFWriter(model, fields,
+simulation.output_writers[:field_writer] = JLD2Writer(model, fields,
     schedule = IterationInterval(50),
     with_halos = true,
     filename = "three_dimensional_turbulence_rank$rank",
     overwrite_existing = true)
- =#
+
 run!(simulation)
