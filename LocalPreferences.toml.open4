@@ -1,0 +1,17 @@
+[MPIPreferences]
+__clear__ = ["preloads_env_switch"]
+_format = "1.0"
+abi = "OpenMPI"
+binary = "system"
+cclibs = []
+libmpi = "/fs1/local/cluster/CEOAS/spack/opt/spack/linux-rocky9-sandybridge/gcc-13.2.0/openmpi-4.1.6-ix6ituu3kr26freyez7y4k6aorb4q7nn/lib/libmpi.so"
+mpiexec = "/fs1/local/cluster/CEOAS/spack/opt/spack/linux-rocky9-sandybridge/gcc-13.2.0/openmpi-4.1.6-ix6ituu3kr26freyez7y4k6aorb4q7nn/bin/mpiexec"
+preloads = []
+
+[OpenMPI_jll]
+libmpi_path =  "/fs1/local/cluster/CEOAS/spack/opt/spack/linux-rocky9-sandybridge/gcc-13.2.0/openmpi-4.1.6-ix6ituu3kr26freyez7y4k6aorb4q7nn/lib/libmpi.so"
+mpiexec_path = "/fs1/local/cluster/CEOAS/spack/opt/spack/linux-rocky9-sandybridge/gcc-13.2.0/openmpi-4.1.6-ix6ituu3kr26freyez7y4k6aorb4q7nn/bin/mpiexec"
+libmpi_mpifh_path = "/fs1/local/cluster/CEOAS/spack/opt/spack/linux-rocky9-sandybridge/gcc-13.2.0/openmpi-4.1.6-ix6ituu3kr26freyez7y4k6aorb4q7nn/lib/libmpi_mpifh.so"
+libmpi_usempi_ignore_tkr_path = "/fs1/local/cluster/CEOAS/spack/opt/spack/linux-rocky9-sandybridge/gcc-13.2.0/openmpi-4.1.6-ix6ituu3kr26freyez7y4k6aorb4q7nn/lib/libmpi_usempi_ignore_tkr.so"
+libmpi_usempif08_path = "/fs1/local/cluster/CEOAS/spack/opt/spack/linux-rocky9-sandybridge/gcc-13.2.0/openmpi-4.1.6-ix6ituu3kr26freyez7y4k6aorb4q7nn/lib/libmpi_usempif08"
+

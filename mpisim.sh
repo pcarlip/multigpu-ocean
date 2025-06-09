@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#SBATCH --job-name=mpisim
+#SBATCH --partition=ceoas-gpu
+#SBATCH --nodelist=aerosmith
+#SBATCH --cpus-per-task=6
+#SBATCH --mem=100000
+#SBATCH --nodes=1
+#SBATCH --ntasks=4
+#SBATCH --gres=gpu:4
+#SBATCH --time=3-00:00:00
+#SBATCH --output=mpisim.out
+
+export MPITRAMPOLINE_LIB="/local/ceoas/x86_64/opt/MPIwrapper/openmpi@4.1.6%gcc@13.2-cuda-sandybridge/lib64/libmpiwrapper.so"
+export MPITRAMPOLINE_MPIEXEC="/local/ceoas/x86_64/opt/MPItrampoline/openmpi@4.1.6%gcc@13.2-cuda-sandybridge/bin/mpiexec"
+
+export UCX_WARN_UNUSED_ENV_VARS=n
+
+/local/ceoas/x86_64/opt/MPIwrapper/openmpi@4.1.6%gcc@13.2-cuda-sandybridge/bin/mpiwrapperexec -n 4 julia --project mpisim.jl
