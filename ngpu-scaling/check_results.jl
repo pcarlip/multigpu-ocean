@@ -17,8 +17,8 @@ using Oceananigans, CairoMakie
 using ColorSchemes
 
 # %%
-u_timeseries = FieldTimeSeries("1gpu_limit.jld2", "u")
-v_timeseries = FieldTimeSeries("1gpu_limit.jld2", "v")
+u_timeseries = FieldTimeSeries("1gpu_mpi_0_rank0.jld2", "u")
+v_timeseries = FieldTimeSeries("1gpu_mpi_0_rank0.jld2", "v")
 
 times = u_timeseries.times
 
