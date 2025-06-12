@@ -55,7 +55,7 @@ u, v, w = model.velocities
 #compute!(e)
 #compute!(ζ)
 
-simulation = Simulation(model, Δt = 0.01, stop_iteration = 500)
+simulation = Simulation(model, Δt = 0.01, stop_iteration = 100)
 
 progress_message(sim) =
     @printf("Iteration: %04d, time: %s, Δt: %s, max(|w|) = %.1e ms⁻¹, wall time: %s\n",
