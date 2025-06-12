@@ -1,15 +1,15 @@
 #!/bin/bash
 
-#SBATCH --job-name=1gpu_mpi
+#SBATCH --job-name=2gpu_mpi
 #SBATCH --partition=ceoas-gpu
 #SBATCH --nodelist=aerosmith
 #SBATCH --cpus-per-task=6
 #SBATCH --mem=100000
 #SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --gres=gpu:1
+#SBATCH --ntasks=2
+#SBATCH --gres=gpu:2
 #SBATCH --time=3-00:00:00
-#SBATCH --output=1gpu_mpi.out
+#SBATCH --output=2gpu_mpi.out
 
 export MPITRAMPOLINE_LIB="/local/ceoas/x86_64/opt/MPIwrapper/openmpi@4.1.6%gcc@13.2-cuda-sandybridge/lib64/libmpiwrapper.so"
 export MPITRAMPOLINE_MPIEXEC="/local/ceoas/x86_64/opt/MPItrampoline/openmpi@4.1.6%gcc@13.2-cuda-sandybridge/bin/mpiwrapperexec"
@@ -21,4 +21,4 @@ export JULIA_NUM_THREADS=1
 # export CUDA_VISIBLE_DEVICES=0,1,2,3
 # use the above to limit available GPUs
 
-/local/ceoas/x86_64/opt/MPIwrapper/openmpi@4.1.6%gcc@13.2-cuda-sandybridge/bin/mpiwrapperexec -n 1 julia --project=.. 1gpu-mpi.jl
+/local/ceoas/x86_64/opt/MPIwrapper/openmpi@4.1.6%gcc@13.2-cuda-sandybridge/bin/mpiwrapperexec -n 2 julia --project=.. 2gpu-mpi.jl
