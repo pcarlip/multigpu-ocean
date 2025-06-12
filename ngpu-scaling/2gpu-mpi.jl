@@ -24,7 +24,7 @@ using Printf
 using Random
 
 Nx = Ny = 1024
-Nz = 1024
+Nz = 512
 Lx = Ly = Lz = 2π
 topology = (Periodic, Periodic, Periodic)
 arch = Distributed(GPU())
