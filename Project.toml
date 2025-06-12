@@ -15,4 +15,4 @@ Preferences = "21216c6a-2e73-6563-6e65-726566657250"
 Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 
 [compat]
-OpenMPI_jll = "=5.0.5"
+OpenMPI_jll = "^4"
