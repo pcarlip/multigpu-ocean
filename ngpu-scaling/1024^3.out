@@ -1,0 +1,56 @@
+ERROR: LoadError: Out of GPU memory trying to allocate 8.141 GiB
+Effective GPU memory usage: 99.98% (79.231 GiB/79.251 GiB)
+Memory pool usage: 72.990 GiB (78.812 GiB reserved)
+
+Stacktrace:
+  [1] _pool_alloc
+    @ ~/.julia/packages/CUDA/ja0IX/src/memory.jl:666 [inlined]
+  [2] macro expansion
+    @ ~/.julia/packages/CUDA/ja0IX/src/memory.jl:623 [inlined]
+  [3] macro expansion
+    @ ./timing.jl:395 [inlined]
+  [4] pool_alloc
+    @ ~/.julia/packages/CUDA/ja0IX/src/memory.jl:622 [inlined]
+  [5] (::CUDA.var"#1140#1142"{CUDA.DeviceMemory, Int64})()
+    @ CUDA ~/.julia/packages/CUDA/ja0IX/src/array.jl:92
+  [6] cached_alloc(f::CUDA.var"#1140#1142"{CUDA.DeviceMemory, Int64}, key::Tuple{UnionAll, CUDA.CuDevice, DataType, Int64})
+    @ GPUArrays ~/.julia/packages/GPUArrays/uiVyU/src/host/alloc_cache.jl:36
+  [7] CUDA.CuArray{Float64, 3, CUDA.DeviceMemory}(::UndefInitializer, dims::Tuple{Int64, Int64, Int64})
+    @ CUDA ~/.julia/packages/CUDA/ja0IX/src/array.jl:91
+  [8] CuArray
+    @ ~/.julia/packages/CUDA/ja0IX/src/array.jl:142 [inlined]
+  [9] CuArray
+    @ ~/.julia/packages/CUDA/ja0IX/src/array.jl:158 [inlined]
+ [10] zeros
+    @ ~/.julia/packages/CUDA/ja0IX/src/array.jl:826 [inlined]
+ [11] zeros(::CUDA.CUDAKernels.CUDABackend, ::Type{Float64}, dims::Tuple{Int64, Int64, Int64})
+    @ CUDA.CUDAKernels ~/.julia/packages/CUDA/ja0IX/src/CUDAKernels.jl:25
+ [12] zeros(::CUDA.CUDAKernels.CUDABackend, ::Type, ::Int64, ::Int64, ::Vararg{Int64})
+    @ KernelAbstractions ~/.julia/packages/KernelAbstractions/C3nYQ/src/KernelAbstractions.jl:550
+ [13] zeros(::GPU{CUDA.CUDAKernels.CUDABackend}, ::Type, ::Int64, ::Vararg{Int64})
+    @ Oceananigans.Grids ~/.julia/packages/Oceananigans/TXJRi/src/Grids/zeros_and_ones.jl:9
+ [14] new_data(FT::DataType, arch::GPU{CUDA.CUDAKernels.CUDABackend}, loc::Tuple{DataType, DataType, DataType}, topo::Tuple{DataType, DataType, DataType}, sz::Tuple{Int64, Int64, Int64}, halo_sz::Tuple{Int64, Int64, Int64}, indices::Tuple{Colon, Colon, Colon})
+    @ Oceananigans.Grids ~/.julia/packages/Oceananigans/TXJRi/src/Grids/new_data.jl:67
+ [15] new_data
+    @ ~/.julia/packages/Oceananigans/TXJRi/src/Grids/new_data.jl:72 [inlined]
+ [16] similar(f::Field{Face, Center, Center, Nothing, RectilinearGrid{Float64, Periodic, Periodic, Periodic, Oceananigans.Grids.StaticVerticalDiscretization{OffsetArrays.OffsetVector{Float64, StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}, Int64}}, OffsetArrays.OffsetVector{Float64, StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}, Int64}}, Float64, Float64}, Float64, Float64, OffsetArrays.OffsetVector{Float64, StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}, Int64}}, OffsetArrays.OffsetVector{Float64, StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}, Int64}}, GPU{CUDA.CUDAKernels.CUDABackend}}, Tuple{Colon, Colon, Colon}, OffsetArrays.OffsetArray{Float64, 3, CUDA.CuArray{Float64, 3, CUDA.DeviceMemory}}, Float64, FieldBoundaryConditions{BoundaryCondition{Oceananigans.BoundaryConditions.Periodic, Nothing}, BoundaryCondition{Oceananigans.BoundaryConditions.Periodic, Nothing}, BoundaryCondition{Oceananigans.BoundaryConditions.Periodic, Nothing}, BoundaryCondition{Oceananigans.BoundaryConditions.Periodic, Nothing}, BoundaryCondition{Oceananigans.BoundaryConditions.Periodic, Nothing}, BoundaryCondition{Oceananigans.BoundaryConditions.Periodic, Nothing}, BoundaryCondition{Oceananigans.BoundaryConditions.Flux, Nothing}}, Nothing, Nothing}, grid::RectilinearGrid{Float64, Periodic, Periodic, Periodic, Oceananigans.Grids.StaticVerticalDiscretization{OffsetArrays.OffsetVector{Float64, StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}, Int64}}, OffsetArrays.OffsetVector{Float64, StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}, Int64}}, Float64, Float64}, Float64, Float64, OffsetArrays.OffsetVector{Float64, StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}, Int64}}, OffsetArrays.OffsetVector{Float64, StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}, Int64}}, GPU{CUDA.CUDAKernels.CUDABackend}})
+    @ Oceananigans.Fields ~/.julia/packages/Oceananigans/TXJRi/src/Fields/field.jl:239
+ [17] similar
+    @ ~/.julia/packages/Oceananigans/TXJRi/src/Fields/field.jl:238 [inlined]
+ [18] map
+    @ ./tuple.jl:293 [inlined]
+ [19] map
+    @ ./namedtuple.jl:265 [inlined]
+ [20] TimeStepper(::Val{:RungeKutta3}, ::RectilinearGrid{Float64, Periodic, Periodic, Periodic, Oceananigans.Grids.StaticVerticalDiscretization{OffsetArrays.OffsetVector{Float64, StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}, Int64}}, OffsetArrays.OffsetVector{Float64, StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}, Int64}}, Float64, Float64}, Float64, Float64, OffsetArrays.OffsetVector{Float64, StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}, Int64}}, OffsetArrays.OffsetVector{Float64, StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}, Int64}}, GPU{CUDA.CUDAKernels.CUDABackend}}, ::Vararg{Any}; kwargs::@Kwargs{implicit_solver::Nothing})
+    @ Oceananigans.TimeSteppers ~/.julia/packages/Oceananigans/TXJRi/src/TimeSteppers/TimeSteppers.jl:64
+ [21] TimeStepper(::Symbol, ::RectilinearGrid{Float64, Periodic, Periodic, Periodic, Oceananigans.Grids.StaticVerticalDiscretization{OffsetArrays.OffsetVector{Float64, StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}, Int64}}, OffsetArrays.OffsetVector{Float64, StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}, Int64}}, Float64, Float64}, Float64, Float64, OffsetArrays.OffsetVector{Float64, StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}, Int64}}, OffsetArrays.OffsetVector{Float64, StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}, Int64}}, GPU{CUDA.CUDAKernels.CUDABackend}}, ::Vararg{Any}; kwargs::@Kwargs{implicit_solver::Nothing})
+    @ Oceananigans.TimeSteppers ~/.julia/packages/Oceananigans/TXJRi/src/TimeSteppers/TimeSteppers.jl:55
+ [22] NonhydrostaticModel(; grid::RectilinearGrid{Float64, Periodic, Periodic, Periodic, Oceananigans.Grids.StaticVerticalDiscretization{OffsetArrays.OffsetVector{Float64, StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}, Int64}}, OffsetArrays.OffsetVector{Float64, StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}, Int64}}, Float64, Float64}, Float64, Float64, OffsetArrays.OffsetVector{Float64, StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}, Int64}}, OffsetArrays.OffsetVector{Float64, StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}, Int64}}, GPU{CUDA.CUDAKernels.CUDABackend}}, clock::Clock{Float64, Float64, Int64, Int64}, advection::WENO{3, Float64, Float32, Nothing, WENO{2, Float64, Float32, Nothing, UpwindBiased{1, Float64, Nothing, Centered{1, Float64, Nothing}}, Centered{1, Float64, Nothing}}, Centered{2, Float64, Centered{1, Float64, Nothing}}}, buoyancy::Nothing, coriolis::Nothing, stokes_drift::Nothing, forcing::@NamedTuple{}, closure::Nothing, boundary_conditions::@NamedTuple{}, tracers::Tuple{}, timestepper::Symbol, background_fields::@NamedTuple{}, particles::Nothing, biogeochemistry::Nothing, velocities::Nothing, hydrostatic_pressure_anomaly::Oceananigans.Models.NonhydrostaticModels.DefaultHydrostaticPressureAnomaly, nonhydrostatic_pressure::Field{Center, Center, Center, Nothing, RectilinearGrid{Float64, Periodic, Periodic, Periodic, Oceananigans.Grids.StaticVerticalDiscretization{OffsetArrays.OffsetVector{Float64, StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}, Int64}}, OffsetArrays.OffsetVector{Float64, StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}, Int64}}, Float64, Float64}, Float64, Float64, OffsetArrays.OffsetVector{Float64, StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}, Int64}}, OffsetArrays.OffsetVector{Float64, StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}, Int64}}, GPU{CUDA.CUDAKernels.CUDABackend}}, Tuple{Colon, Colon, Colon}, OffsetArrays.OffsetArray{Float64, 3, CUDA.CuArray{Float64, 3, CUDA.DeviceMemory}}, Float64, FieldBoundaryConditions{BoundaryCondition{Oceananigans.BoundaryConditions.Periodic, Nothing}, BoundaryCondition{Oceananigans.BoundaryConditions.Periodic, Nothing}, BoundaryCondition{Oceananigans.BoundaryConditions.Periodic, Nothing}, BoundaryCondition{Oceananigans.BoundaryConditions.Periodic, Nothing}, BoundaryCondition{Oceananigans.BoundaryConditions.Periodic, Nothing}, BoundaryCondition{Oceananigans.BoundaryConditions.Periodic, Nothing}, BoundaryCondition{Oceananigans.BoundaryConditions.Flux, Nothing}}, Nothing, Nothing}, diffusivity_fields::Nothing, pressure_solver::Nothing, auxiliary_fields::@NamedTuple{})
+    @ Oceananigans.Models.NonhydrostaticModels ~/.julia/packages/Oceananigans/TXJRi/src/Models/NonhydrostaticModels/nonhydrostatic_model.jl:227
+ [23] top-level scope
+    @ /fs1/home/ceoas/carlipp/multigpu-ocean/ngpu-scaling/1gpu-limit.jl:41
+in expression starting at /fs1/home/ceoas/carlipp/multigpu-ocean/ngpu-scaling/1gpu-limit.jl:41
+grid = 1024×1024×1024 RectilinearGrid{Float64, Periodic, Periodic, Periodic} on CUDAGPU with 3×3×3 halo
+├── Periodic x ∈ [1.87735e-17, 100.531) regularly spaced with Δx=0.0981748
+├── Periodic y ∈ [1.87735e-17, 100.531) regularly spaced with Δy=0.0981748
+└── Periodic z ∈ [1.87735e-17, 100.531) regularly spaced with Δz=0.0981748
