@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#SBATCH --job-name=mpisim-slim
+#SBATCH --partition=ceoas-gpu
+#SBATCH --nodelist=aerosmith
+#SBATCH --cpus-per-task=6
+#SBATCH --mem=100000
+#SBATCH --nodes=1
+#SBATCH --ntasks=2
+#SBATCH --gres=gpu:2
+#SBATCH --time=3-00:00:00
+#SBATCH --output=mpisim_slim.out
+
+spack load openmpi@5.0.5+cuda
+
+which mpiexec
+
+export UCX_WARN_UNUSED_ENV_VARS=n
+
+export JULIA_NUM_THREADS=1
+
+mpiexec -n 2 julia --project mpisim-slim.jl
