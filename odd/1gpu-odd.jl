@@ -5,7 +5,8 @@ using NCDatasets
 using Printf
 using Random
 
-Nx = Ny = 1024
+Nx = 1024
+Ny = 512
 Nz = 768
 Lx = Ly = Lz = 2π
 topology = (Periodic, Periodic, Periodic)
