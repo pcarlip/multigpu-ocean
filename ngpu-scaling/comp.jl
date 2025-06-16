@@ -25,8 +25,15 @@ times = [4.859, 12.4835, 9.607]
 
 
 # %%
-plot(n, mem_tot, linewidth = 2, label = "Total memory")
-plot!(n, mem_per, linewidth = 2, label = "Memory per GPU")
+plot(n, mem_tot, linewidth = 2, label = "Total memory", shape = :circle, markersize = 3)
+plot!(
+    n,
+    mem_per,
+    linewidth = 2,
+    label = "Memory per GPU",
+    shape = :circle,
+    markersize = 3,
+)
 plot!(legend = :bottomleft)
 xlabel!("Number of GPUs")
 ylabel!("Memory (MiB)")
@@ -36,9 +43,12 @@ title!("Memory use scaling")
 
 
 # %%
-plot(n, times, linewidth = 2, legend = false)
+plot(n, times, linewidth = 2, legend = false, shape = :circle, markersize = 3)
 xlabel!("Number of GPUs")
 ylabel!("Simulation time (min)")
 ylims!(0, 13)
 title!("Time scaling")
 
+
+
+# %%
