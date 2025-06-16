@@ -54,6 +54,7 @@ fields =
         "u" => u,
         "v" => v,
         "w" => w,
+        "b" => model.tracers.b,
     )
 
 simulation.output_writers[:field_writer] = JLD2Writer(model, fields,
