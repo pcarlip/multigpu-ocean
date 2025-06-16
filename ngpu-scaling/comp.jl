@@ -18,17 +18,21 @@ using Plots
 # %%
 n = [1, 2, 4]
 
-mem = [54823, 44871*2, 23207*4]
+mem_per = [54823, 44871, 23207]
+mem_tot = mem_per .* n
 
 times = [4.859, 12.4835, 9.607]
 
 
 # %%
-plot(n, mem, linewidth = 2, legend = false)
+plot(n, mem_tot, linewidth = 2, label = "Total memory")
+plot!(n, mem_per, linewidth = 2, label = "Memory per GPU")
+plot!(legend = :bottomleft)
 xlabel!("Number of GPUs")
 ylabel!("Memory (MiB)")
 ylims!(0, 10^5)
 title!("Memory use scaling")
+
 
 
 # %%
@@ -38,5 +42,3 @@ ylabel!("Simulation time (min)")
 ylims!(0, 13)
 title!("Time scaling")
 
-
-# %%
