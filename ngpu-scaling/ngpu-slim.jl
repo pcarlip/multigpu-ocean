@@ -31,15 +31,11 @@ model = NonhydrostaticModel(;
 
 # Make sure we use different seeds for different cores.
 rank = arch.local_rank
+Random.seed!((rank + 1) * 1234)
 e(x, y, z) = 2rand() - 1
 set!(model, u = e, v = e, w = e)
 
 u, v, w = model.velocities
-#e_op = @at (Center, Center, Center) 1/2 * (u^2 + v^2 + w^2)
-#e = Field(e_op)
-#ζ = Field(∂x(v) - ∂y(u))
-#compute!(e)
-#compute!(ζ)
 
 simulation = Simulation(model, Δt = 0.01, stop_iteration = 100)
 
@@ -56,9 +52,6 @@ fields =
         "u" => u,
         "v" => v,
         "w" => w,
-        #"uadv" => u * ∂x(u) + v * ∂y(u) + w * ∂z(u),
-        #"vadv" => u * ∂x(v) + v * ∂y(v) + w * ∂z(v),
-        #"wadv" => u * ∂x(w) + v * ∂y(w) + w * ∂z(w),
     )
 
 simulation.output_writers[:field_writer] = JLD2Writer(model, fields,
