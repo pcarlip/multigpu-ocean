@@ -19,6 +19,7 @@ export UCX_WARN_UNUSED_ENV_VARS=n
 export JULIA_NUM_THREADS=1
 
 export CUDA_VISIBLE_DEVICES=1,2
-# use the above to limit available GPUs
+# GPUs 0/1 and 2/3 have faster connections, with a slower connection between the pairs,
+# so this script tests whether that impacts overall simulation speed
 
-/local/ceoas/x86_64/opt/MPIwrapper/openmpi@4.1.6%gcc@13.2-cuda-sandybridge/bin/mpiwrapperexec -n 2 julia --project=.. 2gpu-mpi.jl
+/local/ceoas/x86_64/opt/MPIwrapper/openmpi@4.1.6%gcc@13.2-cuda-sandybridge/bin/mpiwrapperexec -n 2 julia --project=.. ngpu-mpi.jl
