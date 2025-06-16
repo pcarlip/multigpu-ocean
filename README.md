@@ -15,6 +15,7 @@ post-processing of the jld2 outputs.
 The `ngpu-scaling` directory contains my attempts to find the maximum size simulation that
 can run on 1 gpu, as well as some initial benchmarks comparing the same simulation 
 on 1, 2, and 4 GPUs. Notable scripts include `ngpu-mpi.jl`, a general Julia file for running
-a 1024x1024x512 gridpoint simulation on multiple GPUs if run via `mpiexec`, and 
+a 1024x1024x512 gridpoint simulation on multiple GPUs if run via `mpiexec` (note: 
+adjust JLD2Writer filename as appropriate), and 
 `2gpu_mpi.sh` and `4gpu_mpi.sh`, which create Slurm jobs to run the simulation on 2 and 4
 GPUs respectively.
