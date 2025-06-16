@@ -4,7 +4,7 @@
 #SBATCH --partition=ceoas-gpu
 #SBATCH --nodelist=aerosmith
 #SBATCH --cpus-per-task=6
-#SBATCH --mem=100000
+#SBATCH --mem=50000
 #SBATCH --nodes=1
 #SBATCH --ntasks=3
 #SBATCH --gres=gpu:3
