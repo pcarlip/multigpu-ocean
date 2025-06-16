@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=2gpu_mpi
+#SBATCH --job-name=4gpu_mpi
 #SBATCH --partition=ceoas-gpu
 #SBATCH --nodelist=aerosmith
 #SBATCH --cpus-per-task=6
@@ -9,7 +9,7 @@
 #SBATCH --ntasks=4
 #SBATCH --gres=gpu:4
 #SBATCH --time=3-00:00:00
-#SBATCH --output=2gpu_mpi.out
+#SBATCH --output=4gpu_mpi.out
 
 export MPITRAMPOLINE_LIB="/local/ceoas/x86_64/opt/MPIwrapper/openmpi@4.1.6%gcc@13.2-cuda-sandybridge/lib64/libmpiwrapper.so"
 export MPITRAMPOLINE_MPIEXEC="/local/ceoas/x86_64/opt/MPItrampoline/openmpi@4.1.6%gcc@13.2-cuda-sandybridge/bin/mpiwrapperexec"
