@@ -56,7 +56,7 @@ fields =
 simulation.output_writers[:field_writer] = JLD2Writer(model, fields,
     schedule = IterationInterval(50),
     with_halos = true,
-    filename = "1gpu_mpi_$rank",
+    filename = "2gpu_mpi",
     overwrite_existing = true)
 
 run!(simulation)
