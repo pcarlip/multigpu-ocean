@@ -7,7 +7,7 @@ using Printf
 using Random
 
 Nx = Ny = 1024
-Nz = 512*1.5
+Nz = 768
 Lx = Ly = Lz = 2π
 topology = (Periodic, Periodic, Periodic)
 arch = Distributed(GPU())
