@@ -17,10 +17,11 @@ using Oceananigans, CairoMakie
 using ColorSchemes
 
 # %%
-u_timeseries = FieldTimeSeries("1gpu_mpi_0_rank0.jld2", "u")
-v_timeseries = FieldTimeSeries("1gpu_mpi_0_rank0.jld2", "v")
+u_timeseries = FieldTimeSeries("2gpu_mpi_rank0.jld2", "u")
+v_timeseries = FieldTimeSeries("2gpu_mpi_rank0.jld2", "v")
+w_timeseries = FieldTimeSeries("2gpu_mpi_rank0.jld2", "w")
 
-times = u_timeseries.times
+times = Array(u_timeseries.times)
 
 
 # %%
@@ -35,5 +36,15 @@ heatmap(u_slice, colormap = ColorSchemes.imola.colors)
 u_slice = Field(u_timeseries[1], indices = (:, :, 10))
 
 heatmap(u_slice, colormap = ColorSchemes.imola.colors)
+
+# %%
+using Statistics
+
+ke_init = mean(u_timeseries[1] .^ 2 + v_timeseries[1] .^ 2 + w_timeseries[1] .^ 2)
+
+
+# %%
+ke_fin = mean(u_timeseries[end] .^ 2 + v_timeseries[end] .^ 2 + w_timeseries[end] .^ 2)
+
 
 # %%
