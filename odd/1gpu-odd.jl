@@ -49,7 +49,7 @@ fields =
 
 simulation.output_writers[:field_writer] = JLD2Writer(model, fields,
     schedule = IterationInterval(50),
-    filename = "1gpu_limit",
+    filename = "1gpu_odd",
     overwrite_existing = true)
 
 run!(simulation)

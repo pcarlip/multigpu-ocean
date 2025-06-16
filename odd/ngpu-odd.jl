@@ -53,10 +53,12 @@ fields =
         "w" => w,
     )
 
+num = ARGS[1]
+
 simulation.output_writers[:field_writer] = JLD2Writer(model, fields,
     schedule = IterationInterval(50),
     with_halos = true,
-    filename = "2gpu_mpi",
+    filename = num*"_gpu_odd",
     overwrite_existing = true)
 
 run!(simulation)
