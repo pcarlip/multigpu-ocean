@@ -1,20 +1,3 @@
-# Run this script with
-#
-# $ mpirun -n 2 julia --project distributed_nonhydrostatic_turbulence.jl
-#
-# for example.
-#
-# You also probably should set
-#
-# $ export JULIA_NUM_THREADS=1
-#
-# See MPI.jl documentation for more information on how to setup the MPI environment.
-# If you have a local installation of MPI, you can use it by setting
-#
-# julia> MPIPreferences.use_system_binaries()
-#
-# before running the script.
-
 using Oceananigans
 using Oceananigans.DistributedComputations
 using Statistics
