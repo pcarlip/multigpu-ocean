@@ -19,3 +19,8 @@ a 1024x1024x512 gridpoint simulation on multiple GPUs if run via `mpiexec` (note
 adjust JLD2Writer filename as appropriate), and 
 `2gpu_mpi.sh` and `4gpu_mpi.sh`, which create Slurm jobs to run the simulation on 2 and 4
 GPUs respectively.
+
+The `tracer` directory looks at the performance impact of adding a buoyancy tracer to the 
+model, which affects run time, memory usage, and output file size (not saved in repo; 
+.jld2 files are too large). The `odd` directory considers a simulation size that isn't 
+a power of 2, for which the FFT methods used in the simulation may be less efficient.
