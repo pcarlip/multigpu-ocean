@@ -32,13 +32,14 @@ Lz = get(conf, "Lz", Nz * π / 4)
 #stoptime = get(conf, "stoptime", 3.5e6)
 stopnum = get(conf, "stopnum", 1000) # default to stop after 1000 timesteps
 prog_interval = get(conf, "prog_interval", 25)
-nc_interval = get(conf, "nc_interval", 50)
-nc_file = get(conf, "nc_file", "3d-data.nc")
+save_interval = get(conf, "save_interval", 50)
+file = get(conf, "file", "3d-data.jld2")
 
 mpi = get(conf, "mpi", false)
 
 if mpi
     gpu = Distributed(GPU())
+    file = file * string(arch.local_rank)
 else
     gpu = GPU()
 end
@@ -126,12 +127,12 @@ fields =
         "dissipation" => diss,
     )
 
-simulation.output_writers[:netcdf] =
-    NetCDFWriter(
+simulation.output_writers[:JLD2] =
+    JLD2Writer(
         model,
         fields,
-        filename=nc_file,
-        schedule=OrSchedule(IterationInterval(nc_interval), TimeInterval(stoptime)),
+        filename=file,
+        schedule=OrSchedule(IterationInterval(save_interval), TimeInterval(stoptime)),
         overwrite_existing=true,
     )
 
