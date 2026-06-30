@@ -1,0 +1,140 @@
+using Oceananigans
+using Oceananigans: TendencyCallsite, Periodic
+using CUDA
+using Interpolations
+using CUDA.CUFFT: fftfreq, rfftfreq, irfft
+using NCDatasets
+using Printf
+using CairoMakie
+using Oceanostics
+using Dates
+using TOML
+using MPI
+
+CUDA.Random.seed!(1234);
+
+conf = TOML.tryparsefile(ARGS[1])
+if isa(conf, TOML.ParserError)
+    conf = Dict{String,Any}()
+    println("Bad config file")
+end
+
+println(conf)
+
+N = get(conf, "N", 512)
+Nx = get(conf, "Nx", N)
+Ny = get(conf, "Ny", N)
+Nz = get(conf, "Nz", N)
+Lx = get(conf, "Lx", Nx * π / 4)
+Ly = get(conf, "Ly", Ny * π / 4)
+Lz = get(conf, "Lz", Nz * π / 4)
+Δt = get(conf, "dt", 0.01)
+#stoptime = get(conf, "stoptime", 3.5e6)
+stopnum = get(conf, "stopnum", 1000) # default to stop after 1000 timesteps
+prog_interval = get(conf, "prog_interval", 25)
+nc_interval = get(conf, "nc_interval", 50)
+nc_file = get(conf, "nc_file", "3d-data.nc")
+
+mpi = get(conf, "mpi", false)
+
+if mpi
+    gpu = Distributed(GPU())
+else
+    gpu = GPU()
+end
+
+grid = RectilinearGrid(
+    gpu,
+    size=(Nx, Ny, Nz),
+    x=(-Lx / 2, Lx / 2),
+    y=(-Ly / 2, Ly / 2),
+    z=(-Lz / 2, Lz / 2),
+    topology=(Periodic, Periodic, Periodic),
+    halo=(5, 5, 5))
+
+display(grid)
+
+model = NonhydrostaticModel(
+    grid,
+    advection=WENO(order=9),
+    closure=ScalarDiffusivity(ν=5e-6))
+
+display(model)
+
+e(x, y, z) = 2rand() - 1
+set!(model, u=e, v=e, w=e)
+
+simulation = Simulation(model; Δt=Δt, stop_iteration=stopnum)
+
+display(simulation)
+
+function forcing_callback!(model, param)
+    CUDA.randn!(param.rand)
+    model.timestepper.Gⁿ[param.c] .+=
+        irfft(sqrt.(param.spectrum) .* param.rand, param.N) / sqrt(model.clock.last_Δt)
+    return nothing
+    # Gᵐ is the tendency at the current time step
+    # I'm not sure this is the only way to do this, but it is what is used in
+    # https://clima.github.io/OceananigansDocumentation/stable/model_setup/callbacks/
+end
+
+random = CUDA.randn(ComplexF64, (Nxvar, Ny, Nz))
+
+simulation.callbacks[:u_callback] = Callback(
+    forcing_callback!,
+    IterationInterval(1),
+    callsite=TendencyCallsite(),
+    parameters=(spectrum=forcing_spectrum, c=:u, rand=random, N=Nxvar),
+)
+
+simulation.callbacks[:v_callback] = Callback(
+    forcing_callback!,
+    IterationInterval(1),
+    callsite=TendencyCallsite(),
+    parameters=(spectrum=forcing_spectrum, c=:v, rand=random, N=Nxvar),
+)
+
+simulation.callbacks[:w_callback] = Callback(
+    forcing_callback!,
+    IterationInterval(1),
+    callsite=TendencyCallsite(),
+    parameters=(spectrum=forcing_spectrum, c=:w, rand=random, N=Nxvar),
+);
+
+
+function progress_message(sim)
+    @printf("Iteration: %04d, time: %s, Δt: %s, wall time: %s\n",
+        iteration(sim), prettytime(sim), prettytime(sim.Δt), prettytime(
+            sim.run_wall_time,
+        ))
+    return flush(stdout)
+end
+
+add_callback!(simulation, progress_message, IterationInterval(prog_interval))
+
+
+u, v, w = model.velocities
+ke = Integral(KineticEnergyEquation.KineticEnergy(model))
+diss = Integral(KineticEnergyEquation.DissipationRate(model))
+
+fields =
+    Dict(
+        "u" => u,
+        "v" => v,
+        "w" => w,
+        "KE" => ke,
+        "dissipation" => diss,
+    )
+
+simulation.output_writers[:netcdf] =
+    NetCDFWriter(
+        model,
+        fields,
+        filename=nc_file,
+        schedule=OrSchedule(IterationInterval(nc_interval), TimeInterval(stoptime)),
+        overwrite_existing=true,
+    )
+
+conjure_time_step_wizard!(simulation, cfl=1, max_Δt=(Δt * 10))
+
+run!(simulation)
