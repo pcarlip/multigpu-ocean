@@ -1,7 +1,11 @@
 # multigpu-ocean
 
 Testing [Oceananigans](https://github.com/CliMA/Oceananigans.jl) on multiple GPUs using 
-MPI and the [OSU CQLS](https://shell.cqls.oregonstate.edu/) supercomputer.
+MPI and the [OSU CQLS](https://shell.cqls.oregonstate.edu/) supercomputer. This is not 
+intended to produce scientific results (yet), it is a test/demo of my research group's capacity
+to run Oceananigans on multiple GPUs and an initial test of its scaling properties. 
+The model is a simple DNS of decaying turbulence, run at resolutions intended to 
+come close to the maximum memory capacity of the GPUs used.
 
 ## Repository Structure
 
