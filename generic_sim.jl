@@ -69,40 +69,6 @@ simulation = Simulation(model; Δt=Δt, stop_iteration=stopnum)
 
 display(simulation)
 
-function forcing_callback!(model, param)
-    CUDA.randn!(param.rand)
-    model.timestepper.Gⁿ[param.c] .+=
-        irfft(sqrt.(param.spectrum) .* param.rand, param.N) / sqrt(model.clock.last_Δt)
-    return nothing
-    # Gᵐ is the tendency at the current time step
-    # I'm not sure this is the only way to do this, but it is what is used in
-    # https://clima.github.io/OceananigansDocumentation/stable/model_setup/callbacks/
-end
-
-random = CUDA.randn(ComplexF64, (Nxvar, Ny, Nz))
-
-simulation.callbacks[:u_callback] = Callback(
-    forcing_callback!,
-    IterationInterval(1),
-    callsite=TendencyCallsite(),
-    parameters=(spectrum=forcing_spectrum, c=:u, rand=random, N=Nxvar),
-)
-
-simulation.callbacks[:v_callback] = Callback(
-    forcing_callback!,
-    IterationInterval(1),
-    callsite=TendencyCallsite(),
-    parameters=(spectrum=forcing_spectrum, c=:v, rand=random, N=Nxvar),
-)
-
-simulation.callbacks[:w_callback] = Callback(
-    forcing_callback!,
-    IterationInterval(1),
-    callsite=TendencyCallsite(),
-    parameters=(spectrum=forcing_spectrum, c=:w, rand=random, N=Nxvar),
-);
-
-
 function progress_message(sim)
     @printf("Iteration: %04d, time: %s, Δt: %s, wall time: %s\n",
         iteration(sim), prettytime(sim), prettytime(sim.Δt), prettytime(
