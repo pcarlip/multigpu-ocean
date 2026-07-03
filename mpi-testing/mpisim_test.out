@@ -1,0 +1,306 @@
+┌ Warning: Your NVIDIA GeForce GTX 1080 Ti GPU (compute capability 6.1) is not fully supported by CUDA 12.9.0.
+│ Some functionality may be broken. Ensure you are using the latest version of CUDA.jl in combination with an up-to-date NVIDIA driver.
+│ If that does not help, please file an issue to add support for the latest CUDA toolkit.
+└ @ CUDACore ~/.julia/packages/CUDACore/OIFhX/lib/cudadrv/state.jl:231
+┌ Warning: Your NVIDIA GeForce GTX 1080 Ti GPU (compute capability 6.1) is not fully supported by CUDA 12.9.0.
+│ Some functionality may be broken. Ensure you are using the latest version of CUDA.jl in combination with an up-to-date NVIDIA driver.
+│ If that does not help, please file an issue to add support for the latest CUDA toolkit.
+└ @ CUDACore ~/.julia/packages/CUDACore/OIFhX/lib/cudadrv/state.jl:231
+Dict{String, Any}(Dict{String, Any}("mpi" => true, "N" => "mpi" => 64, "visc" => 0.0001)
+true, "N" => 64, "visc" => 0.0001)
+[ Info: MPI has not been initialized, so we are calling MPI.Init().
+[ Info: MPI has not been initialized, so we are calling MPI.Init().
+┌ Warning: Your NVIDIA GeForce GTX 1080 Ti GPU (compute capability 6.1) is not fully supported by CUDA 12.9.0.
+│ Some functionality may be broken. Ensure you are using the latest version of CUDA.jl in combination with an up-to-date NVIDIA driver.
+│ If that does not help, please file an issue to add support for the latest CUDA toolkit.
+└ @ CUDACore ~/.julia/packages/CUDACore/OIFhX/lib/cudadrv/state.jl:231
+32×64×64 (distributed across 2×1×1 ranks) RectilinearGrid{Float64, FullyConnected, Periodic, Periodic} on Distributed{CUDAGPU} on 2×1×1 with 5×5×5 halo
+├── FullyConnected x ∈ [-25.1327, -8.66516e-17) regularly spaced with Δx=0.785398
+├── Periodic y ∈ [-25.1327, 25.1327)            regularly spaced with Δy=0.785398
+└── Periodic z ∈ [-25.1327, 25.1327)            regularly spaced with Δz=0.785398
+32×64×64 (distributed across 2×1×1 ranks) RectilinearGrid{Float64, FullyConnected, Periodic, Periodic} on Distributed{CUDAGPU} on 2×1×1 with 5×5×5 halo
+├── FullyConnected x ∈ [0.0, 25.1327) regularly spaced with Δx=0.785398
+├── Periodic y ∈ [-25.1327, 25.1327)  regularly spaced with Δy=0.785398
+└── Periodic z ∈ [-25.1327, 25.1327)  regularly spaced with Δz=0.785398
+--------------------------------------------------------------------------
+The call to cuMemHostRegister(0x149343400008, 134217728, 0) failed.
+  Host:  ayaya03
+  cuMemHostRegister return value:  1
+  Registration cache:  smcuda
+--------------------------------------------------------------------------
+[ayaya03.hpc.oregonstate.edu:1886290] 1 more process has sent help message help-mpi-common-cuda.txt / cuMemHostRegister during init failed
+[ayaya03.hpc.oregonstate.edu:1886290] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+NonhydrostaticModel{Distributed{CUDAGPU} on 2×1×1, RectilinearGrid}(time = 0 seconds, iteration = 0)
+├── grid: 32×64×64 (distributed across 2×1×1 ranks) RectilinearGrid{Float64, FullyConnected, Periodic, Periodic} on Distributed{CUDAGPU} on 2×1×1 with 5×5×5 halo
+├── timestepper: RungeKutta3TimeStepper
+├── advection scheme: WENO{5, Float64, Oceananigans.Utils.BackendOptimizedDivision}(order=9)
+├── tracers: ()
+├── closure: ScalarDiffusivity{ExplicitTimeDiscretization}(ν=0.0001)
+├── buoyancy: Nothing
+└── coriolis: Nothing
+NonhydrostaticModel{Distributed{CUDAGPU} on 2×1×1, RectilinearGrid}(time = 0 seconds, iteration = 0)
+├── grid: 32×64×64 (distributed across 2×1×1 ranks) RectilinearGrid{Float64, FullyConnected, Periodic, Periodic} on Distributed{CUDAGPU} on 2×1×1 with 5×5×5 halo
+├── timestepper: RungeKutta3TimeStepper
+├── advection scheme: WENO{5, Float64, Oceananigans.Utils.BackendOptimizedDivision}(order=9)
+├── tracers: ()
+├── closure: ScalarDiffusivity{ExplicitTimeDiscretization}(ν=0.0001)
+├── buoyancy: Nothing
+└── coriolis: Nothing
+--------------------------------------------------------------------------
+The call to cuIpcGetMemHandle failed. This means the GPU RDMA protocol
+cannot be used.
+  cuIpcGetMemHandle return value:   1
+  address: 0x976458800
+Check the cuda.h file for what the return value means. Perhaps a reboot
+of the node will clear the problem.
+--------------------------------------------------------------------------
+[ayaya03.hpc.oregonstate.edu:1886290] 43 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+Simulation of NonhydrostaticModel{Distributed{CUDAGPU} on 2×1×1, RectilinearGrid}(time = 0 seconds, iteration = 0)
+├── Next time step: 10 ms
+├── run_wall_time: 0 seconds
+├── run_wall_time / iteration: NaN days
+├── stop_time: Inf days
+├── stop_iteration: 1000.0
+├── wall_time_limit: Inf
+├── minimum_relative_step: 0.0
+├── callbacks: OrderedDict with 4 entries:
+│   ├── stop_time_exceeded => Callback of stop_time_exceeded on IterationInterval(1)
+│   ├── stop_iteration_exceeded => Callback of stop_iteration_exceeded on IterationInterval(1)
+│   ├── wall_time_limit_exceeded => Callback of wall_time_limit_exceeded on IterationInterval(1)
+│   └── nan_checker => Callback of NaNChecker for u on IterationInterval(100)
+└── output_writers: OrderedDict with no entries
+Simulation of NonhydrostaticModel{Distributed{CUDAGPU} on 2×1×1, RectilinearGrid}(time = 0 seconds, iteration = 0)
+├── Next time step: 10 ms
+├── run_wall_time: 0 seconds
+├── run_wall_time / iteration: NaN days
+├── stop_time: Inf days
+├── stop_iteration: 1000.0
+├── wall_time_limit: Inf
+├── minimum_relative_step: 0.0
+├── callbacks: OrderedDict with 4 entries:
+│   ├── stop_time_exceeded => Callback of stop_time_exceeded on IterationInterval(1)
+│   ├── stop_iteration_exceeded => Callback of stop_iteration_exceeded on IterationInterval(1)
+│   ├── wall_time_limit_exceeded => Callback of wall_time_limit_exceeded on IterationInterval(1)
+│   └── nan_checker => Callback of NaNChecker for u on IterationInterval(100)
+└── output_writers: OrderedDict with no entries
+[ayaya03.hpc.oregonstate.edu:1886290] 12 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[ Info: Initializing simulation...
+[ayaya03.hpc.oregonstate.edu:1886290] 1 more process has sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[ Info: Initializing simulation...
+Iteration: 0000, time: 0 seconds, Δt: 10 ms, wall time: 0 seconds
+Iteration: 0000, time: 0 seconds, Δt: 10 ms, wall time: 0 seconds
+[ayaya03.hpc.oregonstate.edu:1886290] 11 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[ Info:     ... simulation initialization complete (37.585 seconds)
+[ Info:     ... simulation initialization complete (36.624 seconds)
+[ Info: Executing initial time step...
+[ Info: Executing initial time step...
+[ayaya03.hpc.oregonstate.edu:1886290] 1 more process has sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[ Info:     ... initial time step complete (2.329 seconds).
+[ Info:     ... initial time step complete (2.340 seconds).
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0025, time: 297.550 ms, Δt: 13.310 ms, wall time: 41.859 seconds
+Iteration: 0025, time: 297.550 ms, Δt: 13.310 ms, wall time: 42.832 seconds
+[ayaya03.hpc.oregonstate.edu:1886290] 2597 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0050, time: 671.561 ms, Δt: 16.105 ms, wall time: 44.266 seconds
+Iteration: 0050, time: 671.561 ms, Δt: 16.105 ms, wall time: 45.238 seconds
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0075, time: 1.151 seconds, Δt: 21.436 ms, wall time: 47.705 seconds
+Iteration: 0075, time: 1.151 seconds, Δt: 21.436 ms, wall time: 46.732 seconds
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] 4926 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0100, time: 1.753 seconds, Δt: 25.937 ms, wall time: 50.112 seconds
+Iteration: 0100, time: 1.753 seconds, Δt: 25.937 ms, wall time: 49.140 seconds
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0125, time: 2.525 seconds, Δt: 34.523 ms, wall time: 51.615 seconds
+Iteration: 0125, time: 2.525 seconds, Δt: 34.523 ms, wall time: 52.587 seconds
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] 4914 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0150, time: 3.495 seconds, Δt: 41.772 ms, wall time: 54.954 seconds
+Iteration: 0150, time: 3.495 seconds, Δt: 41.772 ms, wall time: 53.982 seconds
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0175, time: 4.738 seconds, Δt: 55.599 ms, wall time: 56.467 seconds
+Iteration: 0175, time: 4.738 seconds, Δt: 55.599 ms, wall time: 57.439 seconds
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] 4950 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0200, time: 6.300 seconds, Δt: 67.275 ms, wall time: 59.809 seconds
+Iteration: 0200, time: 6.300 seconds, Δt: 67.275 ms, wall time: 58.837 seconds
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0225, time: 8.302 seconds, Δt: 89.543 ms, wall time: 1.038 minutes
+Iteration: 0225, time: 8.302 seconds, Δt: 89.543 ms, wall time: 1.022 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] 4952 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0250, time: 10.735 seconds, Δt: 100 ms, wall time: 1.078 minutes
+Iteration: 0250, time: 10.735 seconds, Δt: 100 ms, wall time: 1.062 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0275, time: 13.235 seconds, Δt: 100 ms, wall time: 1.103 minutes
+Iteration: 0275, time: 13.235 seconds, Δt: 100 ms, wall time: 1.119 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] 4923 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0300, time: 15.735 seconds, Δt: 100 ms, wall time: 1.159 minutes
+Iteration: 0300, time: 15.735 seconds, Δt: 100 ms, wall time: 1.142 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0325, time: 18.235 seconds, Δt: 100 ms, wall time: 1.184 minutes
+Iteration: 0325, time: 18.235 seconds, Δt: 100 ms, wall time: 1.200 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] 4950 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0350, time: 20.735 seconds, Δt: 100 ms, wall time: 1.223 minutes
+Iteration: 0350, time: 20.735 seconds, Δt: 100 ms, wall time: 1.240 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0375, time: 23.235 seconds, Δt: 100 ms, wall time: 1.265 minutes
+Iteration: 0375, time: 23.235 seconds, Δt: 100 ms, wall time: 1.281 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] 4948 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+Iteration: 0400, time: 25.735 seconds, Δt: 100 ms, wall time: 1.304 minutes
+Iteration: 0400, time: 25.735 seconds, Δt: 100 ms, wall time: 1.320 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0425, time: 28.235 seconds, Δt: 100 ms, wall time: 1.346 minutes
+Iteration: 0425, time: 28.235 seconds, Δt: 100 ms, wall time: 1.362 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] 4934 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0450, time: 30.735 seconds, Δt: 100 ms, wall time: 1.385 minutes
+Iteration: 0450, time: 30.735 seconds, Δt: 100 ms, wall time: 1.402 minutes
+Iteration: 0475, time: 33.235 seconds, Δt: 100 ms, wall time: 1.427 minutes
+Iteration: 0475, time: 33.235 seconds, Δt: 100 ms, wall time: 1.443 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] 4934 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+Iteration: 0500, time: 35.735 seconds, Δt: 100 ms, wall time: 1.483 minutes
+Iteration: 0500, time: 35.735 seconds, Δt: 100 ms, wall time: 1.466 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0525, time: 38.235 seconds, Δt: 100 ms, wall time: 1.524 minutes
+Iteration: 0525, time: 38.235 seconds, Δt: 100 ms, wall time: 1.508 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] 4939 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+Iteration: 0550, time: 40.735 seconds, Δt: 100 ms, wall time: 1.564 minutes
+Iteration: 0550, time: 40.735 seconds, Δt: 100 ms, wall time: 1.547 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0575, time: 43.235 seconds, Δt: 100 ms, wall time: 1.606 minutes
+Iteration: 0575, time: 43.235 seconds, Δt: 100 ms, wall time: 1.589 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] 4908 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0600, time: 45.735 seconds, Δt: 100 ms, wall time: 1.629 minutes
+Iteration: 0600, time: 45.735 seconds, Δt: 100 ms, wall time: 1.645 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0625, time: 48.235 seconds, Δt: 100 ms, wall time: 1.687 minutes
+Iteration: 0625, time: 48.235 seconds, Δt: 100 ms, wall time: 1.671 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] 4935 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+Iteration: 0650, time: 50.735 seconds, Δt: 100 ms, wall time: 1.710 minutes
+Iteration: 0650, time: 50.735 seconds, Δt: 100 ms, wall time: 1.726 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0675, time: 53.235 seconds, Δt: 100 ms, wall time: 1.752 minutes
+Iteration: 0675, time: 53.235 seconds, Δt: 100 ms, wall time: 1.768 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] 4934 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+Iteration: 0700, time: 55.735 seconds, Δt: 100 ms, wall time: 1.791 minutes
+Iteration: 0700, time: 55.735 seconds, Δt: 100 ms, wall time: 1.807 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0725, time: 58.235 seconds, Δt: 100 ms, wall time: 1.833 minutes
+Iteration: 0725, time: 58.235 seconds, Δt: 100 ms, wall time: 1.849 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] 4898 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+Iteration: 0750, time: 1.012 minutes, Δt: 100 ms, wall time: 1.873 minutes
+Iteration: 0750, time: 1.012 minutes, Δt: 100 ms, wall time: 1.889 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0775, time: 1.054 minutes, Δt: 100 ms, wall time: 1.915 minutes
+Iteration: 0775, time: 1.054 minutes, Δt: 100 ms, wall time: 1.931 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] 4905 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+Iteration: 0800, time: 1.096 minutes, Δt: 100 ms, wall time: 1.971 minutes
+Iteration: 0800, time: 1.096 minutes, Δt: 100 ms, wall time: 1.954 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0825, time: 1.137 minutes, Δt: 100 ms, wall time: 2.013 minutes
+Iteration: 0825, time: 1.137 minutes, Δt: 100 ms, wall time: 1.996 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] 4909 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+Iteration: 0850, time: 1.179 minutes, Δt: 100 ms, wall time: 2.052 minutes
+Iteration: 0850, time: 1.179 minutes, Δt: 100 ms, wall time: 2.036 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0875, time: 1.221 minutes, Δt: 100 ms, wall time: 2.094 minutes
+Iteration: 0875, time: 1.221 minutes, Δt: 100 ms, wall time: 2.078 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0900, time: 1.262 minutes, Δt: 100 ms, wall time: 2.117 minutes
+Iteration: 0900, time: 1.262 minutes, Δt: 100 ms, wall time: 2.134 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] 4861 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+Iteration: 0925, time: 1.304 minutes, Δt: 100 ms, wall time: 2.159 minutes
+Iteration: 0925, time: 1.304 minutes, Δt: 100 ms, wall time: 2.176 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0950, time: 1.346 minutes, Δt: 100 ms, wall time: 2.199 minutes
+Iteration: 0950, time: 1.346 minutes, Δt: 100 ms, wall time: 2.215 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] 4882 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+Iteration: 0975, time: 1.387 minutes, Δt: 100 ms, wall time: 2.241 minutes
+Iteration: 0975, time: 1.387 minutes, Δt: 100 ms, wall time: 2.257 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ayaya03.hpc.oregonstate.edu:1886290] [[61960,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
+[ Info: Simulation is stopping after running for 2.297 minutes.
+[ Info: Simulation is stopping after running for 2.280 minutes.
+[ Info: Model iteration 1000 equals or exceeds stop iteration 1000.
+[ Info: Model iteration 1000 equals or exceeds stop iteration 1000.
+Iteration: 1000, time: 1.429 minutes, Δt: 100 ms, wall time: 2.280 minutes
+Iteration: 1000, time: 1.429 minutes, Δt: 100 ms, wall time: 2.297 minutes
+[ayaya03.hpc.oregonstate.edu:1886290] 4709 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
