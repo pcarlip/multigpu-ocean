@@ -29,6 +29,7 @@ Lx = get(conf, "Lx", Nx * π / 4)
 Ly = get(conf, "Ly", Ny * π / 4)
 Lz = get(conf, "Lz", Nz * π / 4)
 Δt = get(conf, "dt", 0.01)
+visc = get(conf, "visc", 5e-6)
 #stoptime = get(conf, "stoptime", 3.5e6)
 stopnum = get(conf, "stopnum", 1000) # default to stop after 1000 timesteps
 prog_interval = get(conf, "prog_interval", 25)
@@ -58,7 +59,7 @@ display(grid)
 model = NonhydrostaticModel(
     grid,
     advection=WENO(order=9),
-    closure=ScalarDiffusivity(ν=5e-6))
+    closure=ScalarDiffusivity(ν=visc))
 
 display(model)
 
