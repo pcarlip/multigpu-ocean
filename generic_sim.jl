@@ -10,7 +10,7 @@ using Dates
 using TOML
 using MPI
 
-CUDA.Random.seed!(1234);
+CUDA.cuRAND.seed!(1234);
 
 conf = TOML.tryparsefile(ARGS[1])
 if isa(conf, TOML.ParserError)
@@ -33,13 +33,12 @@ visc = get(conf, "visc", 5e-6)
 stopnum = get(conf, "stopnum", 1000) # default to stop after 1000 timesteps
 prog_interval = get(conf, "prog_interval", 25)
 save_interval = get(conf, "save_interval", 50)
-file = get(conf, "file", "3d-data.jld2")
+file = get(conf, "file", "3d-data")
 
 mpi = get(conf, "mpi", false)
 
 if mpi
     gpu = Distributed(GPU())
-    file = file * string(arch.local_rank)
 else
     gpu = GPU()
 end
@@ -98,7 +97,7 @@ simulation.output_writers[:JLD2] =
         model,
         fields,
         filename=file,
-        schedule=OrSchedule(IterationInterval(save_interval), TimeInterval(stoptime)),
+        schedule=IterationInterval(save_interval),
         overwrite_existing=true,
     )
 
