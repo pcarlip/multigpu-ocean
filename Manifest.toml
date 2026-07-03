@@ -2,7 +2,7 @@
 
 julia_version = "1.12.2"
 manifest_format = "2.0"
-project_hash = "3b56ea3c858d84c4ed791476d71c36970bdd125d"
+project_hash = "ea051db5510c4e56705b060ee3d50166fa96733f"
 
 [[deps.AbstractFFTs]]
 deps = ["LinearAlgebra"]
@@ -1522,6 +1522,12 @@ version = "0.110.5"
     Reactant = "3c362404-f566-11ee-1572-e11a4b42c853"
     Zarr = "0a941bbe-ad1d-11e8-39d9-ab76183a1d99"
     oneAPI = "8f75cd03-7ff8-4ecb-9b8f-daf728133b1b"
+
+[[deps.Oceanostics]]
+deps = ["Crayons", "DocStringExtensions", "Oceananigans", "Printf", "SeawaterPolynomials"]
+git-tree-sha1 = "093de2771bdb66cf279630d992af7a2268f2e3b5"
+uuid = "d0ccf422-c8fb-49b5-a76d-74acdde946ac"
+version = "0.17.1"
 
 [[deps.OffsetArrays]]
 git-tree-sha1 = "117432e406b5c023f665fa73dc26e79ec3630151"

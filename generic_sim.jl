@@ -1,7 +1,6 @@
 using Oceananigans
 using Oceananigans: TendencyCallsite, Periodic
 using CUDA
-using Interpolations
 using CUDA.CUFFT: fftfreq, rfftfreq, irfft
 using NCDatasets
 using Printf
