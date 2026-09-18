@@ -1,9 +1,0 @@
-[MPIPreferences]
-__clear__ = ["preloads_env_switch"]
-_format = "1.0"
-abi = "OpenMPI"
-binary = "system"
-cclibs = []
-libmpi = "/fs1/local/ceoas/spack/opt/spack/linux-rocky9-sandybridge/gcc-13.2.0/openmpi-5.0.5-gpan6gdak7hjotoqee2umdghes7xfv2r/lib/libmpi"
-mpiexec = "mpiexec"
-preloads = []
