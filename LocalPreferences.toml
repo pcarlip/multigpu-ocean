@@ -1,5 +1,16 @@
 [MPIPreferences]
-__clear__ = ["libmpi", "abi", "mpiexec", "cclibs", "preloads_env_switch"]
+__clear__ = ["preloads_env_switch"]
 _format = "1.0"
-binary = "MPItrampoline_jll"
+abi = "OpenMPI"
+binary = "system"
+cclibs = []
+libmpi = "libmpi.so"
+mpiexec = "mpiexec"
 preloads = []
+
+[OpenMPI_jll]
+libmpi_path =  "/apps/openmpi/4.1_gcc-12/lib/libmpi.so"
+mpiexec_path = "/apps/openmpi/4.1_gcc-12/bin/mpiexec"
+libmpi_mpifh_path = "/apps/openmpi/4.1_gcc-12/lib/libmpi_mpifh.so"
+libmpi_usempi_ignore_tkr_path = "/apps/openmpi/4.1_gcc-12/lib/libmpi_usempi_ignore_tkr.so"
+libmpi_usempif08_path = "/apps/openmpi/4.1_gcc-12/lib/libmpi_usempif08"
