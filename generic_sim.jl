@@ -14,7 +14,7 @@ CUDA.cuRAND.seed!(1234);
 
 conf = TOML.tryparsefile(ARGS[1])
 if isa(conf, TOML.ParserError)
-    conf = Dict{String,Any}()
+    conf = Dict{String, Any}()
     println("Bad config file")
 end
 
@@ -34,7 +34,7 @@ stopnum = get(conf, "stopnum", 1000) # default to stop after 1000 timesteps
 prog_interval = get(conf, "prog_interval", 25)
 save_interval = get(conf, "save_interval", 50)
 file = get(conf, "file", "3d-data")
-
+jld2 = get(conf, "writer", true)
 mpi = get(conf, "mpi", false)
 
 if mpi
@@ -43,36 +43,42 @@ else
     gpu = GPU()
 end
 
+if jld2
+    writer = JLD2Writer
+else
+    writer = NetCDFWriter
+end
+
 grid = RectilinearGrid(
     gpu,
-    size=(Nx, Ny, Nz),
-    x=(-Lx / 2, Lx / 2),
-    y=(-Ly / 2, Ly / 2),
-    z=(-Lz / 2, Lz / 2),
-    topology=(Periodic, Periodic, Periodic),
-    halo=(5, 5, 5))
+    size = (Nx, Ny, Nz),
+    x = (-Lx / 2, Lx / 2),
+    y = (-Ly / 2, Ly / 2),
+    z = (-Lz / 2, Lz / 2),
+    topology = (Periodic, Periodic, Periodic),
+    halo = (5, 5, 5))
 
 display(grid)
 
 model = NonhydrostaticModel(
     grid,
-    advection=WENO(order=9),
-    closure=ScalarDiffusivity(ν=visc))
+    advection = WENO(order = 9),
+    closure = ScalarDiffusivity(ν = visc))
 
 display(model)
 
 e(x, y, z) = 2rand() - 1
-set!(model, u=e, v=e, w=e)
+set!(model, u = e, v = e, w = e)
 
-simulation = Simulation(model; Δt=Δt, stop_iteration=stopnum)
+simulation = Simulation(model; Δt = Δt, stop_iteration = stopnum)
 
 display(simulation)
 
 function progress_message(sim)
     @printf("Iteration: %04d, time: %s, Δt: %s, wall time: %s\n",
         iteration(sim), prettytime(sim), prettytime(sim.Δt), prettytime(
-            sim.run_wall_time,
-        ))
+        sim.run_wall_time,
+    ))
     return flush(stdout)
 end
 
@@ -93,14 +99,14 @@ fields =
     )
 
 simulation.output_writers[:JLD2] =
-    JLD2Writer(
+    writer(
         model,
         fields,
-        filename=file,
-        schedule=IterationInterval(save_interval),
-        overwrite_existing=true,
+        filename = file,
+        schedule = IterationInterval(save_interval),
+        overwrite_files = true,
     )
 
-conjure_time_step_wizard!(simulation, cfl=1, max_Δt=(Δt * 10))
+conjure_time_step_wizard!(simulation, cfl = 1, max_Δt = (Δt * 10))
 
 run!(simulation)
