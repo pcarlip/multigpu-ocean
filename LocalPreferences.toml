@@ -4,8 +4,8 @@ _format = "1.0"
 abi = "OpenMPI"
 binary = "system"
 cclibs = []
-libmpi = "libmpi.so"
-mpiexec = "mpiexec"
+libmpi = "/apps/openmpi/4.1_gcc-12/lib/libmpi.so"
+mpiexec = "/apps/openmpi/4.1_gcc-12/bin/mpiexec"
 preloads = []
 
 [OpenMPI_jll]
