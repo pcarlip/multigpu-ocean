@@ -36,6 +36,7 @@ save_interval = get(conf, "save_interval", 50)
 file = get(conf, "file", "3d-data")
 jld2 = get(conf, "writer", true)
 mpi = get(conf, "mpi", false)
+nv_info = get(conf, "nv", false)
 
 if mpi
     gpu = Distributed(GPU())
@@ -108,5 +109,9 @@ simulation.output_writers[:JLD2] =
     )
 
 conjure_time_step_wizard!(simulation, cfl = 1, max_Δt = (Δt * 10))
+
+if nv_info
+    run(`nvidia-smi`)
+end
 
 run!(simulation)
