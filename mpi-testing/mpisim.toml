@@ -2,3 +2,4 @@ N = 128
 visc = 5e-6
 dt = 0.1
 mpi = true
+file = /nfs/hpc/share/carlipp/mpi-testing/3d-data
