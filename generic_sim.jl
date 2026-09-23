@@ -63,7 +63,7 @@ display(grid)
 
 model = NonhydrostaticModel(
     grid,
-    advection = WENO(order = 9),
+    advection = WENO(order = 5),
     closure = ScalarDiffusivity(ν = visc))
 
 display(model)
@@ -99,7 +99,7 @@ fields =
         "dissipation" => diss,
     )
 
-simulation.output_writers[:JLD2] =
+simulation.output_writers[:output] =
     writer(
         model,
         fields,
