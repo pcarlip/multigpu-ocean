@@ -1,0 +1,8 @@
+Nx = 1024
+Ny = 1024
+Nz = 512
+visc = 5e-6
+dt = 0.1
+mpi = true
+file = "/nfs/hpc/share/carlipp/ngpu-scaling/2gpu_data"
+nv = true
