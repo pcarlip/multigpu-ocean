@@ -2,6 +2,7 @@
 
 #SBATCH --job-name=1gpu-oc
 #SBATCH --partition=dgxh
+#SBATCH --exclude=dgxh-1
 #SBATCH --cpus-per-task=2
 #SBATCH --mem=50G
 #SBATCH --nodes=1

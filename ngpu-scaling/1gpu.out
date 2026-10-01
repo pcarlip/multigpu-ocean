@@ -1,0 +1,143 @@
+┌ Warning: CUDA runtime library `libcublasLt.so.13` was loaded from a system path, `/usr/local/apps/cuda/13.0/targets/x86_64-linux/lib/libcublasLt.so.13`.
+│ This may cause errors.
+│ 
+│ If you're running under a profiler, this situation is expected. Otherwise,
+│ ensure that your library path environment variable (e.g., `PATH` on Windows
+│ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
+│ 
+│ In any other case, please file an issue.
+└ @ CUDACore ~/.julia/packages/CUDACore/ro0xn/src/initialization.jl:203
+┌ Warning: CUDA runtime library `libcusparse.so.12` was loaded from a system path, `/usr/local/apps/cuda/13.0/targets/x86_64-linux/lib/libcusparse.so.12`.
+│ This may cause errors.
+│ 
+│ If you're running under a profiler, this situation is expected. Otherwise,
+│ ensure that your library path environment variable (e.g., `PATH` on Windows
+│ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
+│ 
+│ In any other case, please file an issue.
+└ @ CUDACore ~/.julia/packages/CUDACore/ro0xn/src/initialization.jl:203
+Dict{String, Any}("Nz" => 512, "mpi" => true, "Nx" => 1024, "Ny" => 1024, "visc" => 5.0e-6, "dt" => 0.1, "file" => "/nfs/hpc/share/carlipp/ngpu-scaling/1gpu_data", "nv" => true)
+[ Info: MPI has not been initialized, so we are calling MPI.Init().
+--------------------------------------------------------------------------
+Sorry!  You were supposed to get help about:
+    ini file:file not found
+But I couldn't open the help file:
+    /nfs/stak/users/carlipp/.julia/artifacts/d4af8b9275d39f24a3f6b9a9758d27bd0d18aac5/share/openmpi/help-mpi-btl-openib.txt: No such file or directory.  Sorry!
+--------------------------------------------------------------------------
+[dgxh-3][[53222,1],0][btl_openib_component.c:1704:init_one_device] error obtaining device attributes for mlx5_0 errno says No space left on device
+--------------------------------------------------------------------------
+Sorry!  You were supposed to get help about:
+    error in device init
+But I couldn't open the help file:
+    /nfs/stak/users/carlipp/.julia/artifacts/d4af8b9275d39f24a3f6b9a9758d27bd0d18aac5/share/openmpi/help-mpi-btl-openib.txt: No such file or directory.  Sorry!
+--------------------------------------------------------------------------
+┌ Warning: We are building a Distributed architecture on a single MPI rank. 
+│ This can occur when MPI is incorrectly configured. 
+│ See https://juliaparallel.org/MPI.jl/stable/configuration/ for more details.
+└ @ Oceananigans.DistributedComputations ~/.julia/packages/Oceananigans/Kal90/src/DistributedComputations/distributed_architectures.jl:275
+1024×1024×512 (distributed on 1 rank) RectilinearGrid{Float64, Periodic, Periodic, Periodic} on Distributed{CUDAGPU} on 1×1×1 with 5×5×5 halo
+├── Periodic x ∈ [-402.124, 402.124) regularly spaced with Δx=0.785398
+├── Periodic y ∈ [-402.124, 402.124) regularly spaced with Δy=0.785398
+└── Periodic z ∈ [-201.062, 201.062) regularly spaced with Δz=0.785398
+┌ Warning: We are building a Distributed architecture on a single MPI rank. 
+│ This can occur when MPI is incorrectly configured. 
+│ See https://juliaparallel.org/MPI.jl/stable/configuration/ for more details.
+└ @ Oceananigans.DistributedComputations ~/.julia/packages/Oceananigans/Kal90/src/DistributedComputations/distributed_architectures.jl:275
+┌ Warning: We are building a Distributed architecture on a single MPI rank. 
+│ This can occur when MPI is incorrectly configured. 
+│ See https://juliaparallel.org/MPI.jl/stable/configuration/ for more details.
+└ @ Oceananigans.DistributedComputations ~/.julia/packages/Oceananigans/Kal90/src/DistributedComputations/distributed_architectures.jl:275
+NonhydrostaticModel{Distributed{CUDAGPU} on 1×1×1, RectilinearGrid}(time = 0 seconds, iteration = 0)
+├── grid: 1024×1024×512 (distributed on 1 rank) RectilinearGrid{Float64, Periodic, Periodic, Periodic} on Distributed{CUDAGPU} on 1×1×1 with 5×5×5 halo
+├── timestepper: RungeKutta3TimeStepper
+├── advection scheme:
+│   └── momentum: WENO{3, Float64, Oceananigans.Utils.BackendOptimizedDivision}(order=5)
+├── tracers: ()
+├── closure: ScalarDiffusivity{ExplicitTimeDiscretization}(ν=5.0e-6)
+├── buoyancy: Nothing
+└── coriolis: Nothing
+Simulation of NonhydrostaticModel{Distributed{CUDAGPU} on 1×1×1, RectilinearGrid}(time = 0 seconds, iteration = 0)
+├── Next time step: 100 ms
+├── run_wall_time: 0 seconds
+├── run_wall_time / iteration: NaN days
+├── stop_time: Inf days
+├── stop_iteration: 1000.0
+├── wall_time_limit: Inf
+├── minimum_relative_step: 0.0
+├── callbacks: OrderedDict with 4 entries:
+│   ├── stop_time_exceeded => Callback of stop_time_exceeded on IterationInterval(1)
+│   ├── stop_iteration_exceeded => Callback of stop_iteration_exceeded on IterationInterval(1)
+│   ├── wall_time_limit_exceeded => Callback of wall_time_limit_exceeded on IterationInterval(1)
+│   └── nan_checker => Callback of NaNChecker for u on IterationInterval(100)
+└── output_writers: OrderedDict with no entries
+Thu Sep 24 12:43:37 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 610.43.02              KMD Version: 610.43.02     CUDA UMD Version: 13.3     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  |   00000000:52:00.0 Off |                    0 |
+| N/A   43C    P0            124W /  700W |   59629MiB /  81559MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A         2697252      C   julia                                 59620MiB |
++-----------------------------------------------------------------------------------------+
+[ Info: Initializing simulation...
+┌ Warning: We are building a Distributed architecture on a single MPI rank. 
+│ This can occur when MPI is incorrectly configured. 
+│ See https://juliaparallel.org/MPI.jl/stable/configuration/ for more details.
+└ @ Oceananigans.DistributedComputations ~/.julia/packages/Oceananigans/Kal90/src/DistributedComputations/distributed_architectures.jl:275
+Iteration: 0000, time: 0 seconds, Δt: 100 ms, wall time: 0 seconds
+[ Info:     ... simulation initialization complete (4.295 minutes)
+[ Info: Executing initial time step...
+[ Info:     ... initial time step complete (1.268 seconds).
+Iteration: 0025, time: 2.976 seconds, Δt: 133.100 ms, wall time: 4.639 minutes
+Iteration: 0050, time: 6.716 seconds, Δt: 161.051 ms, wall time: 5.008 minutes
+Iteration: 0075, time: 11.508 seconds, Δt: 214.359 ms, wall time: 9.346 minutes
+Iteration: 0100, time: 17.531 seconds, Δt: 259.374 ms, wall time: 9.715 minutes
+Iteration: 0125, time: 25.249 seconds, Δt: 345.227 ms, wall time: 14.186 minutes
+Iteration: 0150, time: 34.950 seconds, Δt: 417.725 ms, wall time: 14.554 minutes
+Iteration: 0175, time: 47.379 seconds, Δt: 555.992 ms, wall time: 19.007 minutes
+Iteration: 0200, time: 1.050 minutes, Δt: 672.750 ms, wall time: 19.376 minutes
+Iteration: 0225, time: 1.384 minutes, Δt: 895.430 ms, wall time: 23.740 minutes
+Iteration: 0250, time: 1.789 minutes, Δt: 1 second, wall time: 24.109 minutes
+Iteration: 0275, time: 2.206 minutes, Δt: 1 second, wall time: 28.453 minutes
+Iteration: 0300, time: 2.622 minutes, Δt: 1 second, wall time: 28.821 minutes
+Iteration: 0325, time: 3.039 minutes, Δt: 1 second, wall time: 33.268 minutes
+Iteration: 0350, time: 3.456 minutes, Δt: 1 second, wall time: 33.636 minutes
+Iteration: 0375, time: 3.872 minutes, Δt: 1 second, wall time: 38.107 minutes
+Iteration: 0400, time: 4.289 minutes, Δt: 1 second, wall time: 38.476 minutes
+Iteration: 0425, time: 4.706 minutes, Δt: 1 second, wall time: 42.972 minutes
+Iteration: 0450, time: 5.122 minutes, Δt: 1 second, wall time: 43.340 minutes
+Iteration: 0475, time: 5.539 minutes, Δt: 1 second, wall time: 47.844 minutes
+Iteration: 0500, time: 5.956 minutes, Δt: 1 second, wall time: 48.213 minutes
+Iteration: 0525, time: 6.372 minutes, Δt: 1 second, wall time: 52.719 minutes
+Iteration: 0550, time: 6.789 minutes, Δt: 1 second, wall time: 53.088 minutes
+Iteration: 0575, time: 7.206 minutes, Δt: 1 second, wall time: 57.582 minutes
+Iteration: 0600, time: 7.622 minutes, Δt: 1 second, wall time: 57.950 minutes
+Iteration: 0625, time: 8.039 minutes, Δt: 1 second, wall time: 1.040 hours
+Iteration: 0650, time: 8.456 minutes, Δt: 1 second, wall time: 1.047 hours
+Iteration: 0675, time: 8.872 minutes, Δt: 1 second, wall time: 1.121 hours
+Iteration: 0700, time: 9.289 minutes, Δt: 1 second, wall time: 1.127 hours
+Iteration: 0725, time: 9.706 minutes, Δt: 1 second, wall time: 1.201 hours
+Iteration: 0750, time: 10.122 minutes, Δt: 1 second, wall time: 1.207 hours
+Iteration: 0775, time: 10.539 minutes, Δt: 1 second, wall time: 1.281 hours
+Iteration: 0800, time: 10.956 minutes, Δt: 1 second, wall time: 1.287 hours
+Iteration: 0825, time: 11.372 minutes, Δt: 1 second, wall time: 1.361 hours
+Iteration: 0850, time: 11.789 minutes, Δt: 1 second, wall time: 1.367 hours
+Iteration: 0875, time: 12.206 minutes, Δt: 1 second, wall time: 1.440 hours
+Iteration: 0900, time: 12.622 minutes, Δt: 1 second, wall time: 1.447 hours
+Iteration: 0925, time: 13.039 minutes, Δt: 1 second, wall time: 1.520 hours
+Iteration: 0950, time: 13.456 minutes, Δt: 1 second, wall time: 1.526 hours
+Iteration: 0975, time: 13.872 minutes, Δt: 1 second, wall time: 1.599 hours
+[ Info: Simulation is stopping after running for 1.605 hours.
+[ Info: Model iteration 1000 equals or exceeds stop iteration 1000.
+Iteration: 1000, time: 14.289 minutes, Δt: 1 second, wall time: 1.605 hours
