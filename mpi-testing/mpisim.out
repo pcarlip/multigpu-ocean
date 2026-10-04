@@ -1,458 +1,452 @@
+┌ Warning: CUDA runtime library `libcublasLt.so.13` was loaded from a system path, `/usr/local/apps/cuda/13.0/targets/x86_64-linux/lib/libcublasLt.so.13`.
+│ This may cause errors.
+│ 
+│ If you're running under a profiler, this situation is expected. Otherwise,
+│ ensure that your library path environment variable (e.g., `PATH` on Windows
+│ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
+│ 
+│ In any other case, please file an issue.
+└ @ CUDACore ~/.julia/packages/CUDACore/ro0xn/src/initialization.jl:203
+┌ Warning: CUDA runtime library `libcusparse.so.12` was loaded from a system path, `/usr/local/apps/cuda/13.0/targets/x86_64-linux/lib/libcusparse.so.12`.
+│ This may cause errors.
+│ 
+│ If you're running under a profiler, this situation is expected. Otherwise,
+│ ensure that your library path environment variable (e.g., `PATH` on Windows
+│ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
+│ 
+│ In any other case, please file an issue.
+└ @ CUDACore ~/.julia/packages/CUDACore/ro0xn/src/initialization.jl:203
+┌ Warning: CUDA runtime library `libcublasLt.so.13` was loaded from a system path, `/usr/local/apps/cuda/13.0/targets/x86_64-linux/lib/libcublasLt.so.13`.
+│ This may cause errors.
+│ 
+│ If you're running under a profiler, this situation is expected. Otherwise,
+│ ensure that your library path environment variable (e.g., `PATH` on Windows
+│ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
+│ 
+│ In any other case, please file an issue.
+└ @ CUDACore ~/.julia/packages/CUDACore/ro0xn/src/initialization.jl:203
+┌ Warning: CUDA runtime library `libcusparse.so.12` was loaded from a system path, `/usr/local/apps/cuda/13.0/targets/x86_64-linux/lib/libcusparse.so.12`.
+│ This may cause errors.
+│ 
+│ If you're running under a profiler, this situation is expected. Otherwise,
+│ ensure that your library path environment variable (e.g., `PATH` on Windows
+│ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
+│ 
+│ In any other case, please file an issue.
+└ @ CUDACore ~/.julia/packages/CUDACore/ro0xn/src/initialization.jl:203
+┌ Warning: CUDA runtime library `libcublasLt.so.13` was loaded from a system path, `/usr/local/apps/cuda/13.0/targets/x86_64-linux/lib/libcublasLt.so.13`.
+│ This may cause errors.
+│ 
+│ If you're running under a profiler, this situation is expected. Otherwise,
+│ ensure that your library path environment variable (e.g., `PATH` on Windows
+│ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
+│ 
+│ In any other case, please file an issue.
+└ @ CUDACore ~/.julia/packages/CUDACore/ro0xn/src/initialization.jl:203
+┌ Warning: CUDA runtime library `libcusparse.so.12` was loaded from a system path, `/usr/local/apps/cuda/13.0/targets/x86_64-linux/lib/libcusparse.so.12`.
+│ This may cause errors.
+│ 
+│ If you're running under a profiler, this situation is expected. Otherwise,
+│ ensure that your library path environment variable (e.g., `PATH` on Windows
+│ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
+│ 
+│ In any other case, please file an issue.
+└ @ CUDACore ~/.julia/packages/CUDACore/ro0xn/src/initialization.jl:203
+┌ Warning: CUDA runtime library `libcublasLt.so.13` was loaded from a system path, `/usr/local/apps/cuda/13.0/targets/x86_64-linux/lib/libcublasLt.so.13`.
+│ This may cause errors.
+│ 
+│ If you're running under a profiler, this situation is expected. Otherwise,
+│ ensure that your library path environment variable (e.g., `PATH` on Windows
+│ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
+│ 
+│ In any other case, please file an issue.
+└ @ CUDACore ~/.julia/packages/CUDACore/ro0xn/src/initialization.jl:203
+┌ Warning: CUDA runtime library `libcusparse.so.12` was loaded from a system path, `/usr/local/apps/cuda/13.0/targets/x86_64-linux/lib/libcusparse.so.12`.
+│ This may cause errors.
+│ 
+│ If you're running under a profiler, this situation is expected. Otherwise,
+│ ensure that your library path environment variable (e.g., `PATH` on Windows
+│ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
+│ 
+│ In any other case, please file an issue.
+└ @ CUDACore ~/.julia/packages/CUDACore/ro0xn/src/initialization.jl:203
+Dict{String, Any}(Dict{String, Any}("mpi" => true, "N" => 128, "visc" => 5.0e-6, "dt" => 0.1)
+"mpi" => true, "N" => 128, "visc" => 5.0e-6, "dt" => 0.1)
+Dict{String, Any}(Dict{String, Any}("mpi" => true, "N" => 128, "visc" => 5.0e-6, "dt" => 0.1)
+"mpi" => true, "N" => 128, "visc" => 5.0e-6, "dt" => 0.1)
 [ Info: MPI has not been initialized, so we are calling MPI.Init().
 [ Info: MPI has not been initialized, so we are calling MPI.Init().
+--------------------------------------------------------------------------
+Sorry!  You were supposed to get help about:
+    ini file:file not found
+But I couldn't open the help file:
+    /nfs/stak/users/carlipp/.julia/artifacts/d4af8b9275d39f24a3f6b9a9758d27bd0d18aac5/share/openmpi/help-mpi-btl-openib.txt: No such file or directory.  Sorry!
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+Sorry!  You were supposed to get help about:
+    ini file:file not found
+But I couldn't open the help file:
+    /nfs/stak/users/carlipp/.julia/artifacts/d4af8b9275d39f24a3f6b9a9758d27bd0d18aac5/share/openmpi/help-mpi-btl-openib.txt: No such file or directory.  Sorry!
+--------------------------------------------------------------------------
+[dgxh-1][[29156,1],1][btl_openib_component.c:1704:init_one_device] error obtaining device attributes for mlx5_0 errno says No space left on device
+--------------------------------------------------------------------------
+Sorry!  You were supposed to get help about:
+    error in device init
+But I couldn't open the help file:
+    /nfs/stak/users/carlipp/.julia/artifacts/d4af8b9275d39f24a3f6b9a9758d27bd0d18aac5/share/openmpi/help-mpi-btl-openib.txt: No such file or directory.  Sorry!
+--------------------------------------------------------------------------
+[dgxh-1][[29156,1],3][btl_openib_component.c:1704:init_one_device] error obtaining device attributes for mlx5_0 errno says No space left on device
+--------------------------------------------------------------------------
+Sorry!  You were supposed to get help about:
+    error in device init
+But I couldn't open the help file:
+    /nfs/stak/users/carlipp/.julia/artifacts/d4af8b9275d39f24a3f6b9a9758d27bd0d18aac5/share/openmpi/help-mpi-btl-openib.txt: No such file or directory.  Sorry!
+--------------------------------------------------------------------------
 [ Info: MPI has not been initialized, so we are calling MPI.Init().
+--------------------------------------------------------------------------
+Sorry!  You were supposed to get help about:
+    ini file:file not found
+But I couldn't open the help file:
+    /nfs/stak/users/carlipp/.julia/artifacts/d4af8b9275d39f24a3f6b9a9758d27bd0d18aac5/share/openmpi/help-mpi-btl-openib.txt: No such file or directory.  Sorry!
+--------------------------------------------------------------------------
 [ Info: MPI has not been initialized, so we are calling MPI.Init().
-grid = 64×256×256 RectilinearGrid{Float64, Oceananigans.Grids.FullyConnected, Periodic, Periodic} on Distributed{GPU{CUDA.CUDAKernels.CUDABackend}} with 3×3×3 halo
-├── FullyConnected x ∈ [1.5708, 3.14159) regularly spaced with Δx=0.0245437
-├── Periodic y ∈ [-1.91418e-18, 6.28319) regularly spaced with Δy=0.0245437
-└── Periodic z ∈ [-1.91418e-18, 6.28319) regularly spaced with Δz=0.0245437
-grid = grid = 64×256×256 RectilinearGrid{Float64, Oceananigans.Grids.FullyConnected, Periodic, Periodic} on Distributed{GPU{CUDA.CUDAKernels.CUDABackend}} with 3×3×3 halo
-├── FullyConnected x ∈ [2.41353e-18, 1.5708) regularly spaced with Δx=0.0245437
-├── Periodic y ∈ [-1.91418e-18, 6.28319)     regularly spaced with Δy=0.0245437
-└── Periodic z ∈ [-1.91418e-18, 6.28319)     regularly spaced with Δz=0.0245437
-64×256×256 RectilinearGrid{Float64, Oceananigans.Grids.FullyConnected, Periodic, Periodic} on Distributed{GPU{CUDA.CUDAKernels.CUDABackend}} with 3×3×3 halo
-├── FullyConnected x ∈ [4.71239, 6.28319) regularly spaced with Δx=0.0245437
-├── Periodic y ∈ [-1.91418e-18, 6.28319)  regularly spaced with Δy=0.0245437
-└── Periodic z ∈ [-1.91418e-18, 6.28319)  regularly spaced with Δz=0.0245437
-grid = 64×256×256 RectilinearGrid{Float64, Oceananigans.Grids.FullyConnected, Periodic, Periodic} on Distributed{GPU{CUDA.CUDAKernels.CUDABackend}} with 3×3×3 halo
-├── FullyConnected x ∈ [3.14159, 4.71239) regularly spaced with Δx=0.0245437
-├── Periodic y ∈ [-1.91418e-18, 6.28319)  regularly spaced with Δy=0.0245437
-└── Periodic z ∈ [-1.91418e-18, 6.28319)  regularly spaced with Δz=0.0245437
 --------------------------------------------------------------------------
-The call to cuMemHostRegister(0x15243fe00008, 134217728, 0) failed.
-  Host:  aerosmith
-  cuMemHostRegister return value:  1
-  Registration cache:  smcuda
+Sorry!  You were supposed to get help about:
+    ini file:file not found
+But I couldn't open the help file:
+    /nfs/stak/users/carlipp/.julia/artifacts/d4af8b9275d39f24a3f6b9a9758d27bd0d18aac5/share/openmpi/help-mpi-btl-openib.txt: No such file or directory.  Sorry!
 --------------------------------------------------------------------------
-[aerosmith.hpc.oregonstate.edu:515507] 3 more processes have sent help message help-mpi-common-cuda.txt / cuMemHostRegister during init failed
-[aerosmith.hpc.oregonstate.edu:515507] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[dgxh-1][[29156,1],2][btl_openib_component.c:1704:init_one_device] error obtaining device attributes for mlx5_0 errno says No space left on device
 --------------------------------------------------------------------------
-The call to cuIpcGetMemHandle failed. This means the GPU RDMA protocol
-cannot be used.
-  cuIpcGetMemHandle return value:   1
-  address: 0x624f9b000
-Check the cuda.h file for what the return value means. Perhaps a reboot
-of the node will clear the problem.
+Sorry!  You were supposed to get help about:
+    error in device init
+But I couldn't open the help file:
+    /nfs/stak/users/carlipp/.julia/artifacts/d4af8b9275d39f24a3f6b9a9758d27bd0d18aac5/share/openmpi/help-mpi-btl-openib.txt: No such file or directory.  Sorry!
 --------------------------------------------------------------------------
-[aerosmith.hpc.oregonstate.edu:515507] 95 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] 32 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+[dgxh-1][[29156,1],0][btl_openib_component.c:1704:init_one_device] error obtaining device attributes for mlx5_0 errno says No space left on device
+--------------------------------------------------------------------------
+Sorry!  You were supposed to get help about:
+    error in device init
+But I couldn't open the help file:
+    /nfs/stak/users/carlipp/.julia/artifacts/d4af8b9275d39f24a3f6b9a9758d27bd0d18aac5/share/openmpi/help-mpi-btl-openib.txt: No such file or directory.  Sorry!
+--------------------------------------------------------------------------
+32×128×128 (distributed across 4×1×1 ranks) RectilinearGrid{Float64, FullyConnected, Periodic, Periodic} on Distributed{CUDAGPU} on 4×1×1 with 5×5×5 halo
+├── FullyConnected x ∈ [25.1327, 50.2655) regularly spaced with Δx=0.785398
+├── Periodic y ∈ [-50.2655, 50.2655)      regularly spaced with Δy=0.785398
+└── Periodic z ∈ [-50.2655, 50.2655)      regularly spaced with Δz=0.78539832×128×128 (distributed across 4×1×1 ranks) RectilinearGrid{Float64, FullyConnected, Periodic, Periodic} on Distributed{CUDAGPU} on 4×1×1 with 5×5×5 halo
+├── FullyConnected x ∈ [-25.1327, -8.66516e-17) regularly spaced with Δx=0.785398
+├── Periodic y ∈ [-50.2655, 50.2655)            regularly spaced with Δy=0.785398
+└── Periodic z ∈ [-50.2655, 50.2655)            regularly spaced with Δz=0.785398
+
+32×128×128 (distributed across 4×1×1 ranks) RectilinearGrid{Float64, FullyConnected, Periodic, Periodic} on Distributed{CUDAGPU} on 4×1×1 with 5×5×5 halo
+├── FullyConnected x ∈ [0.0, 25.1327) regularly spaced with Δx=0.785398
+├── Periodic y ∈ [-50.2655, 50.2655)  regularly spaced with Δy=0.785398
+└── Periodic z ∈ [-50.2655, 50.2655)  regularly spaced with Δz=0.78539832×128×128 (distributed across 4×1×1 ranks) RectilinearGrid{Float64, FullyConnected, Periodic, Periodic} on Distributed{CUDAGPU} on 4×1×1 with 5×5×5 halo
+├── FullyConnected x ∈ [-50.2655, -25.1327) regularly spaced with Δx=0.785398
+├── Periodic y ∈ [-50.2655, 50.2655)        regularly spaced with Δy=0.785398
+└── Periodic z ∈ [-50.2655, 50.2655)        regularly spaced with Δz=0.785398
+
+--------------------------------------------------------------------------
+Sorry!  You were supposed to get help about:
+    cuMemHostRegister during init failed
+But I couldn't open the help file:
+    /nfs/stak/users/carlipp/.julia/artifacts/d4af8b9275d39f24a3f6b9a9758d27bd0d18aac5/share/openmpi/help-mpi-common-cuda.txt: No such file or directory.  Sorry!
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+Sorry!  You were supposed to get help about:
+    cuMemHostRegister during init failed
+But I couldn't open the help file:
+    /nfs/stak/users/carlipp/.julia/artifacts/d4af8b9275d39f24a3f6b9a9758d27bd0d18aac5/share/openmpi/help-mpi-common-cuda.txt: No such file or directory.  Sorry!
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+Sorry!  You were supposed to get help about:
+    cuMemHostRegister during init failed
+But I couldn't open the help file:
+    /nfs/stak/users/carlipp/.julia/artifacts/d4af8b9275d39f24a3f6b9a9758d27bd0d18aac5/share/openmpi/help-mpi-common-cuda.txt: No such file or directory.  Sorry!
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+Sorry!  You were supposed to get help about:
+    cuMemHostRegister during init failed
+But I couldn't open the help file:
+    /nfs/stak/users/carlipp/.julia/artifacts/d4af8b9275d39f24a3f6b9a9758d27bd0d18aac5/share/openmpi/help-mpi-common-cuda.txt: No such file or directory.  Sorry!
+--------------------------------------------------------------------------
+NonhydrostaticModel{Distributed{CUDAGPU} on 4×1×1, RectilinearGrid}(time = 0 seconds, iteration = 0)
+├── grid: 32×128×128 (distributed across 4×1×1 ranks) RectilinearGrid{Float64, FullyConnected, Periodic, Periodic} on Distributed{CUDAGPU} on 4×1×1 with 5×5×5 halo
+├── timestepper: RungeKutta3TimeStepper
+├── advection scheme:
+│   └── momentum: WENO{5, Float64, Oceananigans.Utils.BackendOptimizedDivision}(order=9)
+├── tracers: ()
+├── closure: ScalarDiffusivity{ExplicitTimeDiscretization}(ν=5.0e-6)
+├── buoyancy: Nothing
+└── coriolis: Nothing
+NonhydrostaticModel{Distributed{CUDAGPU} on 4×1×1, RectilinearGrid}(time = 0 seconds, iteration = 0)
+├── grid: 32×128×128 (distributed across 4×1×1 ranks) RectilinearGrid{Float64, FullyConnected, Periodic, Periodic} on Distributed{CUDAGPU} on 4×1×1 with 5×5×5 halo
+├── timestepper: RungeKutta3TimeStepper
+├── advection scheme:
+│   └── momentum: WENO{5, Float64, Oceananigans.Utils.BackendOptimizedDivision}(order=9)
+├── tracers: ()
+├── closure: ScalarDiffusivity{ExplicitTimeDiscretization}(ν=5.0e-6)
+├── buoyancy: Nothing
+└── coriolis: Nothing
+NonhydrostaticModel{Distributed{CUDAGPU} on 4×1×1, RectilinearGrid}(time = 0 seconds, iteration = 0)
+├── grid: 32×128×128 (distributed across 4×1×1 ranks) RectilinearGrid{Float64, FullyConnected, Periodic, Periodic} on Distributed{CUDAGPU} on 4×1×1 with 5×5×5 halo
+├── timestepper: RungeKutta3TimeStepper
+├── advection scheme:
+│   └── momentum: WENO{5, Float64, Oceananigans.Utils.BackendOptimizedDivision}(order=9)
+├── tracers: ()
+├── closure: ScalarDiffusivity{ExplicitTimeDiscretization}(ν=5.0e-6)
+├── buoyancy: Nothing
+└── coriolis: Nothing
+NonhydrostaticModel{Distributed{CUDAGPU} on 4×1×1, RectilinearGrid}(time = 0 seconds, iteration = 0)
+├── grid: 32×128×128 (distributed across 4×1×1 ranks) RectilinearGrid{Float64, FullyConnected, Periodic, Periodic} on Distributed{CUDAGPU} on 4×1×1 with 5×5×5 halo
+├── timestepper: RungeKutta3TimeStepper
+├── advection scheme:
+│   └── momentum: WENO{5, Float64, Oceananigans.Utils.BackendOptimizedDivision}(order=9)
+├── tracers: ()
+├── closure: ScalarDiffusivity{ExplicitTimeDiscretization}(ν=5.0e-6)
+├── buoyancy: Nothing
+└── coriolis: Nothing
+Simulation of NonhydrostaticModel{Distributed{CUDAGPU} on 4×1×1, RectilinearGrid}(time = 0 seconds, iteration = 0)Simulation of NonhydrostaticModel{Distributed{CUDAGPU} on 4×1×1, RectilinearGrid}(time = 0 seconds, iteration = 0)
+├── Next time step: 100 ms
+├── run_wall_time: 0 seconds
+├── run_wall_time / iteration: NaN days
+├── stop_time: Inf days
+├── stop_iteration: 1000.0
+├── wall_time_limit: Inf
+├── minimum_relative_step: 0.0
+├── callbacks: OrderedDict with 4 entries:
+│   ├── stop_time_exceeded => Callback of stop_time_exceeded on IterationInterval(1)
+│   ├── stop_iteration_exceeded => Callback of stop_iteration_exceeded on IterationInterval(1)
+│   ├── wall_time_limit_exceeded => Callback of wall_time_limit_exceeded on IterationInterval(1)
+│   └── nan_checker => Callback of NaNChecker for u on IterationInterval(100)
+└── output_writers: OrderedDict with no entries
+
+├── Next time step: 100 ms
+├── run_wall_time: 0 seconds
+├── run_wall_time / iteration: NaN days
+├── stop_time: Inf days
+├── stop_iteration: 1000.0
+├── wall_time_limit: Inf
+├── minimum_relative_step: 0.0
+├── callbacks: OrderedDict with 4 entries:
+│   ├── stop_time_exceeded => Callback of stop_time_exceeded on IterationInterval(1)
+│   ├── stop_iteration_exceeded => Callback of stop_iteration_exceeded on IterationInterval(1)
+│   ├── wall_time_limit_exceeded => Callback of wall_time_limit_exceeded on IterationInterval(1)
+│   └── nan_checker => Callback of NaNChecker for u on IterationInterval(100)
+└── output_writers: OrderedDict with no entries
+Simulation of NonhydrostaticModel{Distributed{CUDAGPU} on 4×1×1, RectilinearGrid}(time = 0 seconds, iteration = 0)Simulation of NonhydrostaticModel{Distributed{CUDAGPU} on 4×1×1, RectilinearGrid}(time = 0 seconds, iteration = 0)
+├── Next time step: 100 ms
+├── run_wall_time: 0 seconds
+├── run_wall_time / iteration: NaN days
+├── stop_time: Inf days
+├── stop_iteration: 1000.0
+├── wall_time_limit: Inf
+├── minimum_relative_step: 0.0
+├── callbacks: OrderedDict with 4 entries:
+│   ├── stop_time_exceeded => Callback of stop_time_exceeded on IterationInterval(1)
+│   ├── stop_iteration_exceeded => Callback of stop_iteration_exceeded on IterationInterval(1)
+│   ├── wall_time_limit_exceeded => Callback of wall_time_limit_exceeded on IterationInterval(1)
+│   └── nan_checker => Callback of NaNChecker for u on IterationInterval(100)
+└── output_writers: OrderedDict with no entries
+
+├── Next time step: 100 ms
+├── run_wall_time: 0 seconds
+├── run_wall_time / iteration: NaN days
+├── stop_time: Inf days
+├── stop_iteration: 1000.0
+├── wall_time_limit: Inf
+├── minimum_relative_step: 0.0
+├── callbacks: OrderedDict with 4 entries:
+│   ├── stop_time_exceeded => Callback of stop_time_exceeded on IterationInterval(1)
+│   ├── stop_iteration_exceeded => Callback of stop_iteration_exceeded on IterationInterval(1)
+│   ├── wall_time_limit_exceeded => Callback of wall_time_limit_exceeded on IterationInterval(1)
+│   └── nan_checker => Callback of NaNChecker for u on IterationInterval(100)
+└── output_writers: OrderedDict with no entries
 [ Info: Initializing simulation...
 [ Info: Initializing simulation...
 [ Info: Initializing simulation...
 [ Info: Initializing simulation...
-[aerosmith.hpc.oregonstate.edu:515507] 24 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-Iteration: 0000, time: 0 seconds, Δt: 10 ms, max(|w|) = 1.9e+00 ms⁻¹, wall time: 0 seconds
-Iteration: 0000, time: 0 seconds, Δt: 10 ms, max(|w|) = 1.9e+00 ms⁻¹, wall time: 0 seconds
-Iteration: 0000, time: 0 seconds, Δt: 10 ms, max(|w|) = 1.9e+00 ms⁻¹, wall time: 0 seconds
-Iteration: 0000, time: 0 seconds, Δt: 10 ms, max(|w|) = 1.9e+00 ms⁻¹, wall time: 0 seconds
-[ Info:     ... simulation initialization complete (16.850 seconds)
+Iteration: 0000, time: 0 seconds, Δt: 100 ms, wall time: 0 seconds
+Iteration: 0000, time: 0 seconds, Δt: 100 ms, wall time: 0 seconds
+Iteration: 0000, time: 0 seconds, Δt: 100 ms, wall time: 0 seconds
+Iteration: 0000, time: 0 seconds, Δt: 100 ms, wall time: 0 seconds
+[ Info:     ... simulation initialization complete (43.167 seconds)
+[ Info:     ... simulation initialization complete (42.777 seconds)
+[ Info:     ... simulation initialization complete (33.194 seconds)
 [ Info: Executing initial time step...
-[ Info:     ... simulation initialization complete (17.256 seconds)
 [ Info: Executing initial time step...
-[ Info:     ... simulation initialization complete (17.506 seconds)
 [ Info: Executing initial time step...
-[ Info:     ... simulation initialization complete (17.129 seconds)
+[ Info:     ... simulation initialization complete (33.592 seconds)
 [ Info: Executing initial time step...
-[aerosmith.hpc.oregonstate.edu:515507] 1 more process has sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[ Info:     ... initial time step complete (5.087 seconds).
-[ Info:     ... initial time step complete (5.112 seconds).
-[ Info:     ... initial time step complete (5.114 seconds).
-[ Info:     ... initial time step complete (5.111 seconds).
-[aerosmith.hpc.oregonstate.edu:515507] 1979 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0020, time: 200.000 ms, Δt: 10 ms, max(|w|) = 5.7e-01 ms⁻¹, wall time: 27.482 seconds
-Iteration: 0020, time: 200.000 ms, Δt: 10 ms, max(|w|) = 6.2e-01 ms⁻¹, wall time: 27.106 seconds
-Iteration: 0020, time: 200.000 ms, Δt: 10 ms, max(|w|) = 5.7e-01 ms⁻¹, wall time: 26.832 seconds
-Iteration: 0020, time: 200.000 ms, Δt: 10 ms, max(|w|) = 5.8e-01 ms⁻¹, wall time: 27.235 seconds
-[aerosmith.hpc.oregonstate.edu:515507] 5131 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0040, time: 400.000 ms, Δt: 10 ms, max(|w|) = 3.9e-01 ms⁻¹, wall time: 31.934 seconds
-Iteration: 0040, time: 400.000 ms, Δt: 10 ms, max(|w|) = 4.0e-01 ms⁻¹, wall time: 31.284 seconds
-Iteration: 0040, time: 400.000 ms, Δt: 10 ms, max(|w|) = 4.1e-01 ms⁻¹, wall time: 31.687 seconds
-Iteration: 0040, time: 400.000 ms, Δt: 10 ms, max(|w|) = 4.1e-01 ms⁻¹, wall time: 31.558 seconds
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] 4909 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0060, time: 600.000 ms, Δt: 10 ms, max(|w|) = 3.3e-01 ms⁻¹, wall time: 38.212 seconds
-Iteration: 0060, time: 600.000 ms, Δt: 10 ms, max(|w|) = 3.3e-01 ms⁻¹, wall time: 37.809 seconds
-Iteration: 0060, time: 600.000 ms, Δt: 10 ms, max(|w|) = 3.2e-01 ms⁻¹, wall time: 38.458 seconds
-Iteration: 0060, time: 600.000 ms, Δt: 10 ms, max(|w|) = 3.2e-01 ms⁻¹, wall time: 38.083 seconds
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] 5314 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0080, time: 800.000 ms, Δt: 10 ms, max(|w|) = 2.7e-01 ms⁻¹, wall time: 42.805 seconds
-Iteration: 0080, time: 800.000 ms, Δt: 10 ms, max(|w|) = 2.7e-01 ms⁻¹, wall time: 43.181 seconds
-Iteration: 0080, time: 800.000 ms, Δt: 10 ms, max(|w|) = 2.7e-01 ms⁻¹, wall time: 42.935 seconds
-Iteration: 0080, time: 800.000 ms, Δt: 10 ms, max(|w|) = 2.7e-01 ms⁻¹, wall time: 42.531 seconds
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] 5042 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0100, time: 1000.000 ms, Δt: 10 ms, max(|w|) = 4.7e-02 ms⁻¹, wall time: 47.518 seconds
-Iteration: 0100, time: 1000.000 ms, Δt: 10 ms, max(|w|) = 4.7e-02 ms⁻¹, wall time: 47.893 seconds
-Iteration: 0100, time: 1000.000 ms, Δt: 10 ms, max(|w|) = 2.4e-01 ms⁻¹, wall time: 47.647 seconds
-Iteration: 0100, time: 1000.000 ms, Δt: 10 ms, max(|w|) = 2.4e-01 ms⁻¹, wall time: 47.244 seconds
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] 3012 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0120, time: 1.200 seconds, Δt: 10 ms, max(|w|) = 2.1e-01 ms⁻¹, wall time: 54.363 seconds
-Iteration: 0120, time: 1.200 seconds, Δt: 10 ms, max(|w|) = 2.1e-01 ms⁻¹, wall time: 53.987 seconds
-Iteration: 0120, time: 1.200 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 53.713 seconds
-Iteration: 0120, time: 1.200 seconds, Δt: 10 ms, max(|w|) = 2.2e-01 ms⁻¹, wall time: 54.116 seconds
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] 5255 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-Iteration: 0140, time: 1.400 seconds, Δt: 10 ms, max(|w|) = 2.0e-01 ms⁻¹, wall time: 58.884 seconds
-Iteration: 0140, time: 1.400 seconds, Δt: 10 ms, max(|w|) = 2.0e-01 ms⁻¹, wall time: 58.480 seconds
-Iteration: 0140, time: 1.400 seconds, Δt: 10 ms, max(|w|) = 2.0e-01 ms⁻¹, wall time: 59.130 seconds
-Iteration: 0140, time: 1.400 seconds, Δt: 10 ms, max(|w|) = 2.0e-01 ms⁻¹, wall time: 58.754 seconds
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] 4606 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack had inadequate space in file util/show_help.c at line 507
-Iteration: 0160, time: 1.600 seconds, Δt: 10 ms, max(|w|) = 1.9e-01 ms⁻¹, wall time: 1.096 minutes
-Iteration: 0160, time: 1.600 seconds, Δt: 10 ms, max(|w|) = 1.8e-01 ms⁻¹, wall time: 1.098 minutes
-Iteration: 0160, time: 1.600 seconds, Δt: 10 ms, max(|w|) = 1.8e-01 ms⁻¹, wall time: 1.091 minutes
-Iteration: 0160, time: 1.600 seconds, Δt: 10 ms, max(|w|) = 1.9e-01 ms⁻¹, wall time: 1.102 minutes
-[aerosmith.hpc.oregonstate.edu:515507] 3221 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0180, time: 1.800 seconds, Δt: 10 ms, max(|w|) = 1.8e-01 ms⁻¹, wall time: 1.170 minutes
-Iteration: 0180, time: 1.800 seconds, Δt: 10 ms, max(|w|) = 1.8e-01 ms⁻¹, wall time: 1.177 minutes
-Iteration: 0180, time: 1.800 seconds, Δt: 10 ms, max(|w|) = 1.7e-01 ms⁻¹, wall time: 1.173 minutes
-Iteration: 0180, time: 1.800 seconds, Δt: 10 ms, max(|w|) = 1.7e-01 ms⁻¹, wall time: 1.166 minutes
-[aerosmith.hpc.oregonstate.edu:515507] 5349 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0200, time: 2.000 seconds, Δt: 10 ms, max(|w|) = 4.5e-02 ms⁻¹, wall time: 1.249 minutes
-Iteration: 0200, time: 2.000 seconds, Δt: 10 ms, max(|w|) = 1.7e-01 ms⁻¹, wall time: 1.255 minutes
-Iteration: 0200, time: 2.000 seconds, Δt: 10 ms, max(|w|) = 4.5e-02 ms⁻¹, wall time: 1.251 minutes
-Iteration: 0200, time: 2.000 seconds, Δt: 10 ms, max(|w|) = 4.5e-02 ms⁻¹, wall time: 1.244 minutes
-[aerosmith.hpc.oregonstate.edu:515507] 4174 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0220, time: 2.200 seconds, Δt: 10 ms, max(|w|) = 1.5e-01 ms⁻¹, wall time: 1.360 minutes
-Iteration: 0220, time: 2.200 seconds, Δt: 10 ms, max(|w|) = 1.5e-01 ms⁻¹, wall time: 1.354 minutes
-Iteration: 0220, time: 2.200 seconds, Δt: 10 ms, max(|w|) = 1.6e-01 ms⁻¹, wall time: 1.358 minutes
-Iteration: 0220, time: 2.200 seconds, Δt: 10 ms, max(|w|) = 1.6e-01 ms⁻¹, wall time: 1.365 minutes
-[aerosmith.hpc.oregonstate.edu:515507] 5242 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-Iteration: 0240, time: 2.400 seconds, Δt: 10 ms, max(|w|) = 1.5e-01 ms⁻¹, wall time: 1.440 minutes
-Iteration: 0240, time: 2.400 seconds, Δt: 10 ms, max(|w|) = 1.4e-01 ms⁻¹, wall time: 1.433 minutes
-Iteration: 0240, time: 2.400 seconds, Δt: 10 ms, max(|w|) = 1.5e-01 ms⁻¹, wall time: 1.438 minutes
-Iteration: 0240, time: 2.400 seconds, Δt: 10 ms, max(|w|) = 1.5e-01 ms⁻¹, wall time: 1.444 minutes
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] 5074 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] 3219 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0260, time: 2.600 seconds, Δt: 10 ms, max(|w|) = 1.4e-01 ms⁻¹, wall time: 1.549 minutes
-Iteration: 0260, time: 2.600 seconds, Δt: 10 ms, max(|w|) = 1.4e-01 ms⁻¹, wall time: 1.556 minutes
-Iteration: 0260, time: 2.600 seconds, Δt: 10 ms, max(|w|) = 1.4e-01 ms⁻¹, wall time: 1.545 minutes
-Iteration: 0260, time: 2.600 seconds, Δt: 10 ms, max(|w|) = 1.4e-01 ms⁻¹, wall time: 1.552 minutes
-[aerosmith.hpc.oregonstate.edu:515507] 5223 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-Iteration: 0280, time: 2.800 seconds, Δt: 10 ms, max(|w|) = 1.4e-01 ms⁻¹, wall time: 1.626 minutes
-Iteration: 0280, time: 2.800 seconds, Δt: 10 ms, max(|w|) = 1.4e-01 ms⁻¹, wall time: 1.632 minutes
-Iteration: 0280, time: 2.800 seconds, Δt: 10 ms, max(|w|) = 1.3e-01 ms⁻¹, wall time: 1.628 minutes
-Iteration: 0280, time: 2.800 seconds, Δt: 10 ms, max(|w|) = 1.3e-01 ms⁻¹, wall time: 1.621 minutes
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:515507] 5184 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-Iteration: 0300, time: 3.000 seconds, Δt: 10 ms, max(|w|) = 3.1e-02 ms⁻¹, wall time: 1.710 minutes
-Iteration: 0300, time: 3.000 seconds, Δt: 10 ms, max(|w|) = 1.3e-01 ms⁻¹, wall time: 1.706 minutes
-Iteration: 0300, time: 3.000 seconds, Δt: 10 ms, max(|w|) = 3.1e-02 ms⁻¹, wall time: 1.704 minutes
-Iteration: 0300, time: 3.000 seconds, Δt: 10 ms, max(|w|) = 3.1e-02 ms⁻¹, wall time: 1.699 minutes
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] 3249 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-Iteration: 0320, time: 3.200 seconds, Δt: 10 ms, max(|w|) = 1.2e-01 ms⁻¹, wall time: 1.811 minutes
-Iteration: 0320, time: 3.200 seconds, Δt: 10 ms, max(|w|) = 1.2e-01 ms⁻¹, wall time: 1.817 minutes
-Iteration: 0320, time: 3.200 seconds, Δt: 10 ms, max(|w|) = 1.2e-01 ms⁻¹, wall time: 1.813 minutes
-Iteration: 0320, time: 3.200 seconds, Δt: 10 ms, max(|w|) = 1.2e-01 ms⁻¹, wall time: 1.807 minutes
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:515507] 5127 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-Iteration: 0340, time: 3.400 seconds, Δt: 10 ms, max(|w|) = 1.2e-01 ms⁻¹, wall time: 1.892 minutes
-Iteration: 0340, time: 3.400 seconds, Δt: 10 ms, max(|w|) = 1.2e-01 ms⁻¹, wall time: 1.885 minutes
-Iteration: 0340, time: 3.400 seconds, Δt: 10 ms, max(|w|) = 1.1e-01 ms⁻¹, wall time: 1.889 minutes
-Iteration: 0340, time: 3.400 seconds, Δt: 10 ms, max(|w|) = 1.2e-01 ms⁻¹, wall time: 1.896 minutes
-[aerosmith.hpc.oregonstate.edu:515507] 3663 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0360, time: 3.600 seconds, Δt: 10 ms, max(|w|) = 1.2e-01 ms⁻¹, wall time: 2.008 minutes
-Iteration: 0360, time: 3.600 seconds, Δt: 10 ms, max(|w|) = 1.2e-01 ms⁻¹, wall time: 1.997 minutes
-Iteration: 0360, time: 3.600 seconds, Δt: 10 ms, max(|w|) = 1.1e-01 ms⁻¹, wall time: 2.004 minutes
-Iteration: 0360, time: 3.600 seconds, Δt: 10 ms, max(|w|) = 1.1e-01 ms⁻¹, wall time: 2.002 minutes
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:515507] 5062 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-Iteration: 0380, time: 3.800 seconds, Δt: 10 ms, max(|w|) = 1.1e-01 ms⁻¹, wall time: 2.083 minutes
-Iteration: 0380, time: 3.800 seconds, Δt: 10 ms, max(|w|) = 1.1e-01 ms⁻¹, wall time: 2.077 minutes
-Iteration: 0380, time: 3.800 seconds, Δt: 10 ms, max(|w|) = 1.2e-01 ms⁻¹, wall time: 2.072 minutes
-Iteration: 0380, time: 3.800 seconds, Δt: 10 ms, max(|w|) = 1.0e-01 ms⁻¹, wall time: 2.079 minutes
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] 5263 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0400, time: 4.000 seconds, Δt: 10 ms, max(|w|) = 3.9e-02 ms⁻¹, wall time: 2.156 minutes
-Iteration: 0400, time: 4.000 seconds, Δt: 10 ms, max(|w|) = 3.9e-02 ms⁻¹, wall time: 2.162 minutes
-Iteration: 0400, time: 4.000 seconds, Δt: 10 ms, max(|w|) = 1.2e-01 ms⁻¹, wall time: 2.151 minutes
-Iteration: 0400, time: 4.000 seconds, Δt: 10 ms, max(|w|) = 1.0e-01 ms⁻¹, wall time: 2.158 minutes
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] 3206 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-Iteration: 0420, time: 4.200 seconds, Δt: 10 ms, max(|w|) = 9.9e-02 ms⁻¹, wall time: 2.266 minutes
-Iteration: 0420, time: 4.200 seconds, Δt: 10 ms, max(|w|) = 1.0e-01 ms⁻¹, wall time: 2.264 minutes
-Iteration: 0420, time: 4.200 seconds, Δt: 10 ms, max(|w|) = 1.0e-01 ms⁻¹, wall time: 2.270 minutes
-Iteration: 0420, time: 4.200 seconds, Δt: 10 ms, max(|w|) = 1.1e-01 ms⁻¹, wall time: 2.260 minutes
-[aerosmith.hpc.oregonstate.edu:515507] 5292 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-Iteration: 0440, time: 4.400 seconds, Δt: 10 ms, max(|w|) = 9.7e-02 ms⁻¹, wall time: 2.350 minutes
-Iteration: 0440, time: 4.400 seconds, Δt: 10 ms, max(|w|) = 1.1e-01 ms⁻¹, wall time: 2.339 minutes
-Iteration: 0440, time: 4.400 seconds, Δt: 10 ms, max(|w|) = 9.9e-02 ms⁻¹, wall time: 2.346 minutes
-Iteration: 0440, time: 4.400 seconds, Δt: 10 ms, max(|w|) = 1.0e-01 ms⁻¹, wall time: 2.344 minutes
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] 4887 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-Iteration: 0460, time: 4.600 seconds, Δt: 10 ms, max(|w|) = 9.5e-02 ms⁻¹, wall time: 2.461 minutes
-Iteration: 0460, time: 4.600 seconds, Δt: 10 ms, max(|w|) = 9.7e-02 ms⁻¹, wall time: 2.455 minutes
-Iteration: 0460, time: 4.600 seconds, Δt: 10 ms, max(|w|) = 9.6e-02 ms⁻¹, wall time: 2.457 minutes
-Iteration: 0460, time: 4.600 seconds, Δt: 10 ms, max(|w|) = 1.1e-01 ms⁻¹, wall time: 2.450 minutes
-[aerosmith.hpc.oregonstate.edu:515507] 3251 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-Iteration: 0480, time: 4.800 seconds, Δt: 10 ms, max(|w|) = 9.2e-02 ms⁻¹, wall time: 2.536 minutes
-Iteration: 0480, time: 4.800 seconds, Δt: 10 ms, max(|w|) = 9.4e-02 ms⁻¹, wall time: 2.529 minutes
-Iteration: 0480, time: 4.800 seconds, Δt: 10 ms, max(|w|) = 1.0e-01 ms⁻¹, wall time: 2.525 minutes
-Iteration: 0480, time: 4.800 seconds, Δt: 10 ms, max(|w|) = 9.6e-02 ms⁻¹, wall time: 2.532 minutes
-[aerosmith.hpc.oregonstate.edu:515507] 5321 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0500, time: 5.000 seconds, Δt: 10 ms, max(|w|) = 3.6e-02 ms⁻¹, wall time: 2.608 minutes
-Iteration: 0500, time: 5.000 seconds, Δt: 10 ms, max(|w|) = 1.0e-01 ms⁻¹, wall time: 2.603 minutes
-Iteration: 0500, time: 5.000 seconds, Δt: 10 ms, max(|w|) = 3.6e-02 ms⁻¹, wall time: 2.614 minutes
-Iteration: 0500, time: 5.000 seconds, Δt: 10 ms, max(|w|) = 3.6e-02 ms⁻¹, wall time: 2.610 minutes
-[aerosmith.hpc.oregonstate.edu:515507] 3711 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0520, time: 5.200 seconds, Δt: 10 ms, max(|w|) = 8.6e-02 ms⁻¹, wall time: 2.721 minutes
-Iteration: 0520, time: 5.200 seconds, Δt: 10 ms, max(|w|) = 8.7e-02 ms⁻¹, wall time: 2.715 minutes
-Iteration: 0520, time: 5.200 seconds, Δt: 10 ms, max(|w|) = 9.8e-02 ms⁻¹, wall time: 2.710 minutes
-Iteration: 0520, time: 5.200 seconds, Δt: 10 ms, max(|w|) = 9.1e-02 ms⁻¹, wall time: 2.717 minutes
-[aerosmith.hpc.oregonstate.edu:515507] 5171 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0540, time: 5.400 seconds, Δt: 10 ms, max(|w|) = 8.5e-02 ms⁻¹, wall time: 2.793 minutes
-Iteration: 0540, time: 5.400 seconds, Δt: 10 ms, max(|w|) = 9.3e-02 ms⁻¹, wall time: 2.789 minutes
-Iteration: 0540, time: 5.400 seconds, Δt: 10 ms, max(|w|) = 8.7e-02 ms⁻¹, wall time: 2.796 minutes
-Iteration: 0540, time: 5.400 seconds, Δt: 10 ms, max(|w|) = 8.5e-02 ms⁻¹, wall time: 2.800 minutes
-[aerosmith.hpc.oregonstate.edu:515507] 5148 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] 3239 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0560, time: 5.600 seconds, Δt: 10 ms, max(|w|) = 8.4e-02 ms⁻¹, wall time: 2.905 minutes
-Iteration: 0560, time: 5.600 seconds, Δt: 10 ms, max(|w|) = 8.4e-02 ms⁻¹, wall time: 2.907 minutes
-Iteration: 0560, time: 5.600 seconds, Δt: 10 ms, max(|w|) = 9.1e-02 ms⁻¹, wall time: 2.900 minutes
-Iteration: 0560, time: 5.600 seconds, Δt: 10 ms, max(|w|) = 8.2e-02 ms⁻¹, wall time: 2.911 minutes
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] 5358 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-Iteration: 0580, time: 5.800 seconds, Δt: 10 ms, max(|w|) = 8.3e-02 ms⁻¹, wall time: 2.982 minutes
-Iteration: 0580, time: 5.800 seconds, Δt: 10 ms, max(|w|) = 8.1e-02 ms⁻¹, wall time: 2.980 minutes
-Iteration: 0580, time: 5.800 seconds, Δt: 10 ms, max(|w|) = 7.9e-02 ms⁻¹, wall time: 2.986 minutes
-Iteration: 0580, time: 5.800 seconds, Δt: 10 ms, max(|w|) = 8.8e-02 ms⁻¹, wall time: 2.975 minutes
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-Iteration: 0600, time: 6.000 seconds, Δt: 10 ms, max(|w|) = 3.8e-02 ms⁻¹, wall time: 3.057 minutes
-Iteration: 0600, time: 6.000 seconds, Δt: 10 ms, max(|w|) = 8.7e-02 ms⁻¹, wall time: 3.053 minutes
-Iteration: 0600, time: 6.000 seconds, Δt: 10 ms, max(|w|) = 3.8e-02 ms⁻¹, wall time: 3.064 minutes
-Iteration: 0600, time: 6.000 seconds, Δt: 10 ms, max(|w|) = 3.8e-02 ms⁻¹, wall time: 3.060 minutes
-[aerosmith.hpc.oregonstate.edu:515507] 5074 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0620, time: 6.200 seconds, Δt: 10 ms, max(|w|) = 7.8e-02 ms⁻¹, wall time: 3.165 minutes
-Iteration: 0620, time: 6.200 seconds, Δt: 10 ms, max(|w|) = 7.9e-02 ms⁻¹, wall time: 3.167 minutes
-Iteration: 0620, time: 6.200 seconds, Δt: 10 ms, max(|w|) = 7.6e-02 ms⁻¹, wall time: 3.171 minutes
-Iteration: 0620, time: 6.200 seconds, Δt: 10 ms, max(|w|) = 8.6e-02 ms⁻¹, wall time: 3.160 minutes
-[aerosmith.hpc.oregonstate.edu:515507] 5326 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0640, time: 6.400 seconds, Δt: 10 ms, max(|w|) = 7.7e-02 ms⁻¹, wall time: 3.246 minutes
-Iteration: 0640, time: 6.400 seconds, Δt: 10 ms, max(|w|) = 7.7e-02 ms⁻¹, wall time: 3.244 minutes
-Iteration: 0640, time: 6.400 seconds, Δt: 10 ms, max(|w|) = 7.5e-02 ms⁻¹, wall time: 3.250 minutes
-Iteration: 0640, time: 6.400 seconds, Δt: 10 ms, max(|w|) = 8.4e-02 ms⁻¹, wall time: 3.239 minutes
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] 4993 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] 3231 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack had inadequate space in file util/show_help.c at line 507
-Iteration: 0660, time: 6.600 seconds, Δt: 10 ms, max(|w|) = 7.6e-02 ms⁻¹, wall time: 3.357 minutes
-Iteration: 0660, time: 6.600 seconds, Δt: 10 ms, max(|w|) = 8.3e-02 ms⁻¹, wall time: 3.350 minutes
-Iteration: 0660, time: 6.600 seconds, Δt: 10 ms, max(|w|) = 7.7e-02 ms⁻¹, wall time: 3.354 minutes
-Iteration: 0660, time: 6.600 seconds, Δt: 10 ms, max(|w|) = 7.3e-02 ms⁻¹, wall time: 3.361 minutes
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] 5356 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0680, time: 6.800 seconds, Δt: 10 ms, max(|w|) = 8.1e-02 ms⁻¹, wall time: 3.425 minutes
-Iteration: 0680, time: 6.800 seconds, Δt: 10 ms, max(|w|) = 7.4e-02 ms⁻¹, wall time: 3.431 minutes
-Iteration: 0680, time: 6.800 seconds, Δt: 10 ms, max(|w|) = 7.6e-02 ms⁻¹, wall time: 3.429 minutes
-Iteration: 0680, time: 6.800 seconds, Δt: 10 ms, max(|w|) = 7.1e-02 ms⁻¹, wall time: 3.436 minutes
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0700, time: 7.000 seconds, Δt: 10 ms, max(|w|) = 7.4e-02 ms⁻¹, wall time: 3.507 minutes
-Iteration: 0700, time: 7.000 seconds, Δt: 10 ms, max(|w|) = 3.2e-02 ms⁻¹, wall time: 3.509 minutes
-Iteration: 0700, time: 7.000 seconds, Δt: 10 ms, max(|w|) = 3.2e-02 ms⁻¹, wall time: 3.502 minutes
-Iteration: 0700, time: 7.000 seconds, Δt: 10 ms, max(|w|) = 3.2e-02 ms⁻¹, wall time: 3.513 minutes
-[aerosmith.hpc.oregonstate.edu:515507] 5078 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-Iteration: 0720, time: 7.200 seconds, Δt: 10 ms, max(|w|) = 7.3e-02 ms⁻¹, wall time: 3.614 minutes
-Iteration: 0720, time: 7.200 seconds, Δt: 10 ms, max(|w|) = 7.0e-02 ms⁻¹, wall time: 3.616 minutes
-Iteration: 0720, time: 7.200 seconds, Δt: 10 ms, max(|w|) = 6.9e-02 ms⁻¹, wall time: 3.620 minutes
-Iteration: 0720, time: 7.200 seconds, Δt: 10 ms, max(|w|) = 7.8e-02 ms⁻¹, wall time: 3.610 minutes
-[aerosmith.hpc.oregonstate.edu:515507] 5184 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
---------------------------------------------------------------------------
-The call to cuIpcGetMemHandle failed. This means the GPU RDMA protocol
-cannot be used.
-  cuIpcGetMemHandle return value:   1
-  address: 0x637eba000
-Check the cuda.h file for what the return value means. Perhaps a reboot
-of the node will clear the problem.
---------------------------------------------------------------------------
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0740, time: 7.400 seconds, Δt: 10 ms, max(|w|) = 6.7e-02 ms⁻¹, wall time: 3.695 minutes
-Iteration: 0740, time: 7.400 seconds, Δt: 10 ms, max(|w|) = 7.2e-02 ms⁻¹, wall time: 3.693 minutes
-Iteration: 0740, time: 7.400 seconds, Δt: 10 ms, max(|w|) = 7.5e-02 ms⁻¹, wall time: 3.688 minutes
-Iteration: 0740, time: 7.400 seconds, Δt: 10 ms, max(|w|) = 6.9e-02 ms⁻¹, wall time: 3.699 minutes
-[aerosmith.hpc.oregonstate.edu:515507] 5138 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:515507] 3203 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-Iteration: 0760, time: 7.600 seconds, Δt: 10 ms, max(|w|) = 6.9e-02 ms⁻¹, wall time: 3.811 minutes
-Iteration: 0760, time: 7.600 seconds, Δt: 10 ms, max(|w|) = 7.3e-02 ms⁻¹, wall time: 3.800 minutes
-Iteration: 0760, time: 7.600 seconds, Δt: 10 ms, max(|w|) = 7.1e-02 ms⁻¹, wall time: 3.805 minutes
-Iteration: 0760, time: 7.600 seconds, Δt: 10 ms, max(|w|) = 6.6e-02 ms⁻¹, wall time: 3.807 minutes
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack had inadequate space in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:515507] 5316 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-Iteration: 0780, time: 7.800 seconds, Δt: 10 ms, max(|w|) = 7.0e-02 ms⁻¹, wall time: 3.880 minutes
-Iteration: 0780, time: 7.800 seconds, Δt: 10 ms, max(|w|) = 6.9e-02 ms⁻¹, wall time: 3.887 minutes
-Iteration: 0780, time: 7.800 seconds, Δt: 10 ms, max(|w|) = 6.6e-02 ms⁻¹, wall time: 3.883 minutes
-Iteration: 0780, time: 7.800 seconds, Δt: 10 ms, max(|w|) = 7.1e-02 ms⁻¹, wall time: 3.876 minutes
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack had inadequate space in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack had inadequate space in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] 5099 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-Iteration: 0800, time: 8.000 seconds, Δt: 10 ms, max(|w|) = 2.9e-02 ms⁻¹, wall time: 3.959 minutes
-Iteration: 0800, time: 8.000 seconds, Δt: 10 ms, max(|w|) = 2.9e-02 ms⁻¹, wall time: 3.962 minutes
-Iteration: 0800, time: 8.000 seconds, Δt: 10 ms, max(|w|) = 2.9e-02 ms⁻¹, wall time: 3.966 minutes
-Iteration: 0800, time: 8.000 seconds, Δt: 10 ms, max(|w|) = 6.9e-02 ms⁻¹, wall time: 3.955 minutes
-[aerosmith.hpc.oregonstate.edu:515507] 3212 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0820, time: 8.200 seconds, Δt: 10 ms, max(|w|) = 6.5e-02 ms⁻¹, wall time: 4.069 minutes
-Iteration: 0820, time: 8.200 seconds, Δt: 10 ms, max(|w|) = 6.8e-02 ms⁻¹, wall time: 4.063 minutes
-Iteration: 0820, time: 8.200 seconds, Δt: 10 ms, max(|w|) = 6.9e-02 ms⁻¹, wall time: 4.067 minutes
-Iteration: 0820, time: 8.200 seconds, Δt: 10 ms, max(|w|) = 6.8e-02 ms⁻¹, wall time: 4.074 minutes
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] 5119 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-Iteration: 0840, time: 8.400 seconds, Δt: 10 ms, max(|w|) = 6.7e-02 ms⁻¹, wall time: 4.141 minutes
-Iteration: 0840, time: 8.400 seconds, Δt: 10 ms, max(|w|) = 6.8e-02 ms⁻¹, wall time: 4.152 minutes
-Iteration: 0840, time: 8.400 seconds, Δt: 10 ms, max(|w|) = 6.4e-02 ms⁻¹, wall time: 4.148 minutes
-Iteration: 0840, time: 8.400 seconds, Δt: 10 ms, max(|w|) = 6.8e-02 ms⁻¹, wall time: 4.146 minutes
-[aerosmith.hpc.oregonstate.edu:515507] 3710 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-Iteration: 0860, time: 8.600 seconds, Δt: 10 ms, max(|w|) = 6.7e-02 ms⁻¹, wall time: 4.263 minutes
-Iteration: 0860, time: 8.600 seconds, Δt: 10 ms, max(|w|) = 6.7e-02 ms⁻¹, wall time: 4.257 minutes
-Iteration: 0860, time: 8.600 seconds, Δt: 10 ms, max(|w|) = 6.3e-02 ms⁻¹, wall time: 4.259 minutes
-Iteration: 0860, time: 8.600 seconds, Δt: 10 ms, max(|w|) = 6.6e-02 ms⁻¹, wall time: 4.253 minutes
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] 5327 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-Iteration: 0880, time: 8.800 seconds, Δt: 10 ms, max(|w|) = 6.6e-02 ms⁻¹, wall time: 4.339 minutes
-Iteration: 0880, time: 8.800 seconds, Δt: 10 ms, max(|w|) = 6.7e-02 ms⁻¹, wall time: 4.332 minutes
-Iteration: 0880, time: 8.800 seconds, Δt: 10 ms, max(|w|) = 6.3e-02 ms⁻¹, wall time: 4.334 minutes
-Iteration: 0880, time: 8.800 seconds, Δt: 10 ms, max(|w|) = 6.5e-02 ms⁻¹, wall time: 4.328 minutes
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] 5194 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-Iteration: 0900, time: 9.000 seconds, Δt: 10 ms, max(|w|) = 3.0e-02 ms⁻¹, wall time: 4.416 minutes
-Iteration: 0900, time: 9.000 seconds, Δt: 10 ms, max(|w|) = 3.0e-02 ms⁻¹, wall time: 4.412 minutes
-Iteration: 0900, time: 9.000 seconds, Δt: 10 ms, max(|w|) = 3.0e-02 ms⁻¹, wall time: 4.405 minutes
-Iteration: 0900, time: 9.000 seconds, Δt: 10 ms, max(|w|) = 6.6e-02 ms⁻¹, wall time: 4.410 minutes
-[aerosmith.hpc.oregonstate.edu:515507] 3268 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0920, time: 9.200 seconds, Δt: 10 ms, max(|w|) = 6.5e-02 ms⁻¹, wall time: 4.517 minutes
-Iteration: 0920, time: 9.200 seconds, Δt: 10 ms, max(|w|) = 6.4e-02 ms⁻¹, wall time: 4.523 minutes
-Iteration: 0920, time: 9.200 seconds, Δt: 10 ms, max(|w|) = 6.2e-02 ms⁻¹, wall time: 4.519 minutes
-Iteration: 0920, time: 9.200 seconds, Δt: 10 ms, max(|w|) = 6.2e-02 ms⁻¹, wall time: 4.513 minutes
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] 5117 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack had inadequate space in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0940, time: 9.400 seconds, Δt: 10 ms, max(|w|) = 6.4e-02 ms⁻¹, wall time: 4.602 minutes
-Iteration: 0940, time: 9.400 seconds, Δt: 10 ms, max(|w|) = 6.0e-02 ms⁻¹, wall time: 4.591 minutes
-Iteration: 0940, time: 9.400 seconds, Δt: 10 ms, max(|w|) = 6.1e-02 ms⁻¹, wall time: 4.598 minutes
-Iteration: 0940, time: 9.400 seconds, Δt: 10 ms, max(|w|) = 6.4e-02 ms⁻¹, wall time: 4.596 minutes
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack had inadequate space in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] 5078 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0960, time: 9.600 seconds, Δt: 10 ms, max(|w|) = 6.3e-02 ms⁻¹, wall time: 4.715 minutes
-Iteration: 0960, time: 9.600 seconds, Δt: 10 ms, max(|w|) = 6.3e-02 ms⁻¹, wall time: 4.708 minutes
-Iteration: 0960, time: 9.600 seconds, Δt: 10 ms, max(|w|) = 5.9e-02 ms⁻¹, wall time: 4.704 minutes
-Iteration: 0960, time: 9.600 seconds, Δt: 10 ms, max(|w|) = 6.0e-02 ms⁻¹, wall time: 4.711 minutes
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack had inadequate space in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] 5312 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-Iteration: 0980, time: 9.800 seconds, Δt: 10 ms, max(|w|) = 6.3e-02 ms⁻¹, wall time: 4.789 minutes
-Iteration: 0980, time: 9.800 seconds, Δt: 10 ms, max(|w|) = 6.2e-02 ms⁻¹, wall time: 4.783 minutes
-Iteration: 0980, time: 9.800 seconds, Δt: 10 ms, max(|w|) = 6.0e-02 ms⁻¹, wall time: 4.785 minutes
-Iteration: 0980, time: 9.800 seconds, Δt: 10 ms, max(|w|) = 5.8e-02 ms⁻¹, wall time: 4.778 minutes
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack had inadequate space in file util/show_help.c at line 507
-[aerosmith.hpc.oregonstate.edu:515507] 5158 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Data unpack would read past end of buffer in file util/show_help.c at line 501
-[aerosmith.hpc.oregonstate.edu:515507] [[4314,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 507
-[ Info: Simulation is stopping after running for 4.861 minutes.
+[ Info:     ... initial time step complete (2.625 seconds).
+[ Info:     ... initial time step complete (2.619 seconds).
+[ Info:     ... initial time step complete (2.625 seconds).
+[ Info:     ... initial time step complete (2.424 seconds).
+Iteration: 0025, time: 2.976 seconds, Δt: 133.100 ms, wall time: 37.493 seconds
+Iteration: 0025, time: 2.976 seconds, Δt: 133.100 ms, wall time: 47.081 seconds
+Iteration: 0025, time: 2.976 seconds, Δt: 133.100 ms, wall time: 47.471 seconds
+Iteration: 0025, time: 2.976 seconds, Δt: 133.100 ms, wall time: 37.699 seconds
+Iteration: 0050, time: 6.716 seconds, Δt: 161.051 ms, wall time: 50.645 seconds
+Iteration: 0050, time: 6.716 seconds, Δt: 161.051 ms, wall time: 40.667 seconds
+Iteration: 0050, time: 6.716 seconds, Δt: 161.051 ms, wall time: 50.256 seconds
+Iteration: 0050, time: 6.716 seconds, Δt: 161.051 ms, wall time: 40.873 seconds
+Iteration: 0075, time: 11.508 seconds, Δt: 214.359 ms, wall time: 52.041 seconds
+Iteration: 0075, time: 11.508 seconds, Δt: 214.359 ms, wall time: 52.431 seconds
+Iteration: 0075, time: 11.508 seconds, Δt: 214.359 ms, wall time: 42.453 seconds
+Iteration: 0075, time: 11.508 seconds, Δt: 214.359 ms, wall time: 42.659 seconds
+Iteration: 0100, time: 17.531 seconds, Δt: 259.374 ms, wall time: 43.557 seconds
+Iteration: 0100, time: 17.531 seconds, Δt: 259.374 ms, wall time: 43.764 seconds
+Iteration: 0100, time: 17.531 seconds, Δt: 259.374 ms, wall time: 53.146 seconds
+Iteration: 0100, time: 17.531 seconds, Δt: 259.374 ms, wall time: 53.535 seconds
+Iteration: 0125, time: 25.249 seconds, Δt: 345.227 ms, wall time: 45.527 seconds
+Iteration: 0125, time: 25.249 seconds, Δt: 345.227 ms, wall time: 45.733 seconds
+Iteration: 0125, time: 25.249 seconds, Δt: 345.227 ms, wall time: 55.115 seconds
+Iteration: 0125, time: 25.249 seconds, Δt: 345.227 ms, wall time: 55.505 seconds
+Iteration: 0150, time: 34.950 seconds, Δt: 417.725 ms, wall time: 56.407 seconds
+Iteration: 0150, time: 34.950 seconds, Δt: 417.725 ms, wall time: 46.819 seconds
+Iteration: 0150, time: 34.950 seconds, Δt: 417.725 ms, wall time: 47.025 seconds
+Iteration: 0150, time: 34.950 seconds, Δt: 417.725 ms, wall time: 56.797 seconds
+Iteration: 0175, time: 47.379 seconds, Δt: 555.992 ms, wall time: 49.266 seconds
+Iteration: 0175, time: 47.379 seconds, Δt: 555.992 ms, wall time: 58.854 seconds
+Iteration: 0175, time: 47.379 seconds, Δt: 555.992 ms, wall time: 59.244 seconds
+Iteration: 0175, time: 47.379 seconds, Δt: 555.992 ms, wall time: 49.472 seconds
+Iteration: 0200, time: 1.050 minutes, Δt: 672.750 ms, wall time: 1.009 minutes
+Iteration: 0200, time: 1.050 minutes, Δt: 672.750 ms, wall time: 50.563 seconds
+Iteration: 0200, time: 1.050 minutes, Δt: 672.750 ms, wall time: 1.003 minutes
+Iteration: 0200, time: 1.050 minutes, Δt: 672.750 ms, wall time: 50.770 seconds
+Iteration: 0225, time: 1.384 minutes, Δt: 895.430 ms, wall time: 1.046 minutes
+Iteration: 0225, time: 1.384 minutes, Δt: 895.430 ms, wall time: 1.052 minutes
+Iteration: 0225, time: 1.384 minutes, Δt: 895.430 ms, wall time: 53.168 seconds
+Iteration: 0225, time: 1.384 minutes, Δt: 895.430 ms, wall time: 53.374 seconds
+Iteration: 0250, time: 1.789 minutes, Δt: 1 second, wall time: 54.266 seconds
+Iteration: 0250, time: 1.789 minutes, Δt: 1 second, wall time: 54.060 seconds
+Iteration: 0250, time: 1.789 minutes, Δt: 1 second, wall time: 1.061 minutes
+Iteration: 0250, time: 1.789 minutes, Δt: 1 second, wall time: 1.067 minutes
+Iteration: 0275, time: 2.206 minutes, Δt: 1 second, wall time: 55.881 seconds
+Iteration: 0275, time: 2.206 minutes, Δt: 1 second, wall time: 55.675 seconds
+Iteration: 0275, time: 2.206 minutes, Δt: 1 second, wall time: 1.088 minutes
+Iteration: 0275, time: 2.206 minutes, Δt: 1 second, wall time: 1.094 minutes
+Iteration: 0300, time: 2.622 minutes, Δt: 1 second, wall time: 1.107 minutes
+Iteration: 0300, time: 2.622 minutes, Δt: 1 second, wall time: 57.010 seconds
+Iteration: 0300, time: 2.622 minutes, Δt: 1 second, wall time: 56.804 seconds
+Iteration: 0300, time: 2.622 minutes, Δt: 1 second, wall time: 1.113 minutes
+Iteration: 0325, time: 3.039 minutes, Δt: 1 second, wall time: 58.516 seconds
+Iteration: 0325, time: 3.039 minutes, Δt: 1 second, wall time: 1.135 minutes
+Iteration: 0325, time: 3.039 minutes, Δt: 1 second, wall time: 58.722 seconds
+Iteration: 0325, time: 3.039 minutes, Δt: 1 second, wall time: 1.142 minutes
+Iteration: 0350, time: 3.456 minutes, Δt: 1 second, wall time: 59.623 seconds
+Iteration: 0350, time: 3.456 minutes, Δt: 1 second, wall time: 59.416 seconds
+Iteration: 0350, time: 3.456 minutes, Δt: 1 second, wall time: 1.150 minutes
+Iteration: 0350, time: 3.456 minutes, Δt: 1 second, wall time: 1.157 minutes
+Iteration: 0375, time: 3.872 minutes, Δt: 1 second, wall time: 1.176 minutes
+Iteration: 0375, time: 3.872 minutes, Δt: 1 second, wall time: 1.020 minutes
+Iteration: 0375, time: 3.872 minutes, Δt: 1 second, wall time: 1.016 minutes
+Iteration: 0375, time: 3.872 minutes, Δt: 1 second, wall time: 1.183 minutes
+Iteration: 0400, time: 4.289 minutes, Δt: 1 second, wall time: 1.194 minutes
+Iteration: 0400, time: 4.289 minutes, Δt: 1 second, wall time: 1.201 minutes
+Iteration: 0400, time: 4.289 minutes, Δt: 1 second, wall time: 1.035 minutes
+Iteration: 0400, time: 4.289 minutes, Δt: 1 second, wall time: 1.038 minutes
+Iteration: 0425, time: 4.706 minutes, Δt: 1 second, wall time: 1.231 minutes
+Iteration: 0425, time: 4.706 minutes, Δt: 1 second, wall time: 1.225 minutes
+Iteration: 0425, time: 4.706 minutes, Δt: 1 second, wall time: 1.065 minutes
+Iteration: 0425, time: 4.706 minutes, Δt: 1 second, wall time: 1.068 minutes
+Iteration: 0450, time: 5.122 minutes, Δt: 1 second, wall time: 1.084 minutes
+Iteration: 0450, time: 5.122 minutes, Δt: 1 second, wall time: 1.244 minutes
+Iteration: 0450, time: 5.122 minutes, Δt: 1 second, wall time: 1.250 minutes
+Iteration: 0450, time: 5.122 minutes, Δt: 1 second, wall time: 1.088 minutes
+Iteration: 0475, time: 5.539 minutes, Δt: 1 second, wall time: 1.278 minutes
+Iteration: 0475, time: 5.539 minutes, Δt: 1 second, wall time: 1.271 minutes
+Iteration: 0475, time: 5.539 minutes, Δt: 1 second, wall time: 1.112 minutes
+Iteration: 0475, time: 5.539 minutes, Δt: 1 second, wall time: 1.115 minutes
+Iteration: 0500, time: 5.956 minutes, Δt: 1 second, wall time: 1.131 minutes
+Iteration: 0500, time: 5.956 minutes, Δt: 1 second, wall time: 1.297 minutes
+Iteration: 0500, time: 5.956 minutes, Δt: 1 second, wall time: 1.291 minutes
+Iteration: 0500, time: 5.956 minutes, Δt: 1 second, wall time: 1.134 minutes
+Iteration: 0525, time: 6.372 minutes, Δt: 1 second, wall time: 1.319 minutes
+Iteration: 0525, time: 6.372 minutes, Δt: 1 second, wall time: 1.159 minutes
+Iteration: 0525, time: 6.372 minutes, Δt: 1 second, wall time: 1.325 minutes
+Iteration: 0525, time: 6.372 minutes, Δt: 1 second, wall time: 1.162 minutes
+Iteration: 0550, time: 6.789 minutes, Δt: 1 second, wall time: 1.345 minutes
+Iteration: 0550, time: 6.789 minutes, Δt: 1 second, wall time: 1.338 minutes
+Iteration: 0550, time: 6.789 minutes, Δt: 1 second, wall time: 1.179 minutes
+Iteration: 0550, time: 6.789 minutes, Δt: 1 second, wall time: 1.182 minutes
+Iteration: 0575, time: 7.206 minutes, Δt: 1 second, wall time: 1.210 minutes
+Iteration: 0575, time: 7.206 minutes, Δt: 1 second, wall time: 1.376 minutes
+Iteration: 0575, time: 7.206 minutes, Δt: 1 second, wall time: 1.370 minutes
+Iteration: 0575, time: 7.206 minutes, Δt: 1 second, wall time: 1.213 minutes
+Iteration: 0600, time: 7.622 minutes, Δt: 1 second, wall time: 1.229 minutes
+Iteration: 0600, time: 7.622 minutes, Δt: 1 second, wall time: 1.232 minutes
+Iteration: 0600, time: 7.622 minutes, Δt: 1 second, wall time: 1.389 minutes
+Iteration: 0600, time: 7.622 minutes, Δt: 1 second, wall time: 1.395 minutes
+Iteration: 0625, time: 8.039 minutes, Δt: 1 second, wall time: 1.263 minutes
+Iteration: 0625, time: 8.039 minutes, Δt: 1 second, wall time: 1.259 minutes
+Iteration: 0625, time: 8.039 minutes, Δt: 1 second, wall time: 1.419 minutes
+Iteration: 0625, time: 8.039 minutes, Δt: 1 second, wall time: 1.426 minutes
+Iteration: 0650, time: 8.456 minutes, Δt: 1 second, wall time: 1.438 minutes
+Iteration: 0650, time: 8.456 minutes, Δt: 1 second, wall time: 1.282 minutes
+Iteration: 0650, time: 8.456 minutes, Δt: 1 second, wall time: 1.278 minutes
+Iteration: 0650, time: 8.456 minutes, Δt: 1 second, wall time: 1.445 minutes
+Iteration: 0675, time: 8.872 minutes, Δt: 1 second, wall time: 1.309 minutes
+Iteration: 0675, time: 8.872 minutes, Δt: 1 second, wall time: 1.469 minutes
+Iteration: 0675, time: 8.872 minutes, Δt: 1 second, wall time: 1.313 minutes
+Iteration: 0675, time: 8.872 minutes, Δt: 1 second, wall time: 1.476 minutes
+Iteration: 0700, time: 9.289 minutes, Δt: 1 second, wall time: 1.329 minutes
+Iteration: 0700, time: 9.289 minutes, Δt: 1 second, wall time: 1.332 minutes
+Iteration: 0700, time: 9.289 minutes, Δt: 1 second, wall time: 1.495 minutes
+Iteration: 0700, time: 9.289 minutes, Δt: 1 second, wall time: 1.489 minutes
+Iteration: 0725, time: 9.706 minutes, Δt: 1 second, wall time: 1.360 minutes
+Iteration: 0725, time: 9.706 minutes, Δt: 1 second, wall time: 1.363 minutes
+Iteration: 0725, time: 9.706 minutes, Δt: 1 second, wall time: 1.526 minutes
+Iteration: 0725, time: 9.706 minutes, Δt: 1 second, wall time: 1.519 minutes
+Iteration: 0750, time: 10.122 minutes, Δt: 1 second, wall time: 1.547 minutes
+Iteration: 0750, time: 10.122 minutes, Δt: 1 second, wall time: 1.381 minutes
+Iteration: 0750, time: 10.122 minutes, Δt: 1 second, wall time: 1.384 minutes
+Iteration: 0750, time: 10.122 minutes, Δt: 1 second, wall time: 1.541 minutes
+Iteration: 0775, time: 10.539 minutes, Δt: 1 second, wall time: 1.415 minutes
+Iteration: 0775, time: 10.539 minutes, Δt: 1 second, wall time: 1.578 minutes
+Iteration: 0775, time: 10.539 minutes, Δt: 1 second, wall time: 1.412 minutes
+Iteration: 0775, time: 10.539 minutes, Δt: 1 second, wall time: 1.572 minutes
+Iteration: 0800, time: 10.956 minutes, Δt: 1 second, wall time: 1.431 minutes
+Iteration: 0800, time: 10.956 minutes, Δt: 1 second, wall time: 1.434 minutes
+Iteration: 0800, time: 10.956 minutes, Δt: 1 second, wall time: 1.597 minutes
+Iteration: 0800, time: 10.956 minutes, Δt: 1 second, wall time: 1.591 minutes
+Iteration: 0825, time: 11.372 minutes, Δt: 1 second, wall time: 1.629 minutes
+Iteration: 0825, time: 11.372 minutes, Δt: 1 second, wall time: 1.463 minutes
+Iteration: 0825, time: 11.372 minutes, Δt: 1 second, wall time: 1.466 minutes
+Iteration: 0825, time: 11.372 minutes, Δt: 1 second, wall time: 1.622 minutes
+Iteration: 0850, time: 11.789 minutes, Δt: 1 second, wall time: 1.488 minutes
+Iteration: 0850, time: 11.789 minutes, Δt: 1 second, wall time: 1.651 minutes
+Iteration: 0850, time: 11.789 minutes, Δt: 1 second, wall time: 1.484 minutes
+Iteration: 0850, time: 11.789 minutes, Δt: 1 second, wall time: 1.644 minutes
+Iteration: 0875, time: 12.206 minutes, Δt: 1 second, wall time: 1.515 minutes
+Iteration: 0875, time: 12.206 minutes, Δt: 1 second, wall time: 1.518 minutes
+Iteration: 0875, time: 12.206 minutes, Δt: 1 second, wall time: 1.681 minutes
+Iteration: 0875, time: 12.206 minutes, Δt: 1 second, wall time: 1.675 minutes
+Iteration: 0900, time: 12.622 minutes, Δt: 1 second, wall time: 1.699 minutes
+Iteration: 0900, time: 12.622 minutes, Δt: 1 second, wall time: 1.533 minutes
+Iteration: 0900, time: 12.622 minutes, Δt: 1 second, wall time: 1.536 minutes
+Iteration: 0900, time: 12.622 minutes, Δt: 1 second, wall time: 1.693 minutes
+Iteration: 0925, time: 13.039 minutes, Δt: 1 second, wall time: 1.570 minutes
+Iteration: 0925, time: 13.039 minutes, Δt: 1 second, wall time: 1.733 minutes
+Iteration: 0925, time: 13.039 minutes, Δt: 1 second, wall time: 1.566 minutes
+Iteration: 0925, time: 13.039 minutes, Δt: 1 second, wall time: 1.726 minutes
+Iteration: 0950, time: 13.456 minutes, Δt: 1 second, wall time: 1.585 minutes
+Iteration: 0950, time: 13.456 minutes, Δt: 1 second, wall time: 1.588 minutes
+Iteration: 0950, time: 13.456 minutes, Δt: 1 second, wall time: 1.751 minutes
+Iteration: 0950, time: 13.456 minutes, Δt: 1 second, wall time: 1.745 minutes
+Iteration: 0975, time: 13.872 minutes, Δt: 1 second, wall time: 1.616 minutes
+Iteration: 0975, time: 13.872 minutes, Δt: 1 second, wall time: 1.782 minutes
+Iteration: 0975, time: 13.872 minutes, Δt: 1 second, wall time: 1.776 minutes
+Iteration: 0975, time: 13.872 minutes, Δt: 1 second, wall time: 1.619 minutes
+[ Info: Simulation is stopping after running for 1.804 minutes.
 [ Info: Model iteration 1000 equals or exceeds stop iteration 1000.
-[ Info: Simulation is stopping after running for 4.863 minutes.
-[ Info: Simulation is stopping after running for 4.867 minutes.
+[ Info: Simulation is stopping after running for 1.637 minutes.
+[ Info: Model iteration 1000 equals or exceeds stop iteration 1000.
+[ Info: Simulation is stopping after running for 1.797 minutes.
+[ Info: Simulation is stopping after running for 1.641 minutes.
 [ Info: Model iteration 1000 equals or exceeds stop iteration 1000.
 [ Info: Model iteration 1000 equals or exceeds stop iteration 1000.
-[ Info: Simulation is stopping after running for 4.856 minutes.
-[ Info: Model iteration 1000 equals or exceeds stop iteration 1000.
-Iteration: 1000, time: 10.000 seconds, Δt: 10 ms, max(|w|) = 3.4e-02 ms⁻¹, wall time: 4.856 minutes
-Iteration: 1000, time: 10.000 seconds, Δt: 10 ms, max(|w|) = 3.4e-02 ms⁻¹, wall time: 4.861 minutes
-Iteration: 1000, time: 10.000 seconds, Δt: 10 ms, max(|w|) = 3.4e-02 ms⁻¹, wall time: 4.867 minutes
-Iteration: 1000, time: 10.000 seconds, Δt: 10 ms, max(|w|) = 5.9e-02 ms⁻¹, wall time: 4.863 minutes
-[aerosmith.hpc.oregonstate.edu:515507] 1518 more processes have sent help message help-mpi-common-cuda.txt / cuIpcGetMemHandle failed
+Iteration: 1000, time: 14.289 minutes, Δt: 1 second, wall time: 1.641 minutes
+Iteration: 1000, time: 14.289 minutes, Δt: 1 second, wall time: 1.637 minutes
+Iteration: 1000, time: 14.289 minutes, Δt: 1 second, wall time: 1.804 minutes
+Iteration: 1000, time: 14.289 minutes, Δt: 1 second, wall time: 1.797 minutes

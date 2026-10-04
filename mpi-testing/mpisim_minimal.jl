@@ -3,12 +3,12 @@ using MPI
 using Oceananigans
 using Oceananigans.DistributedComputations
 using Statistics
-using HDF5_jll
+using CUDA
 using Printf
 using Random
 
 
-Nx = Ny = Nz = 256
+Nx = Ny = Nz = 128
 Lx = Ly = Lz = 2π
 topology = (Periodic, Periodic, Periodic)
 arch = Distributed(GPU())
@@ -23,11 +23,8 @@ grid = RectilinearGrid(
     z = (0, 2π),
 )
 
-
 @show grid
 
-model = NonhydrostaticModel(;
-    grid,
-    advection = WENO(),
-)
+model = NonhydrostaticModel(grid, advection = WENO())
 
+@show model

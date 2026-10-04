@@ -5,11 +5,11 @@
 #       extension: .jl
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.17.2
+#       jupytext_version: 1.19.5
 #   kernelspec:
-#     display_name: Julia 1.10.9
+#     display_name: Julia 1.12.7
 #     language: julia
-#     name: julia-1.10
+#     name: julia-1.12
 # ---
 
 # %%
@@ -17,8 +17,8 @@ using Oceananigans, CairoMakie
 using ColorSchemes
 
 # %%
-u_timeseries = FieldTimeSeries("three_dimensional_turbulence_rank0_rank0.jld2", "u")
-v_timeseries = FieldTimeSeries("three_dimensional_turbulence_rank0_rank0.jld2", "v")
+u_timeseries = FieldTimeSeries("3d-data_rank0.jld2", "u")
+v_timeseries = FieldTimeSeries("3d-data_rank0.jld2", "v")
 
 times = u_timeseries.times
 

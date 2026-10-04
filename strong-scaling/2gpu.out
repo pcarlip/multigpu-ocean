@@ -1,0 +1,278 @@
+┌ Warning: CUDA runtime library `libcublasLt.so.13` was loaded from a system path, `/usr/local/apps/cuda/13.0/targets/x86_64-linux/lib/libcublasLt.so.13`.
+│ This may cause errors.
+│ 
+│ If you're running under a profiler, this situation is expected. Otherwise,
+│ ensure that your library path environment variable (e.g., `PATH` on Windows
+│ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
+│ 
+│ In any other case, please file an issue.
+└ @ CUDACore ~/.julia/packages/CUDACore/ro0xn/src/initialization.jl:203
+┌ Warning: CUDA runtime library `libcusparse.so.12` was loaded from a system path, `/usr/local/apps/cuda/13.0/targets/x86_64-linux/lib/libcusparse.so.12`.
+│ This may cause errors.
+│ 
+│ If you're running under a profiler, this situation is expected. Otherwise,
+│ ensure that your library path environment variable (e.g., `PATH` on Windows
+│ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
+│ 
+│ In any other case, please file an issue.
+└ @ CUDACore ~/.julia/packages/CUDACore/ro0xn/src/initialization.jl:203
+┌ Warning: CUDA runtime library `libcublasLt.so.13` was loaded from a system path, `/usr/local/apps/cuda/13.0/targets/x86_64-linux/lib/libcublasLt.so.13`.
+│ This may cause errors.
+│ 
+│ If you're running under a profiler, this situation is expected. Otherwise,
+│ ensure that your library path environment variable (e.g., `PATH` on Windows
+│ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
+│ 
+│ In any other case, please file an issue.
+└ @ CUDACore ~/.julia/packages/CUDACore/ro0xn/src/initialization.jl:203
+┌ Warning: CUDA runtime library `libcusparse.so.12` was loaded from a system path, `/usr/local/apps/cuda/13.0/targets/x86_64-linux/lib/libcusparse.so.12`.
+│ This may cause errors.
+│ 
+│ If you're running under a profiler, this situation is expected. Otherwise,
+│ ensure that your library path environment variable (e.g., `PATH` on Windows
+│ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
+│ 
+│ In any other case, please file an issue.
+└ @ CUDACore ~/.julia/packages/CUDACore/ro0xn/src/initialization.jl:203
+Dict{String, Any}(Dict{String, Any}("Nz" => 512, "mpi" => true, "Nx" => 1024, "Ny" => 1024, "visc" => 5.0e-6, "dt" => 0.1, "file" => "/nfs/hpc/share/carlipp/ngpu-scaling/2gpu_data", "nv" => true)
+"Nz" => 512, "mpi" => true, "Nx" => 1024, "Ny" => 1024, "visc" => 5.0e-6, "dt" => 0.1, "file" => "/nfs/hpc/share/carlipp/ngpu-scaling/2gpu_data", "nv" => true)
+[ Info: MPI has not been initialized, so we are calling MPI.Init().
+[ Info: MPI has not been initialized, so we are calling MPI.Init().
+--------------------------------------------------------------------------
+Sorry!  You were supposed to get help about:
+    ini file:file not found
+But I couldn't open the help file:
+    /nfs/stak/users/carlipp/.julia/artifacts/d4af8b9275d39f24a3f6b9a9758d27bd0d18aac5/share/openmpi/help-mpi-btl-openib.txt: No such file or directory.  Sorry!
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+Sorry!  You were supposed to get help about:
+    ini file:file not found
+But I couldn't open the help file:
+    /nfs/stak/users/carlipp/.julia/artifacts/d4af8b9275d39f24a3f6b9a9758d27bd0d18aac5/share/openmpi/help-mpi-btl-openib.txt: No such file or directory.  Sorry!
+--------------------------------------------------------------------------
+[dgxh-2][[26565,1],1][btl_openib_component.c:1704:init_one_device] error obtaining device attributes for mlx5_0 errno says No space left on device
+--------------------------------------------------------------------------
+Sorry!  You were supposed to get help about:
+    error in device init
+But I couldn't open the help file:
+    /nfs/stak/users/carlipp/.julia/artifacts/d4af8b9275d39f24a3f6b9a9758d27bd0d18aac5/share/openmpi/help-mpi-btl-openib.txt: No such file or directory.  Sorry!
+--------------------------------------------------------------------------
+[dgxh-2][[26565,1],0][btl_openib_component.c:1704:init_one_device] error obtaining device attributes for mlx5_0 errno says No space left on device
+--------------------------------------------------------------------------
+Sorry!  You were supposed to get help about:
+    error in device init
+But I couldn't open the help file:
+    /nfs/stak/users/carlipp/.julia/artifacts/d4af8b9275d39f24a3f6b9a9758d27bd0d18aac5/share/openmpi/help-mpi-btl-openib.txt: No such file or directory.  Sorry!
+--------------------------------------------------------------------------
+512×1024×512 (distributed across 2×1×1 ranks) RectilinearGrid{Float64, FullyConnected, Periodic, Periodic} on Distributed{CUDAGPU} on 2×1×1 with 5×5×5 halo
+├── FullyConnected x ∈ [-1.02285e-16, 402.124) regularly spaced with Δx=0.785398
+├── Periodic y ∈ [-402.124, 402.124)           regularly spaced with Δy=0.785398
+└── Periodic z ∈ [-201.062, 201.062)           regularly spaced with Δz=0.785398
+512×1024×512 (distributed across 2×1×1 ranks) RectilinearGrid{Float64, FullyConnected, Periodic, Periodic} on Distributed{CUDAGPU} on 2×1×1 with 5×5×5 halo
+├── FullyConnected x ∈ [-402.124, -1.15923e-16) regularly spaced with Δx=0.785398
+├── Periodic y ∈ [-402.124, 402.124)            regularly spaced with Δy=0.785398
+└── Periodic z ∈ [-201.062, 201.062)            regularly spaced with Δz=0.785398
+--------------------------------------------------------------------------
+Sorry!  You were supposed to get help about:
+    cuMemHostRegister during init failed
+But I couldn't open the help file:
+    /nfs/stak/users/carlipp/.julia/artifacts/d4af8b9275d39f24a3f6b9a9758d27bd0d18aac5/share/openmpi/help-mpi-common-cuda.txt: No such file or directory.  Sorry!
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+Sorry!  You were supposed to get help about:
+    cuMemHostRegister during init failed
+But I couldn't open the help file:
+    /nfs/stak/users/carlipp/.julia/artifacts/d4af8b9275d39f24a3f6b9a9758d27bd0d18aac5/share/openmpi/help-mpi-common-cuda.txt: No such file or directory.  Sorry!
+--------------------------------------------------------------------------
+NonhydrostaticModel{Distributed{CUDAGPU} on 2×1×1, RectilinearGrid}(time = 0 seconds, iteration = 0)
+├── grid: 512×1024×512 (distributed across 2×1×1 ranks) RectilinearGrid{Float64, FullyConnected, Periodic, Periodic} on Distributed{CUDAGPU} on 2×1×1 with 5×5×5 halo
+├── timestepper: RungeKutta3TimeStepper
+├── advection scheme:
+│   └── momentum: WENO{3, Float64, Oceananigans.Utils.BackendOptimizedDivision}(order=5)
+├── tracers: ()
+├── closure: ScalarDiffusivity{ExplicitTimeDiscretization}(ν=5.0e-6)
+├── buoyancy: Nothing
+└── coriolis: Nothing
+NonhydrostaticModel{Distributed{CUDAGPU} on 2×1×1, RectilinearGrid}(time = 0 seconds, iteration = 0)
+├── grid: 512×1024×512 (distributed across 2×1×1 ranks) RectilinearGrid{Float64, FullyConnected, Periodic, Periodic} on Distributed{CUDAGPU} on 2×1×1 with 5×5×5 halo
+├── timestepper: RungeKutta3TimeStepper
+├── advection scheme:
+│   └── momentum: WENO{3, Float64, Oceananigans.Utils.BackendOptimizedDivision}(order=5)
+├── tracers: ()
+├── closure: ScalarDiffusivity{ExplicitTimeDiscretization}(ν=5.0e-6)
+├── buoyancy: Nothing
+└── coriolis: Nothing
+Simulation of NonhydrostaticModel{Distributed{CUDAGPU} on 2×1×1, RectilinearGrid}(time = 0 seconds, iteration = 0)Simulation of NonhydrostaticModel{Distributed{CUDAGPU} on 2×1×1, RectilinearGrid}(time = 0 seconds, iteration = 0)
+├── Next time step: 100 ms
+├── run_wall_time: 0 seconds
+├── run_wall_time / iteration: NaN days
+├── stop_time: Inf days
+├── stop_iteration: 1000.0
+├── wall_time_limit: Inf
+├── minimum_relative_step: 0.0
+├── callbacks: OrderedDict with 4 entries:
+│   ├── stop_time_exceeded => Callback of stop_time_exceeded on IterationInterval(1)
+│   ├── stop_iteration_exceeded => Callback of stop_iteration_exceeded on IterationInterval(1)
+│   ├── wall_time_limit_exceeded => Callback of wall_time_limit_exceeded on IterationInterval(1)
+│   └── nan_checker => Callback of NaNChecker for u on IterationInterval(100)
+└── output_writers: OrderedDict with no entries
+
+├── Next time step: 100 ms
+├── run_wall_time: 0 seconds
+├── run_wall_time / iteration: NaN days
+├── stop_time: Inf days
+├── stop_iteration: 1000.0
+├── wall_time_limit: Inf
+├── minimum_relative_step: 0.0
+├── callbacks: OrderedDict with 4 entries:
+│   ├── stop_time_exceeded => Callback of stop_time_exceeded on IterationInterval(1)
+│   ├── stop_iteration_exceeded => Callback of stop_iteration_exceeded on IterationInterval(1)
+│   ├── wall_time_limit_exceeded => Callback of wall_time_limit_exceeded on IterationInterval(1)
+│   └── nan_checker => Callback of NaNChecker for u on IterationInterval(100)
+└── output_writers: OrderedDict with no entries
+Thu Sep 24 02:28:44 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 610.43.02              KMD Version: 610.43.02     CUDA UMD Version: 13.3     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  |   00000000:43:00.0 Off |                    0 |
+| N/A   25C    P0            114W /  700W |   44379MiB /  81559MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA H100 80GB HBM3          On  |   00000000:D1:00.0 Off |                    0 |
+| N/A   27C    P0            117W /  700W |   43849MiB /  81559MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A         2526332      C   julia                                 43840MiB |
+|    0   N/A  N/A         2526333      C   julia                                   524MiB |
+|    1   N/A  N/A         2526333      C   julia                                 43840MiB |
++-----------------------------------------------------------------------------------------+
+Thu Sep 24 02:28:44 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 610.43.02              KMD Version: 610.43.02     CUDA UMD Version: 13.3     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  |   00000000:43:00.0 Off |                    0 |
+| N/A   25C    P0            114W /  700W |   44379MiB /  81559MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA H100 80GB HBM3          On  |   00000000:D1:00.0 Off |                    0 |
+| N/A   27C    P0            117W /  700W |   43849MiB /  81559MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A         2526332      C   julia                                 43840MiB |
+|    0   N/A  N/A         2526333      C   julia                                   524MiB |
+|    1   N/A  N/A         2526333      C   julia                                 43840MiB |
++-----------------------------------------------------------------------------------------+
+[ Info: Initializing simulation...
+[ Info: Initializing simulation...
+Iteration: 0000, time: 0 seconds, Δt: 100 ms, wall time: 0 seconds
+Iteration: 0000, time: 0 seconds, Δt: 100 ms, wall time: 0 seconds
+[ Info:     ... simulation initialization complete (2.457 minutes)
+[ Info: Executing initial time step...
+[ Info:     ... simulation initialization complete (2.483 minutes)
+[ Info: Executing initial time step...
+[ Info:     ... initial time step complete (4.174 seconds).
+[ Info:     ... initial time step complete (1.914 seconds).
+Iteration: 0025, time: 2.976 seconds, Δt: 133.100 ms, wall time: 2.756 minutes
+Iteration: 0025, time: 2.976 seconds, Δt: 133.100 ms, wall time: 2.743 minutes
+Iteration: 0050, time: 6.716 seconds, Δt: 161.051 ms, wall time: 3.002 minutes
+Iteration: 0050, time: 6.716 seconds, Δt: 161.051 ms, wall time: 2.990 minutes
+Iteration: 0075, time: 11.508 seconds, Δt: 214.359 ms, wall time: 5.313 minutes
+Iteration: 0075, time: 11.508 seconds, Δt: 214.359 ms, wall time: 5.300 minutes
+Iteration: 0100, time: 17.531 seconds, Δt: 259.374 ms, wall time: 5.560 minutes
+Iteration: 0100, time: 17.531 seconds, Δt: 259.374 ms, wall time: 5.548 minutes
+Iteration: 0125, time: 25.249 seconds, Δt: 345.227 ms, wall time: 8.074 minutes
+Iteration: 0125, time: 25.249 seconds, Δt: 345.227 ms, wall time: 8.062 minutes
+Iteration: 0150, time: 34.950 seconds, Δt: 417.725 ms, wall time: 8.321 minutes
+Iteration: 0150, time: 34.950 seconds, Δt: 417.725 ms, wall time: 8.309 minutes
+Iteration: 0175, time: 47.379 seconds, Δt: 555.992 ms, wall time: 10.687 minutes
+Iteration: 0175, time: 47.379 seconds, Δt: 555.992 ms, wall time: 10.675 minutes
+Iteration: 0200, time: 1.050 minutes, Δt: 672.750 ms, wall time: 10.935 minutes
+Iteration: 0200, time: 1.050 minutes, Δt: 672.750 ms, wall time: 10.922 minutes
+Iteration: 0225, time: 1.384 minutes, Δt: 895.430 ms, wall time: 13.251 minutes
+Iteration: 0225, time: 1.384 minutes, Δt: 895.430 ms, wall time: 13.239 minutes
+Iteration: 0250, time: 1.789 minutes, Δt: 1 second, wall time: 13.498 minutes
+Iteration: 0250, time: 1.789 minutes, Δt: 1 second, wall time: 13.486 minutes
+Iteration: 0275, time: 2.206 minutes, Δt: 1 second, wall time: 15.809 minutes
+Iteration: 0275, time: 2.206 minutes, Δt: 1 second, wall time: 15.797 minutes
+Iteration: 0300, time: 2.622 minutes, Δt: 1 second, wall time: 16.058 minutes
+Iteration: 0300, time: 2.622 minutes, Δt: 1 second, wall time: 16.046 minutes
+Iteration: 0325, time: 3.039 minutes, Δt: 1 second, wall time: 18.410 minutes
+Iteration: 0325, time: 3.039 minutes, Δt: 1 second, wall time: 18.398 minutes
+Iteration: 0350, time: 3.456 minutes, Δt: 1 second, wall time: 18.657 minutes
+Iteration: 0350, time: 3.456 minutes, Δt: 1 second, wall time: 18.645 minutes
+Iteration: 0375, time: 3.872 minutes, Δt: 1 second, wall time: 21.024 minutes
+Iteration: 0375, time: 3.872 minutes, Δt: 1 second, wall time: 21.011 minutes
+Iteration: 0400, time: 4.289 minutes, Δt: 1 second, wall time: 21.272 minutes
+Iteration: 0400, time: 4.289 minutes, Δt: 1 second, wall time: 21.260 minutes
+Iteration: 0425, time: 4.706 minutes, Δt: 1 second, wall time: 23.649 minutes
+Iteration: 0425, time: 4.706 minutes, Δt: 1 second, wall time: 23.637 minutes
+Iteration: 0450, time: 5.122 minutes, Δt: 1 second, wall time: 23.897 minutes
+Iteration: 0450, time: 5.122 minutes, Δt: 1 second, wall time: 23.884 minutes
+Iteration: 0475, time: 5.539 minutes, Δt: 1 second, wall time: 26.283 minutes
+Iteration: 0475, time: 5.539 minutes, Δt: 1 second, wall time: 26.271 minutes
+Iteration: 0500, time: 5.956 minutes, Δt: 1 second, wall time: 26.531 minutes
+Iteration: 0500, time: 5.956 minutes, Δt: 1 second, wall time: 26.519 minutes
+Iteration: 0525, time: 6.372 minutes, Δt: 1 second, wall time: 28.911 minutes
+Iteration: 0525, time: 6.372 minutes, Δt: 1 second, wall time: 28.899 minutes
+Iteration: 0550, time: 6.789 minutes, Δt: 1 second, wall time: 29.158 minutes
+Iteration: 0550, time: 6.789 minutes, Δt: 1 second, wall time: 29.146 minutes
+Iteration: 0575, time: 7.206 minutes, Δt: 1 second, wall time: 31.540 minutes
+Iteration: 0575, time: 7.206 minutes, Δt: 1 second, wall time: 31.528 minutes
+Iteration: 0600, time: 7.622 minutes, Δt: 1 second, wall time: 31.788 minutes
+Iteration: 0600, time: 7.622 minutes, Δt: 1 second, wall time: 31.775 minutes
+Iteration: 0625, time: 8.039 minutes, Δt: 1 second, wall time: 34.156 minutes
+Iteration: 0625, time: 8.039 minutes, Δt: 1 second, wall time: 34.144 minutes
+Iteration: 0650, time: 8.456 minutes, Δt: 1 second, wall time: 34.403 minutes
+Iteration: 0650, time: 8.456 minutes, Δt: 1 second, wall time: 34.391 minutes
+Iteration: 0675, time: 8.872 minutes, Δt: 1 second, wall time: 36.755 minutes
+Iteration: 0675, time: 8.872 minutes, Δt: 1 second, wall time: 36.743 minutes
+Iteration: 0700, time: 9.289 minutes, Δt: 1 second, wall time: 37.003 minutes
+Iteration: 0700, time: 9.289 minutes, Δt: 1 second, wall time: 36.991 minutes
+Iteration: 0725, time: 9.706 minutes, Δt: 1 second, wall time: 39.354 minutes
+Iteration: 0725, time: 9.706 minutes, Δt: 1 second, wall time: 39.342 minutes
+Iteration: 0750, time: 10.122 minutes, Δt: 1 second, wall time: 39.602 minutes
+Iteration: 0750, time: 10.122 minutes, Δt: 1 second, wall time: 39.590 minutes
+Iteration: 0775, time: 10.539 minutes, Δt: 1 second, wall time: 41.944 minutes
+Iteration: 0775, time: 10.539 minutes, Δt: 1 second, wall time: 41.931 minutes
+Iteration: 0800, time: 10.956 minutes, Δt: 1 second, wall time: 42.192 minutes
+Iteration: 0800, time: 10.956 minutes, Δt: 1 second, wall time: 42.180 minutes
+Iteration: 0825, time: 11.372 minutes, Δt: 1 second, wall time: 44.524 minutes
+Iteration: 0825, time: 11.372 minutes, Δt: 1 second, wall time: 44.511 minutes
+Iteration: 0850, time: 11.789 minutes, Δt: 1 second, wall time: 44.773 minutes
+Iteration: 0850, time: 11.789 minutes, Δt: 1 second, wall time: 44.761 minutes
+Iteration: 0875, time: 12.206 minutes, Δt: 1 second, wall time: 47.097 minutes
+Iteration: 0875, time: 12.206 minutes, Δt: 1 second, wall time: 47.085 minutes
+Iteration: 0900, time: 12.622 minutes, Δt: 1 second, wall time: 47.345 minutes
+Iteration: 0900, time: 12.622 minutes, Δt: 1 second, wall time: 47.332 minutes
+Iteration: 0925, time: 13.039 minutes, Δt: 1 second, wall time: 49.665 minutes
+Iteration: 0925, time: 13.039 minutes, Δt: 1 second, wall time: 49.652 minutes
+Iteration: 0950, time: 13.456 minutes, Δt: 1 second, wall time: 49.915 minutes
+Iteration: 0950, time: 13.456 minutes, Δt: 1 second, wall time: 49.902 minutes
+Iteration: 0975, time: 13.872 minutes, Δt: 1 second, wall time: 52.229 minutes
+Iteration: 0975, time: 13.872 minutes, Δt: 1 second, wall time: 52.216 minutes
+[ Info: Simulation is stopping after running for 52.479 minutes.
+[ Info: Model iteration 1000 equals or exceeds stop iteration 1000.
+[ Info: Simulation is stopping after running for 52.466 minutes.
+[ Info: Model iteration 1000 equals or exceeds stop iteration 1000.
+Iteration: 1000, time: 14.289 minutes, Δt: 1 second, wall time: 52.479 minutes
+Iteration: 1000, time: 14.289 minutes, Δt: 1 second, wall time: 52.466 minutes
