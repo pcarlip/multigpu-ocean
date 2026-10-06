@@ -113,6 +113,7 @@ simulation.output_writers[:output] =
     )
 
 conjure_time_step_wizard!(simulation, cfl = 1, max_Δt = (Δt * 10))
+# avoid too-large timesteps even within CFL
 
 if nv_info
     run(`nvidia-smi`)
