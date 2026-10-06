@@ -12,10 +12,17 @@ using MPI
 
 CUDA.cuRAND.seed!(1234);
 
+if size(ARGS) == 0
+    throw("No config file provided")
+elseif size(ARGS) > 1
+    throw("Extra args given; please provide only one config file")
+end
+
 conf = TOML.tryparsefile(ARGS[1])
 if isa(conf, TOML.ParserError)
-    conf = Dict{String, Any}()
-    println("Bad config file")
+    println("Bad conf file")
+    println(conf)
+    exit(1)
 end
 
 println(conf)
@@ -29,7 +36,6 @@ Ly = get(conf, "Ly", Ny * π / 4)
 Lz = get(conf, "Lz", Nz * π / 4)
 Δt = get(conf, "dt", 0.01)
 visc = get(conf, "visc", 5e-6)
-#stoptime = get(conf, "stoptime", 3.5e6)
 stopnum = get(conf, "stopnum", 1000) # default to stop after 1000 timesteps
 prog_interval = get(conf, "prog_interval", 25)
 save_interval = get(conf, "save_interval", 50)
