@@ -27,6 +27,9 @@ increases from 2 to 4 GPUs, and scaling otherwise remains fairly close to ideal.
 The slurm scripts are currently set up for the dgxh partition on the OSU COE HPC, and can be 
 run with `sbatch NAME.sh` from their directories. The loading methods for CUDA, Julia, and 
 MPI would likely need modification for any other system. More generally, the primary simulation
-file is `generic_sim.jl`, which can be run with `mpiexec -n NUM_PROCS julia --project generic_sim.jl CONF.toml`,
+file is `generic_sim.jl`, which can be run with 
+`mpiexec -n NUM_PROCS julia --project generic_sim.jl CONF.toml`,
 with some appropriate choice of number of processes (here equal to number of GPUs) and config file.
 The config options should be largely self-documenting in `generic_sim.jl`.
+Simulation outputs are saved to `/nfs/hpc/share/carlipp/`, which should be modified to a user-appropriate
+scratch directory (at minimum, replace carlipp with your ONID).
