@@ -1,5 +1,4 @@
 using Oceananigans
-using Oceananigans: TendencyCallsite, Periodic
 using CUDA
 using NCDatasets
 using Printf
@@ -9,12 +8,12 @@ using Dates
 using TOML
 using MPI
 
-CUDA.cuRAND.seed!(1234);
+Random.seed!(1234);
 
-if size(ARGS) == 0
-    throw("No config file provided")
-elseif size(ARGS) > 1
-    throw("Extra args given; please provide only one config file")
+if size(ARGS)[1] == 0
+    error("No config file provided")
+elseif size(ARGS)[1] > 1
+    error("Extra args given; please provide only one config file")
 end
 
 conf = TOML.tryparsefile(ARGS[1])

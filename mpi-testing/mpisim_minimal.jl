@@ -1,12 +1,8 @@
 
 using MPI
 using Oceananigans
-using Oceananigans.DistributedComputations
-using Statistics
 using CUDA
 using Printf
-using Random
-
 
 Nx = Ny = Nz = 128
 Lx = Ly = Lz = 2π
