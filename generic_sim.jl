@@ -13,10 +13,10 @@ Random.seed!(1234);
 # note: this does not get perfect replication across e.g. different numbers of GPUs, 
 # since each rank is initialized separately
 
-if size(ARGS)[1] == 0
+if length(ARGS) == 0
     println("No config file provided")
     exit(1)
-elseif size(ARGS)[1] > 1
+elseif length(ARGS) > 1
     println("Extra args given; please provide only one config file")
     exit(1)
 end
