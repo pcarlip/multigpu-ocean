@@ -7,6 +7,7 @@ using Oceanostics
 using Dates
 using TOML
 using MPI
+using Random
 
 Random.seed!(1234);
 
