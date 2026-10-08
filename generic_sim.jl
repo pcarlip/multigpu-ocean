@@ -9,12 +9,16 @@ using TOML
 using MPI
 using Random
 
-Random.seed!(1234);
+Random.seed!(1234); 
+# note: this does not get perfect replication across e.g. different numbers of GPUs, 
+# since each rank is initialized separately
 
 if size(ARGS)[1] == 0
-    error("No config file provided")
+    println("No config file provided")
+    exit(1)
 elseif size(ARGS)[1] > 1
-    error("Extra args given; please provide only one config file")
+    println("Extra args given; please provide only one config file")
+    exit(1)
 end
 
 conf = TOML.tryparsefile(ARGS[1])
