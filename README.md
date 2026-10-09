@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/996260250.svg)](https://doi.org/10.5281/zenodo.23257573)
+
 # multigpu-ocean
 
 Testing [Oceananigans](https://github.com/CliMA/Oceananigans.jl) on multiple GPUs using 
