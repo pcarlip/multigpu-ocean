@@ -8,6 +8,8 @@ using Dates
 using TOML
 using MPI
 using Random
+using CoherentNoise
+using ForwardDiff
 
 MPI.Init()
 rank = MPI.Comm_rank(MPI.COMM_WORLD)
@@ -76,8 +78,22 @@ model = NonhydrostaticModel(
 
 display(model)
 
-e(x, y, z) = 2rand() - 1
-set!(model, u = e, v = e, w = e)
+a = opensimplex2_3d(123)
+b = opensimplex2_3d(456)
+c = opensimplex2_3d(789)
+
+afunc(arr) = sample(a, arr[1], arr[2], arr[3])
+bfunc(arr) = sample(a, arr[1], arr[2], arr[3])
+cfunc(arr) = sample(a, arr[1], arr[2], arr[3])
+
+ufunc(x, y, z) = ForwardDiff.gradient(cfunc, [x, y, z])[2] - ForwardDiff.gradient(bfunc, [x, y, z])[3]
+vfunc(x, y, z) = ForwardDiff.gradient(afunc, [x, y, z])[3] - ForwardDiff.gradient(cfunc, [x, y, z])[1]
+wfunc(x, y, z) = ForwardDiff.gradient(bfunc, [x, y, z])[1] - ForwardDiff.gradient(afunc, [x, y, z])[2]
+
+# generate a random vector field as a function of x, y, z, with a fixed seed
+# its curl is also random but also divergenceless
+
+set!(model, u = ufunc, v = vfunc, w = wfunc)
 
 simulation = Simulation(model; Δt = Δt, stop_time = stoptime)
 
