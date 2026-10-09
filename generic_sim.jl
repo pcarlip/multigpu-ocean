@@ -9,12 +9,8 @@ using TOML
 using MPI
 using Random
 
+MPI.Init()
 rank = MPI.Comm_rank(MPI.COMM_WORLD)
-
-Random.seed!(rank);
-# note: this does not get perfect replication across e.g. different numbers of GPUs, 
-# since each rank is initialized separately
-# but it does ensure that each rank has a different random field
 
 if length(ARGS) < 2
     println("Missing config file or output file")
@@ -130,7 +126,7 @@ total_mem = Int(CUDA.total_memory())
 run!(simulation)
 
 file = filepath*"_mem"*string(rank)*".txt"
-t_end = Int(sim.run_wall_time)
+t_end = Int(sim.run_wall_time) # should be time in s, to the nearest int
 data = Dict("rank"=>rank, "total_mem" => total_mem, "used_mem" => used_mem, "runtime" => t_end)
 
 open(file, "w") do io
