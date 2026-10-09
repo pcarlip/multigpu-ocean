@@ -1,7 +1,9 @@
 #!/bin/bash
 
 export NGPU=$1
-export SCRATCH="/nfs/hpc/share/carlipp/ngpu-scaling/strong"
+export SCRATCH="/nfs/hpc/share/$USER/ngpu-scaling/strong"
+
+mkdir -p $SCRATCH
 
 sbatch <<EOT
 #!/bin/bash
