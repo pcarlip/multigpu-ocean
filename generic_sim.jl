@@ -47,10 +47,11 @@ prog_interval = get(conf, "prog_interval", 25)
 save_interval = get(conf, "save_interval", 50)
 jld2 = get(conf, "use_jld2", true)
 mpi = get(conf, "mpi", false)
+redistribute = get(conf, "redistribute", false)
 
 int_params = [N, Nx, Ny, Nz, prog_interval, save_interval]
 numeric_params = [Lx, Ly, Lz, Δt, visc, stoptime]
-bool_params = [jld2, mpi]
+bool_params = [jld2, mpi, redistribute]
 
 if !all(y -> isa(y, Number), numeric_params) || any(y <= 0, numeric_params)
     println("Bad numeric parameter (side length, initial timestep, viscosity, or stop time)")
@@ -61,7 +62,7 @@ if !all(y -> isa(y, Integer), int_params) || any(y -> y <= 0, int_params)
     exit(1)
 end
 if !all(y -> isa(y, Bool), bool_params)
-    println("Bad bool parameter (use_jld2 or mpi)")
+    println("Bad bool parameter (use_jld2, mpi, or redistribute)")
     exit(1)
 end
 if !isdir(filepath)
@@ -69,7 +70,16 @@ if !isdir(filepath)
     exit(1)
 end
 
-if mpi
+if mpi && redistribute
+    mpi_size = MPI.Comm_size(MPI.COMM_WORLD)
+    if mpi_size % 2 == 1
+        println("Trying to distribute MPI ranks for an odd number of GPUs is not currently supported")
+        exit(1)
+    elseif mpi_size == 2
+        println("The redistribute option does nothing for 2-gpu systems")
+    end
+    arch = Distributed(GPU(); Partition(x = 2, y = Equal()))
+elseif mpi
     arch = Distributed(GPU())
 else
     arch = GPU()
