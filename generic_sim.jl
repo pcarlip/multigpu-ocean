@@ -78,9 +78,9 @@ model = NonhydrostaticModel(
 
 display(model)
 
-a = opensimplex2_3d(123)
-b = opensimplex2_3d(456)
-c = opensimplex2_3d(789)
+a = opensimplex2_3d(seed=123)
+b = opensimplex2_3d(seed=456)
+c = opensimplex2_3d(seed=789)
 
 afunc(arr) = sample(a, arr[1], arr[2], arr[3])
 bfunc(arr) = sample(a, arr[1], arr[2], arr[3])
@@ -135,14 +135,18 @@ simulation.output_writers[:output] =
 conjure_time_step_wizard!(simulation, cfl = 1, max_Δt = (Δt * 10))
 # avoid too-large timesteps even within CFL
 
+if rank == 0
+    run(`nvidia-smi`) # can compare listed memory to output toml for an extra check
+end
+
 #mem in MiB, to nearest integer
-used_mem = Int((CUDA.total_memory() - CUDA.free_memory())/1024)
-total_mem = Int(CUDA.total_memory())
+total_mem = round(Int,CUDA.total_memory()/1024)
+used_mem = total_mem - round(Int,CUDA.free_memory()/1024)
 
 run!(simulation)
 
-file = filepath*"_mem"*string(rank)*".txt"
-t_end = Int(sim.run_wall_time) # should be time in s, to the nearest int
+file = filepath*"_stats"*string(rank)*".txt"
+t_end = round(Int,simulation.run_wall_time) # should be time in s, to the nearest int
 data = Dict("rank"=>rank, "total_mem" => total_mem, "used_mem" => used_mem, "runtime" => t_end)
 
 open(file, "w") do io
