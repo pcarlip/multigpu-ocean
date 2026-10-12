@@ -12,4 +12,5 @@
 
 module load openmpi/4.1_gcc-12 cuda/13.0 julia/1.12
 export JULIA_CUDA_MEMORY_POOL=none
-mpiexec -n 4 julia --project=.. ../generic_sim.jl mpisim.toml
+mkdir -p /nfs/hpc/share/$USER/mpi-testing/
+mpiexec -n 4 julia --project=.. ../generic_sim.jl mpisim.toml /nfs/hpc/share/$USER/mpi-testing/3d-data
