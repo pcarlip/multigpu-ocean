@@ -10,6 +10,9 @@
 #SBATCH --time=3:00:00
 #SBATCH --output=mpisim.out
 
+# intentionally not excluding dgxh-1 here, this isn't a benchmark so I don't need 
+# consistent GPU memory
+
 module load openmpi/4.1_gcc-12 cuda/13.0 julia/1.12
 export JULIA_CUDA_MEMORY_POOL=none
 mkdir -p /nfs/hpc/share/$USER/mpi-testing/
