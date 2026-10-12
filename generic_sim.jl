@@ -48,6 +48,27 @@ save_interval = get(conf, "save_interval", 50)
 jld2 = get(conf, "use_jld2", true)
 mpi = get(conf, "mpi", false)
 
+int_params = [N, Nx, Ny, Nz, prog_interval, save_interval]
+numeric_params = [Lx, Ly, Lz, Δt, visc, stoptime]
+bool_params = [jld2, mpi]
+
+if !all(y -> isa(y, Number), numeric_params) || any(y <= 0, numeric_params)
+    println("Bad numeric parameter (side length, initial timestep, viscosity, or stop time)")
+    exit(1)
+end
+if !all(y -> isa(y, Integer), int_params) || any(y -> y <= 0, int_params)
+    println("Bad integer parameter (gridpoint count or iteration interval)")
+    exit(1)
+end
+if !all(y -> isa(y, Bool), bool_params)
+    println("Bad bool parameter (use_jld2 or mpi)")
+    exit(1)
+end
+if !isdir(filepath)
+    println("Bad filepath")
+    exit(1)
+end
+
 if mpi
     arch = Distributed(GPU())
 else
