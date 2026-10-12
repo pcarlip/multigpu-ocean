@@ -53,7 +53,7 @@ int_params = [N, Nx, Ny, Nz, prog_interval, save_interval]
 numeric_params = [Lx, Ly, Lz, Δt, visc, stoptime]
 bool_params = [jld2, mpi, redistribute]
 
-if !all(y -> isa(y, Number), numeric_params) || any(y <= 0, numeric_params)
+if !all(y -> isa(y, Number), numeric_params) || any(y -> y <= 0, numeric_params)
     println("Bad numeric parameter (side length, initial timestep, viscosity, or stop time)")
     exit(1)
 end
