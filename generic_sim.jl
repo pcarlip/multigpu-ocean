@@ -8,20 +8,23 @@ using Dates
 using TOML
 using MPI
 using Random
+using CoherentNoise
+using ForwardDiff
 
-Random.seed!(1234); 
-# note: this does not get perfect replication across e.g. different numbers of GPUs, 
-# since each rank is initialized separately
+MPI.Init()
+rank = MPI.Comm_rank(MPI.COMM_WORLD)
 
-if length(ARGS) == 0
-    println("No config file provided")
+if length(ARGS) < 2
+    println("Missing config file or output file")
     exit(1)
-elseif length(ARGS) > 1
-    println("Extra args given; please provide only one config file")
+elseif length(ARGS) > 2
+    println("Extra args given; please provide only one config file and one output file path")
     exit(1)
 end
 
 conf = TOML.tryparsefile(ARGS[1])
+filepath = ARGS[2]
+
 if isa(conf, TOML.ParserError)
     println("Bad conf file")
     println(conf)
@@ -37,20 +40,18 @@ Nz = get(conf, "Nz", N)
 Lx = get(conf, "Lx", Nx * π / 4)
 Ly = get(conf, "Ly", Ny * π / 4)
 Lz = get(conf, "Lz", Nz * π / 4)
-Δt = get(conf, "dt", 0.01)
+Δt = get(conf, "dt_init", 0.01)
 visc = get(conf, "visc", 5e-6)
-stopnum = get(conf, "stopnum", 1000) # default to stop after 1000 timesteps
+stoptime = get(conf, "stoptime", 3600) # default to stop after 1 hour
 prog_interval = get(conf, "prog_interval", 25)
 save_interval = get(conf, "save_interval", 50)
-file = get(conf, "file", "3d-data")
-jld2 = get(conf, "writer", true)
+jld2 = get(conf, "use_jld2", true)
 mpi = get(conf, "mpi", false)
-nv_info = get(conf, "nv", false)
 
 if mpi
-    gpu = Distributed(GPU())
+    arch = Distributed(GPU())
 else
-    gpu = GPU()
+    arch = GPU()
 end
 
 if jld2
@@ -60,7 +61,7 @@ else
 end
 
 grid = RectilinearGrid(
-    gpu,
+    arch,
     size = (Nx, Ny, Nz),
     x = (-Lx / 2, Lx / 2),
     y = (-Ly / 2, Ly / 2),
@@ -77,10 +78,24 @@ model = NonhydrostaticModel(
 
 display(model)
 
-e(x, y, z) = 2rand() - 1
-set!(model, u = e, v = e, w = e)
+a = opensimplex2_3d(seed = 123)
+b = opensimplex2_3d(seed = 456)
+c = opensimplex2_3d(seed = 789)
 
-simulation = Simulation(model; Δt = Δt, stop_iteration = stopnum)
+afunc(arr) = sample(a, arr[1], arr[2], arr[3])
+bfunc(arr) = sample(a, arr[1], arr[2], arr[3])
+cfunc(arr) = sample(a, arr[1], arr[2], arr[3])
+
+ufunc(x, y, z) = ForwardDiff.gradient(cfunc, [x, y, z])[2] - ForwardDiff.gradient(bfunc, [x, y, z])[3]
+vfunc(x, y, z) = ForwardDiff.gradient(afunc, [x, y, z])[3] - ForwardDiff.gradient(cfunc, [x, y, z])[1]
+wfunc(x, y, z) = ForwardDiff.gradient(bfunc, [x, y, z])[1] - ForwardDiff.gradient(afunc, [x, y, z])[2]
+
+# generate a random vector field as a function of x, y, z, with a fixed seed
+# its curl is also random but also divergenceless
+
+set!(model, u = ufunc, v = vfunc, w = wfunc)
+
+simulation = Simulation(model; Δt = Δt, stop_time = stoptime)
 
 display(simulation)
 
@@ -112,7 +127,7 @@ simulation.output_writers[:output] =
     writer(
         model,
         fields,
-        filename = file,
+        filename = filepath,
         schedule = IterationInterval(save_interval),
         overwrite_files = true,
     )
@@ -120,8 +135,21 @@ simulation.output_writers[:output] =
 conjure_time_step_wizard!(simulation, cfl = 1, max_Δt = (Δt * 10))
 # avoid too-large timesteps even within CFL
 
-if nv_info
-    run(`nvidia-smi`)
+if rank == 0
+    run(`nvidia-smi`) # can compare listed memory to output toml for an extra check
 end
 
+#mem in kB, to nearest integer
+total_mem = round(Int, CUDA.total_memory()/1024)
+used_mem = total_mem - round(Int, CUDA.free_memory()/1024)
+
 run!(simulation)
+
+file = filepath*"_stats"*string(rank)*".toml"
+t_end = round(Int, simulation.run_wall_time) # should be time in s, to the nearest int
+data = Dict("rank"=>rank, "total_mem" => total_mem, "used_mem" => used_mem, "runtime" => t_end)
+
+open(file, "w") do io
+    TOML.print(io, data)
+end
+

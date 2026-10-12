@@ -1,0 +1,7 @@
+Nx = 1024
+Ny = 1024
+Nz = 512
+visc = 5e-6
+dt_init = 0.1
+mpi = true
+stoptime = 600
