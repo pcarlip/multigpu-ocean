@@ -19,10 +19,10 @@ using ColorSchemes
 using MPI
 
 # %%
-loc = "/nfs/hpc/share/carlipp/ngpu-scaling/"
-ds_1gpu = FieldDataset(loc*"1gpu_data_rank0.jld2"; backend = OnDisk())
-ds_2gpu = FieldDataset(loc*"2gpu_data_rank0.jld2"; backend = OnDisk())
-ds_4gpu = FieldDataset(loc*"4gpu_data_rank0.jld2"; backend = OnDisk())
+loc = "/nfs/hpc/share/carlipp/ngpu-scaling/strong/"
+ds_1gpu = FieldDataset(loc*"1-gpu_rank0.jld2"; backend = OnDisk())
+ds_2gpu = FieldDataset(loc*"2-gpu_rank0.jld2"; backend = OnDisk())
+ds_4gpu = FieldDataset(loc*"4-gpu_rank0.jld2"; backend = OnDisk())
 
 
 # %%
@@ -50,9 +50,48 @@ ke_4 = [collect(ds_4gpu.KE[i])[1] for i = 1:n];
 
 
 # %%
-isapprox(ke_1, ke_2, rtol = 0.001)
+println(ke_1)
+println(ke_2)
+println(ke_4)
 
 # %%
-isapprox(ke_2, ke_4, rtol = 0.001)
+isapprox(ke_1, ke_2, rtol = 1e-5)
+
+# %%
+isapprox(ke_2, ke_4, rtol = 1e-5)
+
+# %%
+u1 = FieldTimeSeries(loc*"1-gpu", "u"; backend = OnDisk())
+u2 = FieldTimeSeries(loc*"2-gpu", "u"; backend = OnDisk())
+u4 = FieldTimeSeries(loc*"4-gpu", "u"; backend = OnDisk());
+
+# %%
+u1slice = interior(u1[end])[:, :, 10]
+u2slice = interior(u2[end])[:, :, 10]
+u4slice = interior(u4[end])[:, :, 10];
+
+# %%
+fig = Figure(size = (900, 300))
+ax1 = Axis(fig[1, 1])
+ax2 = Axis(fig[1, 2])
+ax3 = Axis(fig[1, 3])
+heatmap!(ax1, u1slice, colormap = :balance)
+heatmap!(ax2, u2slice, colormap = :balance)
+heatmap!(ax3, u4slice, colormap = :balance)
+fig
+
+# %%
+u1_end = interior(u1[end])
+u2_end = interior(u2[end])
+u4_end = interior(u4[end]);
+
+# %%
+using Statistics
+
+println(std(u1_end))
+println(std(u2_end))
+println(std(u4_end))
+println(std(u1_end-u2_end))
+println(std(u1_end-u4_end))
 
 # %%
