@@ -1,0 +1,1 @@
+../strong-scaling/ngpu.sh
