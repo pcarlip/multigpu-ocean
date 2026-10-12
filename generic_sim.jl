@@ -139,7 +139,7 @@ if rank == 0
     run(`nvidia-smi`) # can compare listed memory to output toml for an extra check
 end
 
-#mem in MiB, to nearest integer
+#mem in kB, to nearest integer
 total_mem = round(Int, CUDA.total_memory()/1024)
 used_mem = total_mem - round(Int, CUDA.free_memory()/1024)
 
