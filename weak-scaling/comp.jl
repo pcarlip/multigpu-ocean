@@ -26,7 +26,7 @@ ds4 = [TOML.parsefile("/nfs/hpc/share/"*user*"/ngpu-scaling/weak/4-gpu_stats"*st
 ds2 = [TOML.parsefile("/nfs/hpc/share/"*user*"/ngpu-scaling/weak/2-gpu_stats"*string(i)*".toml") for i = 0:1]
 ds1 = [TOML.parsefile("/nfs/hpc/share/"*user*"/ngpu-scaling/weak/1-gpu_stats"*string(i)*".toml") for i = 0:0]
 
-mem_tot = [sum([i["used_mem"] for i in ds1])/1024, sum([i["used_mem"] for i in ds2])/1024, sum([i["used_mem"] for i in ds4])/1024]
+mem_tot = [sum([i["used_mem"] for i in ds1]), sum([i["used_mem"] for i in ds2]), sum([i["used_mem"] for i in ds4])] ./ 1024
 mem_per = mem_tot ./ n
 
 times = [mean([i["runtime"] for i in ds1]), mean([i["runtime"] for i in ds2]), mean([i["runtime"] for i in ds4])]
