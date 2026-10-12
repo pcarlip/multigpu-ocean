@@ -163,6 +163,8 @@ end
 #mem in kB, to nearest integer
 total_mem = round(Int, CUDA.total_memory()/1024)
 used_mem = total_mem - round(Int, CUDA.free_memory()/1024)
+# this isn't a perfect memory measurement, it runs before the sim starts, but it should 
+# be enough to estimate scaling properties
 
 run!(simulation)
 
