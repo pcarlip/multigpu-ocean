@@ -26,13 +26,18 @@ increases from 2 to 4 GPUs, and scaling otherwise remains fairly close to ideal.
 
 ## How to run
 
-The slurm scripts are currently set up for the dgxh partition on the OSU COE HPC, and can be 
-run with `sbatch NAME.sh` from their directories. The loading methods for CUDA, Julia, and 
-MPI would likely need modification for any other system, as would `LocalPreferences.toml`, 
-which informs Julia about MPI details. More generally, the primary simulation
+Instead of individual slurm scripts, jobs are generated with `ngpu.sh`, which is 
+linked between `strong-scaling` and `weak-scaling`. It accepts 3 arguments: 
+number of GPUs, toml config for `generic_sim.jl`, and a naming argument which 
+extends the job name and creates a storage directory for the output files in 
+`/nfs/hpc/share/$USER/ngpu-scaling`.
+ More generally, the primary simulation
 file is `generic_sim.jl`, which can be run with 
-`mpiexec -n NUM_PROCS julia --project generic_sim.jl CONF.toml`,
-with some appropriate choice of number of processes (here equal to number of GPUs) and config file.
+`mpiexec -n NUM_PROCS julia --project generic_sim.jl CONF.toml OUTPUT`,
+with some appropriate choice of number of processes (here equal to number of GPUs), config file,
+and output file (not including the extension; this is also used for storing the time and memory info).
 The config options should be largely self-documenting in `generic_sim.jl`.
-Simulation outputs are saved to `/nfs/hpc/share/carlipp/`, which should be modified to a user-appropriate
-scratch directory (at minimum, replace carlipp with your ONID).
+
+The loading methods for CUDA, Julia, and 
+MPI would likely need modification for any other system, as would `LocalPreferences.toml`, 
+which informs Julia about MPI details, and the storage directory in `ngpu.sh`.
