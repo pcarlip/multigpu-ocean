@@ -83,8 +83,8 @@ b = opensimplex2_3d(seed = 456)
 c = opensimplex2_3d(seed = 789)
 
 afunc(arr) = sample(a, arr[1], arr[2], arr[3])
-bfunc(arr) = sample(a, arr[1], arr[2], arr[3])
-cfunc(arr) = sample(a, arr[1], arr[2], arr[3])
+bfunc(arr) = sample(b, arr[1], arr[2], arr[3])
+cfunc(arr) = sample(c, arr[1], arr[2], arr[3])
 
 ufunc(x, y, z) = ForwardDiff.gradient(cfunc, [x, y, z])[2] - ForwardDiff.gradient(bfunc, [x, y, z])[3]
 vfunc(x, y, z) = ForwardDiff.gradient(afunc, [x, y, z])[3] - ForwardDiff.gradient(cfunc, [x, y, z])[1]
