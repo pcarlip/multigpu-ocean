@@ -19,7 +19,8 @@ using ColorSchemes
 using MPI
 
 # %%
-loc = "/nfs/hpc/share/carlipp/ngpu-scaling/strong/"
+user = ENV["USER"]
+loc = "/nfs/hpc/share/"*user*"/ngpu-scaling/strong/"
 ds_1gpu = FieldDataset(loc*"1-gpu_rank0.jld2"; backend = OnDisk())
 ds_2gpu = FieldDataset(loc*"2-gpu_rank0.jld2"; backend = OnDisk())
 ds_4gpu = FieldDataset(loc*"4-gpu_rank0.jld2"; backend = OnDisk())
