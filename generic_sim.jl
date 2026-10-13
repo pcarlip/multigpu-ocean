@@ -188,10 +188,13 @@ used_mem = total_mem - round(Int, CUDA.free_memory()/1024)
 
 run!(simulation)
 
+# not currently checking this + conf in the analysis scripts, 
+# but this enables future comparison
 commit = read(`git rev-parse HEAD`)
+oc_version = string(pkgversion(Oceananigans))
+
 file = filepath*"_stats"*string(rank)*".toml"
 t_end = round(Int, simulation.run_wall_time) # should be time in s, to the nearest int
-oc_version = string(pkgversion(Oceananigans))
 data = Dict("rank"=>rank,
     "total_mem" => total_mem,
     "used_mem" => used_mem,
