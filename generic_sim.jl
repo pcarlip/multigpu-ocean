@@ -190,7 +190,7 @@ run!(simulation)
 
 # not currently checking this + conf in the analysis scripts, 
 # but this enables future comparison
-commit = read(`git rev-parse HEAD`)
+commit = readchomp(`git rev-parse HEAD`)
 oc_version = string(pkgversion(Oceananigans))
 
 file = filepath*"_stats"*string(rank)*".toml"
