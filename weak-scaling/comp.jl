@@ -29,7 +29,8 @@ ds1 = [TOML.parsefile("/nfs/hpc/share/"*user*"/ngpu-scaling/weak/1-gpu_stats"*st
 mem_tot = [sum([i["used_mem"] for i in ds1]), sum([i["used_mem"] for i in ds2]), sum([i["used_mem"] for i in ds4])] ./ 1024
 mem_per = mem_tot ./ n
 
-times = [mean([i["runtime"] for i in ds1]), mean([i["runtime"] for i in ds2]), mean([i["runtime"] for i in ds4])]
+times = [mean([i["runtime"] for i in ds1]), mean([i["runtime"] for i in ds2]), mean([i["runtime"] for i in ds4])] ./ 60
+
 
 
 # %%
@@ -58,7 +59,7 @@ f = Figure()
 ax = Axis(f[1, 1], xlabel = "Number of GPUs", ylabel = "Time (min)", title = "Time scaling")
 scatterlines!(ax, n, times, linewidth = 2, marker = :circle, markersize = 10, label = "Measured times", color = :red)
 lines!(ax, range(1, 4, 100), range(times[1], times[1], 100), label = "Weak scaling", color = :red, alpha = 0.5)
-ylims!(0, 3500)
+ylims!(0, 60)
 axislegend(ax, position = :lb)
 save("time_weak.svg", f)
 f
