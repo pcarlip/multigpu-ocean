@@ -191,12 +191,14 @@ run!(simulation)
 commit = read(`git rev-parse HEAD`)
 file = filepath*"_stats"*string(rank)*".toml"
 t_end = round(Int, simulation.run_wall_time) # should be time in s, to the nearest int
+oc_version = string(pkgversion(Oceananigans))
 data = Dict("rank"=>rank,
     "total_mem" => total_mem,
     "used_mem" => used_mem,
     "runtime" => t_end,
     "params" => conf,
-    "commit" => commit)
+    "commit" => commit,
+    "oceananigans" => oc_version)
 
 open(file, "w") do io
     TOML.print(io, data)
