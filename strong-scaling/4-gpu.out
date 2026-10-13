@@ -88,57 +88,57 @@ Sorry!  You were supposed to get help about:
 But I couldn't open the help file:
     /nfs/stak/users/carlipp/.julia/artifacts/70bcb00174b844de6761e86f545561dc84c7f8fa/share/openmpi/help-mpi-btl-openib.txt: No such file or directory.  Sorry!
 --------------------------------------------------------------------------
-[dgxh-2][[47050,1],0][btl_openib_component.c:1704:init_one_device] error obtaining device attributes for mlx5_0 errno says No space left on device
---------------------------------------------------------------------------
-Sorry!  You were supposed to get help about:
-    error in device init
-But I couldn't open the help file:
-    /nfs/stak/users/carlipp/.julia/artifacts/70bcb00174b844de6761e86f545561dc84c7f8fa/share/openmpi/help-mpi-btl-openib.txt: No such file or directory.  Sorry!
---------------------------------------------------------------------------
-[dgxh-2][[47050,1],2][btl_openib_component.c:1704:init_one_device] error obtaining device attributes for mlx5_0 errno says No space left on device
---------------------------------------------------------------------------
-Sorry!  You were supposed to get help about:
-    error in device init
-But I couldn't open the help file:
-    /nfs/stak/users/carlipp/.julia/artifacts/70bcb00174b844de6761e86f545561dc84c7f8fa/share/openmpi/help-mpi-btl-openib.txt: No such file or directory.  Sorry!
---------------------------------------------------------------------------
 --------------------------------------------------------------------------
 Sorry!  You were supposed to get help about:
     ini file:file not found
 But I couldn't open the help file:
     /nfs/stak/users/carlipp/.julia/artifacts/70bcb00174b844de6761e86f545561dc84c7f8fa/share/openmpi/help-mpi-btl-openib.txt: No such file or directory.  Sorry!
 --------------------------------------------------------------------------
-[dgxh-2][[47050,1],3][btl_openib_component.c:1704:init_one_device] error obtaining device attributes for mlx5_0 errno says No space left on device
+[dgxh-3][[12182,1],2][btl_openib_component.c:1704:init_one_device] error obtaining device attributes for mlx5_0 errno says No space left on device
 --------------------------------------------------------------------------
 Sorry!  You were supposed to get help about:
     error in device init
 But I couldn't open the help file:
     /nfs/stak/users/carlipp/.julia/artifacts/70bcb00174b844de6761e86f545561dc84c7f8fa/share/openmpi/help-mpi-btl-openib.txt: No such file or directory.  Sorry!
 --------------------------------------------------------------------------
-[dgxh-2][[47050,1],1][btl_openib_component.c:1704:init_one_device] error obtaining device attributes for mlx5_0 errno says No space left on device
+[dgxh-3][[12182,1],0][btl_openib_component.c:1704:init_one_device] error obtaining device attributes for mlx5_0 errno says No space left on device
 --------------------------------------------------------------------------
 Sorry!  You were supposed to get help about:
     error in device init
 But I couldn't open the help file:
     /nfs/stak/users/carlipp/.julia/artifacts/70bcb00174b844de6761e86f545561dc84c7f8fa/share/openmpi/help-mpi-btl-openib.txt: No such file or directory.  Sorry!
 --------------------------------------------------------------------------
-Dict{String, Any}(Dict{String, Any}("Nz" => Dict{String, Any}(Dict{String, Any}(512, "mpi" => true, "Nx" => 1024, "Ny" => 1024, "visc" => 5.0e-6, "dt_init" => 0.1, "stoptime" => 600)
-"Nz" => 512, "mpi" => true, "Nx" => 1024, "Ny" => 1024, "visc" => 5.0e-6, "dt_init" => 0.1, "stoptime" => 600)
-"Nz" => "Nz" => 512, "mpi" => 512, "mpi" => true, "Nx" => 1024, "Ny" => 1024, "visc" => true, "Nx" => 1024, "Ny" => 1024, "visc" => 5.0e-6, "dt_5.0e-6, "dt_init" => init" => 0.1, "st0.1, "stoptimoptime" => 600e" => 600)
-)
+[dgxh-3][[12182,1],3][btl_openib_component.c:1704:init_one_device] error obtaining device attributes for mlx5_0 errno says No space left on device
+--------------------------------------------------------------------------
+Sorry!  You were supposed to get help about:
+    error in device init
+But I couldn't open the help file:
+    /nfs/stak/users/carlipp/.julia/artifacts/70bcb00174b844de6761e86f545561dc84c7f8fa/share/openmpi/help-mpi-btl-openib.txt: No such file or directory.  Sorry!
+--------------------------------------------------------------------------
+[dgxh-3][[12182,1],1][btl_openib_component.c:1704:init_one_device] error obtaining device attributes for mlx5_0 errno says No space left on device
+--------------------------------------------------------------------------
+Sorry!  You were supposed to get help about:
+    error in device init
+But I couldn't open the help file:
+    /nfs/stak/users/carlipp/.julia/artifacts/70bcb00174b844de6761e86f545561dc84c7f8fa/share/openmpi/help-mpi-btl-openib.txt: No such file or directory.  Sorry!
+--------------------------------------------------------------------------
+Dict{String, Any}(Dict{String, Any}("Nz" => 512, "mpi" => true, "Nx" => 1024, "Ny" => 1024, "visc" => 5.0e-6, "dt_init" => 0.1, "stoptime" => 600)
+Dict{String, Any}("Nz" => Dict{String, Any}(512, "mpi" => true, "Nx" => 1024, "Ny" => 1024, "visc" => 5.0e-6, "dt_init" => 0.1, "stoptime" => 600)
+"Nz" => "Nz" => 512, "mpi" => 512, "mpi" => true, "Nx" => 1024, "Ny" => 1024, "visc" => 5.0e-6, "dt_init" => 0.1, "stoptime" => 600)
+true, "Nx" => 1024, "Ny" => 1024, "visc" => 5.0e-6, "dt_init" => 0.1, "stoptime" => 600)
 256×1024×512 (distributed across 4×1×1 ranks) RectilinearGrid{Float64, FullyConnected, Periodic, Periodic} on Distributed{CUDAGPU} on 4×1×1 with 5×5×5 halo
-├── FullyConnected x ∈ [-201.062, 2.01097e-16) regularly spaced with Δx=0.785398
-├── Periodic y ∈ [-402.124, 402.124)           regularly spaced with Δy=0.785398
-└── Periodic z ∈ [-201.062, 201.062)           regularly spaced with Δz=0.785398256×1024×512 (distributed across 4×1×1 ranks) RectilinearGrid{Float64, FullyConnected, Periodic, Periodic} on Distributed{CUDAGPU} on 4×1×1 with 5×5×5 halo
-├── FullyConnected x ∈ [201.062, 402.124) regularly spaced with Δx=0.785398
-├── Periodic y ∈ [-402.124, 402.124)      regularly spaced with Δy=0.785398
-└── Periodic z ∈ [-201.062, 201.062)      regularly spaced with Δz=0.785398256×1024×512 (distributed across 4×1×1 ranks) RectilinearGrid{Float64, FullyConnected, Periodic, Periodic} on Distributed{CUDAGPU} on 4×1×1 with 5×5×5 halo
 ├── FullyConnected x ∈ [-402.124, -201.062) regularly spaced with Δx=0.785398
 ├── Periodic y ∈ [-402.124, 402.124)        regularly spaced with Δy=0.785398
 └── Periodic z ∈ [-201.062, 201.062)        regularly spaced with Δz=0.785398
-
 256×1024×512 (distributed across 4×1×1 ranks) RectilinearGrid{Float64, FullyConnected, Periodic, Periodic} on Distributed{CUDAGPU} on 4×1×1 with 5×5×5 halo
 ├── FullyConnected x ∈ [-2.01097e-16, 201.062) regularly spaced with Δx=0.785398
+├── Periodic y ∈ [-402.124, 402.124)           regularly spaced with Δy=0.785398
+└── Periodic z ∈ [-201.062, 201.062)           regularly spaced with Δz=0.785398
+256×1024×512 (distributed across 4×1×1 ranks) RectilinearGrid{Float64, FullyConnected, Periodic, Periodic} on Distributed{CUDAGPU} on 4×1×1 with 5×5×5 halo
+├── FullyConnected x ∈ [201.062, 402.124) regularly spaced with Δx=0.785398
+├── Periodic y ∈ [-402.124, 402.124)      regularly spaced with Δy=0.785398
+└── Periodic z ∈ [-201.062, 201.062)      regularly spaced with Δz=0.785398256×1024×512 (distributed across 4×1×1 ranks) RectilinearGrid{Float64, FullyConnected, Periodic, Periodic} on Distributed{CUDAGPU} on 4×1×1 with 5×5×5 halo
+├── FullyConnected x ∈ [-201.062, 2.01097e-16) regularly spaced with Δx=0.785398
 ├── Periodic y ∈ [-402.124, 402.124)           regularly spaced with Δy=0.785398
 └── Periodic z ∈ [-201.062, 201.062)           regularly spaced with Δz=0.785398
 
@@ -202,7 +202,7 @@ NonhydrostaticModel{Distributed{CUDAGPU} on 4×1×1, RectilinearGrid}(time = 0 s
 ├── closure: ScalarDiffusivity{ExplicitTimeDiscretization}(ν=5.0e-6)
 ├── buoyancy: Nothing
 └── coriolis: Nothing
-Simulation of NonhydrostaticModel{Distributed{CUDAGPU} on 4×1×1, RectilinearGrid}(time = 0 seconds, iteration = 0)Simulation of NonhydrostaticModel{Distributed{CUDAGPU} on 4×1×1, RectilinearGrid}(time = 0 seconds, iteration = 0)
+Simulation of NonhydrostaticModel{Distributed{CUDAGPU} on 4×1×1, RectilinearGrid}(time = 0 seconds, iteration = 0)
 ├── Next time step: 100 ms
 ├── run_wall_time: 0 seconds
 ├── run_wall_time / iteration: NaN days
@@ -216,7 +216,7 @@ Simulation of NonhydrostaticModel{Distributed{CUDAGPU} on 4×1×1, RectilinearGr
 │   ├── wall_time_limit_exceeded => Callback of wall_time_limit_exceeded on IterationInterval(1)
 │   └── nan_checker => Callback of NaNChecker for u on IterationInterval(100)
 └── output_writers: OrderedDict with no entries
-
+Simulation of NonhydrostaticModel{Distributed{CUDAGPU} on 4×1×1, RectilinearGrid}(time = 0 seconds, iteration = 0)
 ├── Next time step: 100 ms
 ├── run_wall_time: 0 seconds
 ├── run_wall_time / iteration: NaN days
@@ -258,7 +258,7 @@ Simulation of NonhydrostaticModel{Distributed{CUDAGPU} on 4×1×1, RectilinearGr
 │   ├── wall_time_limit_exceeded => Callback of wall_time_limit_exceeded on IterationInterval(1)
 │   └── nan_checker => Callback of NaNChecker for u on IterationInterval(100)
 └── output_writers: OrderedDict with no entries
-Sun Oct 11 11:08:04 2026       
+Tue Oct 13 04:51:16 2026       
 +-----------------------------------------------------------------------------------------+
 | NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |
 +-----------------------------------------+------------------------+----------------------+
@@ -267,19 +267,19 @@ Sun Oct 11 11:08:04 2026
 |                                         |                        |               MIG M. |
 |=========================================+========================+======================|
 |   0  NVIDIA H100 80GB HBM3          On  |   00000000:1B:00.0 Off |                    0 |
-| N/A   30C    P0            117W /  700W |   23069MiB /  81559MiB |      0%      Default |
+| N/A   31C    P0            121W /  700W |   23069MiB /  81559MiB |      0%      Default |
 |                                         |                        |             Disabled |
 +-----------------------------------------+------------------------+----------------------+
-|   1  NVIDIA H100 80GB HBM3          On  |   00000000:52:00.0 Off |                    0 |
+|   1  NVIDIA H100 80GB HBM3          On  |   00000000:9D:00.0 Off |                    0 |
+| N/A   32C    P0            122W /  700W |   23069MiB /  81559MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA H100 80GB HBM3          On  |   00000000:D1:00.0 Off |                    0 |
 | N/A   35C    P0            121W /  700W |   23069MiB /  81559MiB |      0%      Default |
 |                                         |                        |             Disabled |
 +-----------------------------------------+------------------------+----------------------+
-|   2  NVIDIA H100 80GB HBM3          On  |   00000000:9D:00.0 Off |                    0 |
-| N/A   31C    P0            127W /  700W |   23069MiB /  81559MiB |      0%      Default |
-|                                         |                        |             Disabled |
-+-----------------------------------------+------------------------+----------------------+
-|   3  NVIDIA H100 80GB HBM3          On  |   00000000:C3:00.0 Off |                    0 |
-| N/A   31C    P0            118W /  700W |   23069MiB /  81559MiB |      0%      Default |
+|   3  NVIDIA H100 80GB HBM3          On  |   00000000:DF:00.0 Off |                    0 |
+| N/A   35C    P0            119W /  700W |   23069MiB /  81559MiB |      0%      Default |
 |                                         |                        |             Disabled |
 +-----------------------------------------+------------------------+----------------------+
 
@@ -288,10 +288,10 @@ Sun Oct 11 11:08:04 2026
 |  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
 |        ID   ID                                                               Usage      |
 |=========================================================================================|
-|    0   N/A  N/A         1399886      C   julia                                 23060MiB |
-|    1   N/A  N/A         1399887      C   julia                                 23060MiB |
-|    2   N/A  N/A         1399888      C   julia                                 23060MiB |
-|    3   N/A  N/A         1399889      C   julia                                 23060MiB |
+|    0   N/A  N/A          116813      C   julia                                 23060MiB |
+|    1   N/A  N/A          116814      C   julia                                 23060MiB |
+|    2   N/A  N/A          116815      C   julia                                 23060MiB |
+|    3   N/A  N/A          116816      C   julia                                 23060MiB |
 +-----------------------------------------------------------------------------------------+
 [ Info: Initializing simulation...
 [ Info: Initializing simulation...
@@ -301,151 +301,151 @@ Iteration: 0000, time: 0 seconds, Δt: 100 ms, wall time: 0 seconds
 Iteration: 0000, time: 0 seconds, Δt: 100 ms, wall time: 0 seconds
 Iteration: 0000, time: 0 seconds, Δt: 100 ms, wall time: 0 seconds
 Iteration: 0000, time: 0 seconds, Δt: 100 ms, wall time: 0 seconds
-[ Info:     ... simulation initialization complete (2.075 minutes)
+[ Info:     ... simulation initialization complete (1.649 minutes)
 [ Info: Executing initial time step...
-[ Info:     ... simulation initialization complete (2.077 minutes)
+[ Info:     ... simulation initialization complete (1.641 minutes)
 [ Info: Executing initial time step...
-[ Info:     ... simulation initialization complete (2.098 minutes)
+[ Info:     ... simulation initialization complete (1.648 minutes)
 [ Info: Executing initial time step...
-[ Info:     ... simulation initialization complete (2.107 minutes)
+[ Info:     ... simulation initialization complete (1.654 minutes)
 [ Info: Executing initial time step...
-[ Info:     ... initial time step complete (5.702 seconds).
-[ Info:     ... initial time step complete (6.043 seconds).
-[ Info:     ... initial time step complete (3.288 seconds).
-[ Info:     ... initial time step complete (2.896 seconds).
-Iteration: 0025, time: 1.353 seconds, Δt: 60.500 ms, wall time: 2.298 minutes
-Iteration: 0025, time: 1.353 seconds, Δt: 60.500 ms, wall time: 2.315 minutes
-Iteration: 0025, time: 1.353 seconds, Δt: 60.500 ms, wall time: 2.319 minutes
-Iteration: 0025, time: 1.353 seconds, Δt: 60.500 ms, wall time: 2.300 minutes
-Iteration: 0050, time: 3.053 seconds, Δt: 73.205 ms, wall time: 2.448 minutes
-Iteration: 0050, time: 3.053 seconds, Δt: 73.205 ms, wall time: 2.453 minutes
-Iteration: 0050, time: 3.053 seconds, Δt: 73.205 ms, wall time: 2.432 minutes
-Iteration: 0050, time: 3.053 seconds, Δt: 73.205 ms, wall time: 2.433 minutes
-Iteration: 0075, time: 5.231 seconds, Δt: 97.436 ms, wall time: 4.040 minutes
-Iteration: 0075, time: 5.231 seconds, Δt: 97.436 ms, wall time: 4.045 minutes
-Iteration: 0075, time: 5.231 seconds, Δt: 97.436 ms, wall time: 4.025 minutes
-Iteration: 0075, time: 5.231 seconds, Δt: 97.436 ms, wall time: 4.023 minutes
-Iteration: 0100, time: 7.969 seconds, Δt: 117.897 ms, wall time: 4.158 minutes
-Iteration: 0100, time: 7.969 seconds, Δt: 117.897 ms, wall time: 4.156 minutes
-Iteration: 0100, time: 7.969 seconds, Δt: 117.897 ms, wall time: 4.178 minutes
-Iteration: 0100, time: 7.969 seconds, Δt: 117.897 ms, wall time: 4.173 minutes
-Iteration: 0125, time: 11.477 seconds, Δt: 156.921 ms, wall time: 5.723 minutes
-Iteration: 0125, time: 11.477 seconds, Δt: 156.921 ms, wall time: 5.722 minutes
-Iteration: 0125, time: 11.477 seconds, Δt: 156.921 ms, wall time: 5.743 minutes
-Iteration: 0125, time: 11.477 seconds, Δt: 156.921 ms, wall time: 5.739 minutes
-Iteration: 0150, time: 15.886 seconds, Δt: 189.875 ms, wall time: 5.872 minutes
-Iteration: 0150, time: 15.886 seconds, Δt: 189.875 ms, wall time: 5.857 minutes
-Iteration: 0150, time: 15.886 seconds, Δt: 189.875 ms, wall time: 5.855 minutes
-Iteration: 0150, time: 15.886 seconds, Δt: 189.875 ms, wall time: 5.876 minutes
-Iteration: 0175, time: 21.536 seconds, Δt: 252.724 ms, wall time: 7.418 minutes
-Iteration: 0175, time: 21.536 seconds, Δt: 252.724 ms, wall time: 7.434 minutes
-Iteration: 0175, time: 21.536 seconds, Δt: 252.724 ms, wall time: 7.419 minutes
-Iteration: 0175, time: 21.536 seconds, Δt: 252.724 ms, wall time: 7.439 minutes
-Iteration: 0200, time: 28.637 seconds, Δt: 305.795 ms, wall time: 7.568 minutes
-Iteration: 0200, time: 28.637 seconds, Δt: 305.795 ms, wall time: 7.572 minutes
-Iteration: 0200, time: 28.637 seconds, Δt: 305.795 ms, wall time: 7.553 minutes
-Iteration: 0200, time: 28.637 seconds, Δt: 305.795 ms, wall time: 7.551 minutes
-Iteration: 0225, time: 37.736 seconds, Δt: 407.014 ms, wall time: 9.118 minutes
-Iteration: 0225, time: 37.736 seconds, Δt: 407.014 ms, wall time: 9.139 minutes
-Iteration: 0225, time: 37.736 seconds, Δt: 407.014 ms, wall time: 9.119 minutes
-Iteration: 0225, time: 37.736 seconds, Δt: 407.014 ms, wall time: 9.134 minutes
-Iteration: 0250, time: 49.174 seconds, Δt: 492.487 ms, wall time: 9.251 minutes
-Iteration: 0250, time: 49.174 seconds, Δt: 492.487 ms, wall time: 9.273 minutes
-Iteration: 0250, time: 49.174 seconds, Δt: 492.487 ms, wall time: 9.253 minutes
-Iteration: 0250, time: 49.174 seconds, Δt: 492.487 ms, wall time: 9.268 minutes
-Iteration: 0275, time: 1.064 minutes, Δt: 655.500 ms, wall time: 10.863 minutes
-Iteration: 0275, time: 1.064 minutes, Δt: 655.500 ms, wall time: 10.862 minutes
-Iteration: 0275, time: 1.064 minutes, Δt: 655.500 ms, wall time: 10.883 minutes
-Iteration: 0275, time: 1.064 minutes, Δt: 655.500 ms, wall time: 10.878 minutes
-Iteration: 0300, time: 1.371 minutes, Δt: 793.155 ms, wall time: 11.016 minutes
-Iteration: 0300, time: 1.371 minutes, Δt: 793.155 ms, wall time: 11.012 minutes
-Iteration: 0300, time: 1.371 minutes, Δt: 793.155 ms, wall time: 10.997 minutes
-Iteration: 0300, time: 1.371 minutes, Δt: 793.155 ms, wall time: 10.995 minutes
-Iteration: 0325, time: 1.759 minutes, Δt: 1 second, wall time: 12.626 minutes
-Iteration: 0325, time: 1.759 minutes, Δt: 1 second, wall time: 12.631 minutes
-Iteration: 0325, time: 1.759 minutes, Δt: 1 second, wall time: 12.609 minutes
-Iteration: 0325, time: 1.759 minutes, Δt: 1 second, wall time: 12.611 minutes
-Iteration: 0350, time: 2.176 minutes, Δt: 1 second, wall time: 12.759 minutes
-Iteration: 0350, time: 2.176 minutes, Δt: 1 second, wall time: 12.764 minutes
-Iteration: 0350, time: 2.176 minutes, Δt: 1 second, wall time: 12.742 minutes
-Iteration: 0350, time: 2.176 minutes, Δt: 1 second, wall time: 12.744 minutes
-Iteration: 0375, time: 2.593 minutes, Δt: 1 second, wall time: 14.324 minutes
-Iteration: 0375, time: 2.593 minutes, Δt: 1 second, wall time: 14.341 minutes
-Iteration: 0375, time: 2.593 minutes, Δt: 1 second, wall time: 14.345 minutes
-Iteration: 0375, time: 2.593 minutes, Δt: 1 second, wall time: 14.326 minutes
-Iteration: 0400, time: 3.009 minutes, Δt: 1 second, wall time: 14.479 minutes
-Iteration: 0400, time: 3.009 minutes, Δt: 1 second, wall time: 14.474 minutes
-Iteration: 0400, time: 3.009 minutes, Δt: 1 second, wall time: 14.457 minutes
-Iteration: 0400, time: 3.009 minutes, Δt: 1 second, wall time: 14.459 minutes
-Iteration: 0425, time: 3.426 minutes, Δt: 1 second, wall time: 16.052 minutes
-Iteration: 0425, time: 3.426 minutes, Δt: 1 second, wall time: 16.069 minutes
-Iteration: 0425, time: 3.426 minutes, Δt: 1 second, wall time: 16.074 minutes
-Iteration: 0425, time: 3.426 minutes, Δt: 1 second, wall time: 16.054 minutes
-Iteration: 0450, time: 3.843 minutes, Δt: 1 second, wall time: 16.207 minutes
-Iteration: 0450, time: 3.843 minutes, Δt: 1 second, wall time: 16.187 minutes
-Iteration: 0450, time: 3.843 minutes, Δt: 1 second, wall time: 16.185 minutes
-Iteration: 0450, time: 3.843 minutes, Δt: 1 second, wall time: 16.202 minutes
-Iteration: 0475, time: 4.259 minutes, Δt: 1 second, wall time: 17.751 minutes
-Iteration: 0475, time: 4.259 minutes, Δt: 1 second, wall time: 17.731 minutes
-Iteration: 0475, time: 4.259 minutes, Δt: 1 second, wall time: 17.729 minutes
-Iteration: 0475, time: 4.259 minutes, Δt: 1 second, wall time: 17.746 minutes
-Iteration: 0500, time: 4.676 minutes, Δt: 1 second, wall time: 17.862 minutes
-Iteration: 0500, time: 4.676 minutes, Δt: 1 second, wall time: 17.883 minutes
-Iteration: 0500, time: 4.676 minutes, Δt: 1 second, wall time: 17.864 minutes
-Iteration: 0500, time: 4.676 minutes, Δt: 1 second, wall time: 17.879 minutes
-Iteration: 0525, time: 5.093 minutes, Δt: 1 second, wall time: 19.443 minutes
-Iteration: 0525, time: 5.093 minutes, Δt: 1 second, wall time: 19.442 minutes
-Iteration: 0525, time: 5.093 minutes, Δt: 1 second, wall time: 19.463 minutes
-Iteration: 0525, time: 5.093 minutes, Δt: 1 second, wall time: 19.458 minutes
-Iteration: 0550, time: 5.509 minutes, Δt: 1 second, wall time: 19.596 minutes
-Iteration: 0550, time: 5.509 minutes, Δt: 1 second, wall time: 19.591 minutes
-Iteration: 0550, time: 5.509 minutes, Δt: 1 second, wall time: 19.576 minutes
-Iteration: 0550, time: 5.509 minutes, Δt: 1 second, wall time: 19.575 minutes
-Iteration: 0575, time: 5.926 minutes, Δt: 1 second, wall time: 21.180 minutes
-Iteration: 0575, time: 5.926 minutes, Δt: 1 second, wall time: 21.165 minutes
-Iteration: 0575, time: 5.926 minutes, Δt: 1 second, wall time: 21.185 minutes
-Iteration: 0575, time: 5.926 minutes, Δt: 1 second, wall time: 21.164 minutes
-Iteration: 0600, time: 6.343 minutes, Δt: 1 second, wall time: 21.299 minutes
-Iteration: 0600, time: 6.343 minutes, Δt: 1 second, wall time: 21.297 minutes
-Iteration: 0600, time: 6.343 minutes, Δt: 1 second, wall time: 21.318 minutes
-Iteration: 0600, time: 6.343 minutes, Δt: 1 second, wall time: 21.314 minutes
-Iteration: 0625, time: 6.759 minutes, Δt: 1 second, wall time: 22.888 minutes
-Iteration: 0625, time: 6.759 minutes, Δt: 1 second, wall time: 22.887 minutes
-Iteration: 0625, time: 6.759 minutes, Δt: 1 second, wall time: 22.908 minutes
-Iteration: 0625, time: 6.759 minutes, Δt: 1 second, wall time: 22.903 minutes
-Iteration: 0650, time: 7.176 minutes, Δt: 1 second, wall time: 23.041 minutes
-Iteration: 0650, time: 7.176 minutes, Δt: 1 second, wall time: 23.022 minutes
-Iteration: 0650, time: 7.176 minutes, Δt: 1 second, wall time: 23.020 minutes
-Iteration: 0650, time: 7.176 minutes, Δt: 1 second, wall time: 23.037 minutes
-Iteration: 0675, time: 7.593 minutes, Δt: 1 second, wall time: 24.613 minutes
-Iteration: 0675, time: 7.593 minutes, Δt: 1 second, wall time: 24.635 minutes
-Iteration: 0675, time: 7.593 minutes, Δt: 1 second, wall time: 24.615 minutes
-Iteration: 0675, time: 7.593 minutes, Δt: 1 second, wall time: 24.630 minutes
-Iteration: 0700, time: 8.009 minutes, Δt: 1 second, wall time: 24.768 minutes
-Iteration: 0700, time: 8.009 minutes, Δt: 1 second, wall time: 24.763 minutes
-Iteration: 0700, time: 8.009 minutes, Δt: 1 second, wall time: 24.748 minutes
-Iteration: 0700, time: 8.009 minutes, Δt: 1 second, wall time: 24.747 minutes
-Iteration: 0725, time: 8.426 minutes, Δt: 1 second, wall time: 26.364 minutes
-Iteration: 0725, time: 8.426 minutes, Δt: 1 second, wall time: 26.349 minutes
-Iteration: 0725, time: 8.426 minutes, Δt: 1 second, wall time: 26.369 minutes
-Iteration: 0725, time: 8.426 minutes, Δt: 1 second, wall time: 26.347 minutes
-Iteration: 0750, time: 8.843 minutes, Δt: 1 second, wall time: 26.502 minutes
-Iteration: 0750, time: 8.843 minutes, Δt: 1 second, wall time: 26.497 minutes
-Iteration: 0750, time: 8.843 minutes, Δt: 1 second, wall time: 26.482 minutes
-Iteration: 0750, time: 8.843 minutes, Δt: 1 second, wall time: 26.481 minutes
-Iteration: 0775, time: 9.259 minutes, Δt: 1 second, wall time: 28.093 minutes
-Iteration: 0775, time: 9.259 minutes, Δt: 1 second, wall time: 28.113 minutes
-Iteration: 0775, time: 9.259 minutes, Δt: 1 second, wall time: 28.108 minutes
-Iteration: 0775, time: 9.259 minutes, Δt: 1 second, wall time: 28.091 minutes
-Iteration: 0800, time: 9.676 minutes, Δt: 1 second, wall time: 28.226 minutes
-Iteration: 0800, time: 9.676 minutes, Δt: 1 second, wall time: 28.225 minutes
-Iteration: 0800, time: 9.676 minutes, Δt: 1 second, wall time: 28.241 minutes
-Iteration: 0800, time: 9.676 minutes, Δt: 1 second, wall time: 28.246 minutes
-[ Info: Simulation is stopping after running for 29.813 minutes.
+[ Info:     ... initial time step complete (1.536 seconds).
+[ Info:     ... initial time step complete (2.982 seconds).
+[ Info:     ... initial time step complete (3.450 seconds).
+[ Info:     ... initial time step complete (1.892 seconds).
+Iteration: 0025, time: 1.353 seconds, Δt: 60.500 ms, wall time: 1.828 minutes
+Iteration: 0025, time: 1.353 seconds, Δt: 60.500 ms, wall time: 1.842 minutes
+Iteration: 0025, time: 1.353 seconds, Δt: 60.500 ms, wall time: 1.817 minutes
+Iteration: 0025, time: 1.353 seconds, Δt: 60.500 ms, wall time: 1.816 minutes
+Iteration: 0050, time: 3.053 seconds, Δt: 73.205 ms, wall time: 1.961 minutes
+Iteration: 0050, time: 3.053 seconds, Δt: 73.205 ms, wall time: 1.950 minutes
+Iteration: 0050, time: 3.053 seconds, Δt: 73.205 ms, wall time: 1.949 minutes
+Iteration: 0050, time: 3.053 seconds, Δt: 73.205 ms, wall time: 1.975 minutes
+Iteration: 0075, time: 5.231 seconds, Δt: 97.436 ms, wall time: 3.233 minutes
+Iteration: 0075, time: 5.231 seconds, Δt: 97.436 ms, wall time: 3.222 minutes
+Iteration: 0075, time: 5.231 seconds, Δt: 97.436 ms, wall time: 3.221 minutes
+Iteration: 0075, time: 5.231 seconds, Δt: 97.436 ms, wall time: 3.247 minutes
+Iteration: 0100, time: 7.969 seconds, Δt: 117.897 ms, wall time: 3.366 minutes
+Iteration: 0100, time: 7.969 seconds, Δt: 117.897 ms, wall time: 3.355 minutes
+Iteration: 0100, time: 7.969 seconds, Δt: 117.897 ms, wall time: 3.380 minutes
+Iteration: 0100, time: 7.969 seconds, Δt: 117.897 ms, wall time: 3.354 minutes
+Iteration: 0125, time: 11.477 seconds, Δt: 156.921 ms, wall time: 4.650 minutes
+Iteration: 0125, time: 11.477 seconds, Δt: 156.921 ms, wall time: 4.625 minutes
+Iteration: 0125, time: 11.477 seconds, Δt: 156.921 ms, wall time: 4.636 minutes
+Iteration: 0125, time: 11.477 seconds, Δt: 156.921 ms, wall time: 4.624 minutes
+Iteration: 0150, time: 15.886 seconds, Δt: 189.875 ms, wall time: 4.769 minutes
+Iteration: 0150, time: 15.886 seconds, Δt: 189.875 ms, wall time: 4.783 minutes
+Iteration: 0150, time: 15.886 seconds, Δt: 189.875 ms, wall time: 4.757 minutes
+Iteration: 0150, time: 15.886 seconds, Δt: 189.875 ms, wall time: 4.756 minutes
+Iteration: 0175, time: 21.536 seconds, Δt: 252.724 ms, wall time: 6.010 minutes
+Iteration: 0175, time: 21.536 seconds, Δt: 252.724 ms, wall time: 6.022 minutes
+Iteration: 0175, time: 21.536 seconds, Δt: 252.724 ms, wall time: 6.036 minutes
+Iteration: 0175, time: 21.536 seconds, Δt: 252.724 ms, wall time: 6.009 minutes
+Iteration: 0200, time: 28.637 seconds, Δt: 305.795 ms, wall time: 6.168 minutes
+Iteration: 0200, time: 28.637 seconds, Δt: 305.795 ms, wall time: 6.143 minutes
+Iteration: 0200, time: 28.637 seconds, Δt: 305.795 ms, wall time: 6.154 minutes
+Iteration: 0200, time: 28.637 seconds, Δt: 305.795 ms, wall time: 6.142 minutes
+Iteration: 0225, time: 37.736 seconds, Δt: 407.014 ms, wall time: 7.418 minutes
+Iteration: 0225, time: 37.736 seconds, Δt: 407.014 ms, wall time: 7.392 minutes
+Iteration: 0225, time: 37.736 seconds, Δt: 407.014 ms, wall time: 7.403 minutes
+Iteration: 0225, time: 37.736 seconds, Δt: 407.014 ms, wall time: 7.391 minutes
+Iteration: 0250, time: 49.174 seconds, Δt: 492.487 ms, wall time: 7.524 minutes
+Iteration: 0250, time: 49.174 seconds, Δt: 492.487 ms, wall time: 7.550 minutes
+Iteration: 0250, time: 49.174 seconds, Δt: 492.487 ms, wall time: 7.523 minutes
+Iteration: 0250, time: 49.174 seconds, Δt: 492.487 ms, wall time: 7.536 minutes
+Iteration: 0275, time: 1.064 minutes, Δt: 655.500 ms, wall time: 8.801 minutes
+Iteration: 0275, time: 1.064 minutes, Δt: 655.500 ms, wall time: 8.826 minutes
+Iteration: 0275, time: 1.064 minutes, Δt: 655.500 ms, wall time: 8.812 minutes
+Iteration: 0275, time: 1.064 minutes, Δt: 655.500 ms, wall time: 8.800 minutes
+Iteration: 0300, time: 1.371 minutes, Δt: 793.155 ms, wall time: 8.959 minutes
+Iteration: 0300, time: 1.371 minutes, Δt: 793.155 ms, wall time: 8.933 minutes
+Iteration: 0300, time: 1.371 minutes, Δt: 793.155 ms, wall time: 8.944 minutes
+Iteration: 0300, time: 1.371 minutes, Δt: 793.155 ms, wall time: 8.932 minutes
+Iteration: 0325, time: 1.759 minutes, Δt: 1 second, wall time: 10.219 minutes
+Iteration: 0325, time: 1.759 minutes, Δt: 1 second, wall time: 10.230 minutes
+Iteration: 0325, time: 1.759 minutes, Δt: 1 second, wall time: 10.245 minutes
+Iteration: 0325, time: 1.759 minutes, Δt: 1 second, wall time: 10.218 minutes
+Iteration: 0350, time: 2.176 minutes, Δt: 1 second, wall time: 10.363 minutes
+Iteration: 0350, time: 2.176 minutes, Δt: 1 second, wall time: 10.377 minutes
+Iteration: 0350, time: 2.176 minutes, Δt: 1 second, wall time: 10.352 minutes
+Iteration: 0350, time: 2.176 minutes, Δt: 1 second, wall time: 10.351 minutes
+Iteration: 0375, time: 2.593 minutes, Δt: 1 second, wall time: 11.663 minutes
+Iteration: 0375, time: 2.593 minutes, Δt: 1 second, wall time: 11.637 minutes
+Iteration: 0375, time: 2.593 minutes, Δt: 1 second, wall time: 11.649 minutes
+Iteration: 0375, time: 2.593 minutes, Δt: 1 second, wall time: 11.636 minutes
+Iteration: 0400, time: 3.009 minutes, Δt: 1 second, wall time: 11.795 minutes
+Iteration: 0400, time: 3.009 minutes, Δt: 1 second, wall time: 11.781 minutes
+Iteration: 0400, time: 3.009 minutes, Δt: 1 second, wall time: 11.769 minutes
+Iteration: 0400, time: 3.009 minutes, Δt: 1 second, wall time: 11.770 minutes
+Iteration: 0425, time: 3.426 minutes, Δt: 1 second, wall time: 13.057 minutes
+Iteration: 0425, time: 3.426 minutes, Δt: 1 second, wall time: 13.071 minutes
+Iteration: 0425, time: 3.426 minutes, Δt: 1 second, wall time: 13.046 minutes
+Iteration: 0425, time: 3.426 minutes, Δt: 1 second, wall time: 13.045 minutes
+Iteration: 0450, time: 3.843 minutes, Δt: 1 second, wall time: 13.204 minutes
+Iteration: 0450, time: 3.843 minutes, Δt: 1 second, wall time: 13.178 minutes
+Iteration: 0450, time: 3.843 minutes, Δt: 1 second, wall time: 13.190 minutes
+Iteration: 0450, time: 3.843 minutes, Δt: 1 second, wall time: 13.177 minutes
+Iteration: 0475, time: 4.259 minutes, Δt: 1 second, wall time: 14.433 minutes
+Iteration: 0475, time: 4.259 minutes, Δt: 1 second, wall time: 14.447 minutes
+Iteration: 0475, time: 4.259 minutes, Δt: 1 second, wall time: 14.421 minutes
+Iteration: 0475, time: 4.259 minutes, Δt: 1 second, wall time: 14.420 minutes
+Iteration: 0500, time: 4.676 minutes, Δt: 1 second, wall time: 14.554 minutes
+Iteration: 0500, time: 4.676 minutes, Δt: 1 second, wall time: 14.579 minutes
+Iteration: 0500, time: 4.676 minutes, Δt: 1 second, wall time: 14.553 minutes
+Iteration: 0500, time: 4.676 minutes, Δt: 1 second, wall time: 14.565 minutes
+Iteration: 0525, time: 5.093 minutes, Δt: 1 second, wall time: 15.828 minutes
+Iteration: 0525, time: 5.093 minutes, Δt: 1 second, wall time: 15.802 minutes
+Iteration: 0525, time: 5.093 minutes, Δt: 1 second, wall time: 15.803 minutes
+Iteration: 0525, time: 5.093 minutes, Δt: 1 second, wall time: 15.814 minutes
+Iteration: 0550, time: 5.509 minutes, Δt: 1 second, wall time: 15.936 minutes
+Iteration: 0550, time: 5.509 minutes, Δt: 1 second, wall time: 15.961 minutes
+Iteration: 0550, time: 5.509 minutes, Δt: 1 second, wall time: 15.935 minutes
+Iteration: 0550, time: 5.509 minutes, Δt: 1 second, wall time: 15.947 minutes
+Iteration: 0575, time: 5.926 minutes, Δt: 1 second, wall time: 17.174 minutes
+Iteration: 0575, time: 5.926 minutes, Δt: 1 second, wall time: 17.186 minutes
+Iteration: 0575, time: 5.926 minutes, Δt: 1 second, wall time: 17.174 minutes
+Iteration: 0575, time: 5.926 minutes, Δt: 1 second, wall time: 17.200 minutes
+Iteration: 0600, time: 6.343 minutes, Δt: 1 second, wall time: 17.307 minutes
+Iteration: 0600, time: 6.343 minutes, Δt: 1 second, wall time: 17.306 minutes
+Iteration: 0600, time: 6.343 minutes, Δt: 1 second, wall time: 17.333 minutes
+Iteration: 0600, time: 6.343 minutes, Δt: 1 second, wall time: 17.319 minutes
+Iteration: 0625, time: 6.759 minutes, Δt: 1 second, wall time: 18.600 minutes
+Iteration: 0625, time: 6.759 minutes, Δt: 1 second, wall time: 18.574 minutes
+Iteration: 0625, time: 6.759 minutes, Δt: 1 second, wall time: 18.575 minutes
+Iteration: 0625, time: 6.759 minutes, Δt: 1 second, wall time: 18.586 minutes
+Iteration: 0650, time: 7.176 minutes, Δt: 1 second, wall time: 18.707 minutes
+Iteration: 0650, time: 7.176 minutes, Δt: 1 second, wall time: 18.732 minutes
+Iteration: 0650, time: 7.176 minutes, Δt: 1 second, wall time: 18.706 minutes
+Iteration: 0650, time: 7.176 minutes, Δt: 1 second, wall time: 18.718 minutes
+Iteration: 0675, time: 7.593 minutes, Δt: 1 second, wall time: 19.975 minutes
+Iteration: 0675, time: 7.593 minutes, Δt: 1 second, wall time: 19.976 minutes
+Iteration: 0675, time: 7.593 minutes, Δt: 1 second, wall time: 20.002 minutes
+Iteration: 0675, time: 7.593 minutes, Δt: 1 second, wall time: 19.987 minutes
+Iteration: 0700, time: 8.009 minutes, Δt: 1 second, wall time: 20.135 minutes
+Iteration: 0700, time: 8.009 minutes, Δt: 1 second, wall time: 20.109 minutes
+Iteration: 0700, time: 8.009 minutes, Δt: 1 second, wall time: 20.109 minutes
+Iteration: 0700, time: 8.009 minutes, Δt: 1 second, wall time: 20.121 minutes
+Iteration: 0725, time: 8.426 minutes, Δt: 1 second, wall time: 21.375 minutes
+Iteration: 0725, time: 8.426 minutes, Δt: 1 second, wall time: 21.386 minutes
+Iteration: 0725, time: 8.426 minutes, Δt: 1 second, wall time: 21.400 minutes
+Iteration: 0725, time: 8.426 minutes, Δt: 1 second, wall time: 21.374 minutes
+Iteration: 0750, time: 8.843 minutes, Δt: 1 second, wall time: 21.508 minutes
+Iteration: 0750, time: 8.843 minutes, Δt: 1 second, wall time: 21.519 minutes
+Iteration: 0750, time: 8.843 minutes, Δt: 1 second, wall time: 21.533 minutes
+Iteration: 0750, time: 8.843 minutes, Δt: 1 second, wall time: 21.507 minutes
+Iteration: 0775, time: 9.259 minutes, Δt: 1 second, wall time: 22.794 minutes
+Iteration: 0775, time: 9.259 minutes, Δt: 1 second, wall time: 22.768 minutes
+Iteration: 0775, time: 9.259 minutes, Δt: 1 second, wall time: 22.780 minutes
+Iteration: 0775, time: 9.259 minutes, Δt: 1 second, wall time: 22.767 minutes
+Iteration: 0800, time: 9.676 minutes, Δt: 1 second, wall time: 22.912 minutes
+Iteration: 0800, time: 9.676 minutes, Δt: 1 second, wall time: 22.926 minutes
+Iteration: 0800, time: 9.676 minutes, Δt: 1 second, wall time: 22.900 minutes
+Iteration: 0800, time: 9.676 minutes, Δt: 1 second, wall time: 22.900 minutes
+[ Info: Simulation is stopping after running for 24.191 minutes.
 [ Info: Simulation time 10 minutes equals or exceeds stop time 10 minutes.
-[ Info: Simulation is stopping after running for 29.794 minutes.
+[ Info: Simulation is stopping after running for 24.166 minutes.
 [ Info: Simulation time 10 minutes equals or exceeds stop time 10 minutes.
-[ Info: Simulation is stopping after running for 29.792 minutes.
+[ Info: Simulation is stopping after running for 24.177 minutes.
 [ Info: Simulation time 10 minutes equals or exceeds stop time 10 minutes.
-[ Info: Simulation is stopping after running for 29.809 minutes.
+[ Info: Simulation is stopping after running for 24.165 minutes.
 [ Info: Simulation time 10 minutes equals or exceeds stop time 10 minutes.
