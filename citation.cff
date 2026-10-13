@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Carlip"
+  given-names: "Peter"
+  orcid: "https://orcid.org/0009-0003-8257-2001"
+- family-names: "Pearson"
+  given-names: "Brodie"
+  orcid: "https://orcid.org/0000-0002-0202-0481"
+title: "multigpu-ocean"
+version: 0.2.1
+doi: 10.5281/zenodo.1234
+date-released: 2026-10-13
+url: "https://github.com/pcarlip/multigpu-ocean"
