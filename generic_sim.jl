@@ -3,14 +3,11 @@ using Oceananigans.DistributedComputations: Equal
 using CUDA
 using NCDatasets
 using Printf
-using CairoMakie
 using Oceanostics
-using Dates
 using TOML
 using MPI
 using CoherentNoise
 using ForwardDiff
-using Pkg
 
 MPI.Init()
 rank = MPI.Comm_rank(MPI.COMM_WORLD)
@@ -71,6 +68,10 @@ if !isdir(dirname(filepath))
     exit(1)
 end
 
+# not currently checking this + conf in the analysis scripts, 
+# but this enables future comparison
+commit = readchomp(`git rev-parse HEAD`)
+oc_version = string(pkgversion(Oceananigans))
 
 if redistribute
     #currently getting errors from Partition that I need to debug
@@ -187,11 +188,6 @@ used_mem = total_mem - round(Int, CUDA.free_memory()/1024)
 # be enough to estimate scaling properties
 
 run!(simulation)
-
-# not currently checking this + conf in the analysis scripts, 
-# but this enables future comparison
-commit = readchomp(`git rev-parse HEAD`)
-oc_version = string(pkgversion(Oceananigans))
 
 file = filepath*"_stats"*string(rank)*".toml"
 t_end = round(Int, simulation.run_wall_time) # should be time in s, to the nearest int
