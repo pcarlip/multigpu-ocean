@@ -8,9 +8,9 @@ using Oceanostics
 using Dates
 using TOML
 using MPI
-using Random
 using CoherentNoise
 using ForwardDiff
+using Pkg
 
 MPI.Init()
 rank = MPI.Comm_rank(MPI.COMM_WORLD)
@@ -47,7 +47,7 @@ stoptime = get(conf, "stoptime", 3600) # default to stop after 1 hour
 prog_interval = get(conf, "prog_interval", 25)
 save_interval = get(conf, "save_interval", 50)
 jld2 = get(conf, "use_jld2", true)
-mpi = get(conf, "mpi", false)
+mpi = get(conf, "mpi", true)
 redistribute = get(conf, "redistribute", false)
 
 int_params = [N, Nx, Ny, Nz, prog_interval, save_interval]
@@ -188,9 +188,15 @@ used_mem = total_mem - round(Int, CUDA.free_memory()/1024)
 
 run!(simulation)
 
+commit = read(`git rev-parse HEAD`)
 file = filepath*"_stats"*string(rank)*".toml"
 t_end = round(Int, simulation.run_wall_time) # should be time in s, to the nearest int
-data = Dict("rank"=>rank, "total_mem" => total_mem, "used_mem" => used_mem, "runtime" => t_end)
+data = Dict("rank"=>rank,
+    "total_mem" => total_mem,
+    "used_mem" => used_mem,
+    "runtime" => t_end,
+    "params" => conf,
+    "commit" => commit)
 
 open(file, "w") do io
     TOML.print(io, data)
