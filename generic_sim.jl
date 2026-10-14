@@ -9,9 +9,6 @@ using MPI
 using CoherentNoise
 using ForwardDiff
 
-MPI.Init()
-rank = MPI.Comm_rank(MPI.COMM_WORLD)
-
 if length(ARGS) < 2
     println("Missing config file or output file")
     exit(1)
@@ -67,18 +64,23 @@ if !isdir(dirname(filepath))
     println("Bad filepath")
     exit(1)
 end
+if redistribute && !mpi
+    println("Partitioning is only allowed with MPI")
+    exit(1)
+end
+
+if mpi
+    MPI.Init()
+    rank = MPI.Comm_rank(MPI.COMM_WORLD)
+else
+    rank = 0
+end
 
 # not currently checking this + conf in the analysis scripts, 
 # but this enables future comparison
 commit = readchomp(`git rev-parse HEAD`)
 oc_version = string(pkgversion(Oceananigans))
 
-if redistribute
-    #currently getting errors from Partition that I need to debug
-    println("Distributing among multiple axes is not currently supported")
-    exit(1)
-end
-#=
 if mpi && redistribute
     mpi_size = MPI.Comm_size(MPI.COMM_WORLD)
     if mpi_size % 2 == 1
@@ -87,10 +89,8 @@ if mpi && redistribute
     elseif mpi_size == 2
         println("The redistribute option does nothing for 2-gpu systems")
     end
-    arch = Distributed(GPU(); Partition(x = 2, y = Equal()))
-else
-=#
-if mpi
+    arch = Distributed(GPU(); partition = Partition(x = 2, y = Equal()))
+elseif mpi
     arch = Distributed(GPU())
 else
     arch = GPU()
